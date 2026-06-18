@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { MapPin } from "lucide-react";
 import logo from "@/public/logo-1.svg";
 import Image from "next/image";
-import { locationsItems, servicesItems } from "@/lib/data";
+import { locationsItems, servicesItems, dubaiSubLocationsItems } from "@/lib/data";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -309,14 +309,37 @@ export default function Header() {
                   </ul>
                 </li>
 
-                {/* Regular Link: Dubai Areas */}
-                <li>
-                  <a
-                    href="/dubai-areas"
-                    className="block py-4 px-4 hover:bg-background/10 md:hover:bg-transparent md:hover:text-primary transition-colors border-b border-background/5 md:border-none"
-                  >
+                {/* Dropdown: Dubai Areas */}
+                <li className="relative group border-b border-background/5 md:border-none">
+                  <button className="flex items-center gap-1.5 py-5 px-4 hover:text-primary transition-colors focus:outline-none">
                     مناطق دبي
-                  </a>
+                    <svg
+                      className="w-4 h-4 transition-transform group-hover:rotate-180"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </button>
+                  {/* Hover dropdown list */}
+                  <ul className="absolute right-0 top-full hidden group-hover:block bg-white min-w-[220px] py-2 shadow-xl border-t-2 border-primary">
+                    {dubaiSubLocationsItems.map((item, idx) => (
+                      <li key={idx}>
+                        <a
+                          href={item.href}
+                          className="block px-5 py-2.5 text-sm text-foreground/90 hover:text-primary hover:bg-background/5 transition-colors"
+                        >
+                          {item.name}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
                 </li>
 
                 {/* Regular Link: Blogs */}
@@ -433,14 +456,38 @@ export default function Header() {
                 </details>
               </li>
 
-              {/* Regular Link: Dubai Areas */}
-              <li>
-                <a
-                  href="/dubai-areas"
-                  className="block py-4 px-4 hover:bg-background/10 transition-colors border-b border-background/5"
-                >
-                  مناطق دبي
-                </a>
+              {/* Dropdown: Dubai Areas */}
+              <li className="border-b border-background/5">
+                <details className="group">
+                  <summary className="flex justify-between items-center py-4 px-4 hover:bg-background/10 cursor-pointer list-none">
+                    <span>مناطق دبي</span>
+                    <svg
+                      className="w-4 h-4 transition-transform group-open:rotate-180"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </summary>
+                  <ul className="bg-background/5 pl-4 border-l-2 border-primary/40">
+                    {dubaiSubLocationsItems.map((item, idx) => (
+                      <li key={idx}>
+                        <a
+                          href={item.href}
+                          className="block py-3 px-4 text-sm text-background/80 hover:text-primary"
+                        >
+                          {item.name}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </details>
               </li>
 
               {/* Regular Link: Blogs */}
