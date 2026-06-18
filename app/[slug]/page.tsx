@@ -7,13 +7,9 @@ interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
-export async function generateStaticParams() {
-  return dubaiSubLocations.map((location) => ({
-    slug: encodeURIComponent(location.slug),
-  }));
-}
-
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const decodedSlug = decodeURIComponent(slug);
   const location = dubaiSubLocations.find((l) => l.slug === decodedSlug);
@@ -22,25 +18,25 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return {
       title: "الصفحة غير موجودة",
     };
-  }
-
-  return {
-    title: location.metaTitle,
-    description: location.metaDescription,
-    alternates: {
-      canonical: `/${location.slug}`,
-    },
-  };
+  } else
+    return {
+      title: location.metaTitle,
+      description: location.metaDescription,
+      alternates: {
+        canonical: `/${location.slug}`,
+      },
+    };
 }
 
 export default async function SubLocationPage({ params }: PageProps) {
   const { slug } = await params;
   const decodedSlug = decodeURIComponent(slug);
+
+  console.log("slug : ", decodedSlug);
+
   const location = dubaiSubLocations.find((l) => l.slug === decodedSlug);
 
   if (!location) {
     notFound();
-  }
-
-  return <SubLocationLayout data={location} />;
+  } else return <SubLocationLayout data={location} />;
 }
