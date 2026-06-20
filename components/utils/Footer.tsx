@@ -115,14 +115,14 @@ export default function Footer() {
           <ul className="flex flex-col gap-3.5">
             <li>
               <a
-                href={"/"}
+                href={"/مناطق-دبي"}
                 className="group flex items-center gap-2 text-sm text-background/75 hover:text-primary transition-colors duration-200"
               >
                 <ArrowLeft
                   size={14}
                   className="text-primary/70 transition-transform group-hover:-translate-x-1"
                 />
-                نقل اثاث في دبي
+                مناطق خدماتنا في دبي
               </a>
             </li>
             {locationsItems.map((item, idx) => (

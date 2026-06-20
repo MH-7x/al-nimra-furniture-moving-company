@@ -49,15 +49,19 @@ export default function LocationsPage() {
                 <div className="w-12 h-12 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                   <MapPin className="w-6 h-6" />
                 </div>
-                <h3 className="font-bold text-xl mb-4 text-secondary-foreground leading-snug group-hover:text-primary transition-colors duration-300">
-                  {location.title}
-                </h3>
+                <Link href={`/${location.slug}`}>
+                  <h3 className="font-bold text-xl mb-4 text-secondary-foreground leading-snug group-hover:text-primary transition-colors duration-300">
+                    {location.title}
+                  </h3>
+                </Link>
+
                 <p className="text-muted-foreground text-sm leading-relaxed mb-6 line-clamp-3">
                   {location.metaDescription}
                 </p>
               </div>
               <Button
                 asChild
+                title={`عرض تفاصيل  ${location.servicesTitle}`}
                 className="w-full text-base font-bold py-5 bg-muted text-secondary-foreground hover:bg-primary hover:text-white transition-colors duration-300 border-none cursor-pointer"
               >
                 <Link href={`/${location.slug}`}>عرض تفاصيل الخدمة</Link>
