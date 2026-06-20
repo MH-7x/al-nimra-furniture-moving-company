@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Tajawal } from "next/font/google";
 import "./globals.css";
 import HeaderWrapper from "@/components/utils/HeaderWrapper";
 import Footer from "@/components/utils/Footer";
@@ -8,15 +7,15 @@ import localFont from "next/font/local";
 const tajLoc = localFont({
   src: [
     {
-      path: "./fonts/Tajawal-Regular.ttf",
+      path: "./fonts/Tajawal-Regular.woff2",
       weight: "400",
     },
     {
-      path: "./fonts/Tajawal-Medium.ttf",
+      path: "./fonts/Tajawal-Medium.woff2",
       weight: "500",
     },
     {
-      path: "./fonts/Tajawal-Bold.ttf",
+      path: "./fonts/Tajawal-Bold.woff2",
       weight: "700",
     },
   ],
@@ -37,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ar-AE" dir="rtl" className={`${tajLoc.variable} antialiased`}>
+    <html lang="ar-AE" dir="rtl" className={`${tajLoc.className} antialiased`}>
       <body className="relative">
         <div
           className="fixed inset-0 z-0"

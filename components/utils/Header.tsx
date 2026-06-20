@@ -1,10 +1,15 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 "use client";
 
 import { useState, useEffect } from "react";
 import { MapPin } from "lucide-react";
 import logo from "@/public/logo-1.svg";
 import Image from "next/image";
-import { locationsItems, servicesItems, dubaiSubLocationsItems } from "@/lib/data";
+import {
+  locationsItems,
+  servicesItems,
+  dubaiSubLocationsItems,
+} from "@/lib/data";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);

@@ -124,6 +124,10 @@ export const dubaiSubLocationsItems = [
     name: "نقل اثاث جميرا",
     href: "/نقل-اثاث-جميرا",
   },
+  {
+    name: "عرض جميع المناطق",
+    href: "/مناطق-دبي",
+  },
 ];
 
 export const servicesImages = [
