@@ -1,58 +1,58 @@
 export const servicesItems = [
   {
     name: "نقل اثاث المنزل في دبي",
-    href: "/services/house-moving",
+    href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D9%86%D9%82%D9%84-%D8%A7%D8%AB%D8%A7%D8%AB-%D8%A7%D9%84%D9%85%D9%86%D8%B2%D9%84-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A",
   },
   {
     name: "نقل اثاث الشقق في دبي",
-    href: "/services/apartment-moving",
+    href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D9%86%D9%82%D9%84-%D8%A7%D8%AB%D8%A7%D8%AB-%D8%A7%D9%84%D8%B4%D9%82%D9%82-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A",
   },
   {
     name: "نقل اثاث الفلل في دبي",
-    href: "/services/villa-moving",
+    href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D9%86%D9%82%D9%84-%D8%A7%D8%AB%D8%A7%D8%AB-%D8%A7%D9%84%D9%81%D9%84%D9%84-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A",
   },
   {
     name: "نقل اثاث المكاتب في دبي",
-    href: "/services/office-moving",
+    href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D9%86%D9%82%D9%84-%D8%A7%D8%AB%D8%A7%D8%AB-%D8%A7%D9%84%D9%85%D9%83%D8%A7%D8%AA%D8%A8-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A",
   },
   {
     name: "تغليف اثاث في دبي",
-    href: "/services/packing-wrapping",
+    href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D8%AA%D8%BA%D9%84%D9%8A%D9%81-%D8%A7%D8%AB%D8%A7%D8%AB-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A",
   },
   {
     name: "فك وتركيب اثاث في دبي",
-    href: "/services/assembly-disassembly",
+    href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D9%81%D9%83-%D9%88%D8%AA%D8%B1%D9%83%D9%8A%D8%A8-%D8%A7%D8%AB%D8%A7%D8%AB-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A",
   },
   {
     name: "تخزين اثاث في دبي",
-    href: "/services/furniture-storage",
+    href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D8%AA%D8%AE%D8%B2%D9%8A%D9%86-%D8%A7%D8%AB%D8%A7%D8%AB-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A",
   },
 ];
 
 export const specializedServices = [
   {
     name: "نقل البيانو في دبي",
-    href: "/services/piano-moving",
+    href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA",
   },
   {
     name: "نقل الخزنة والأجهزة الثقيلة في دبي",
-    href: "/services/safe-heavy-equipment-moving",
+    href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA",
   },
   {
     name: "تركيب الستائر والسجاد في دبي",
-    href: "/services/curtain-carpet-installation",
+    href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA",
   },
   {
     name: "نقل الاثاث بين الإمارات",
-    href: "/services/inter-emirate-furniture-moving",
+    href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA",
   },
   {
     name: "التخلص من الاثاث القديم في دبي",
-    href: "/services/old-furniture-disposal",
+    href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA",
   },
   {
     name: "نقل اثاث نفس اليوم في دبي",
-    href: "/services/same-day-emergency-moving",
+    href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA",
   },
 ];
 

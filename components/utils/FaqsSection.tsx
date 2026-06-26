@@ -60,7 +60,6 @@ export const FAQSection: React.FC<FAQProps> = ({
   return (
     <>
       <Script
-        strategy="beforeInteractive"
         id="FAQSchema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: FaqsSchema }}

@@ -101,9 +101,9 @@ export const dubaiSubLocations: SubLocationData[] = [
       },
     ],
     internalLinks: [
-      { title: "خدمة نقل الشقق في دبي", href: "/services/apartment-moving" },
-      { title: "تغليف اثاث احترافي", href: "/services/packing-wrapping" },
-      { title: "تخزين الاثاث في القوز", href: "/services/furniture-storage" },
+      { title: "خدمة نقل الشقق في دبي", href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D9%86%D9%82%D9%84-%D8%A7%D8%AB%D8%A7%D8%AB-%D8%A7%D9%84%D8%B4%D9%82%D9%82-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A" },
+      { title: "تغليف اثاث احترافي", href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D8%AA%D8%BA%D9%84%D9%8A%D9%81-%D8%A7%D8%AB%D8%A7%D8%AB-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A" },
+      { title: "تخزين الاثاث في القوز", href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D8%AA%D8%AE%D8%B2%D9%8A%D9%86-%D8%A7%D8%AB%D8%A7%D8%AB-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A" },
       {
         title: "نقل اثاث في أبراج بحيرات جميرا (JLT)",
         href: "/نقل-اثاث-ابراج-بحيرات-جميرا",
@@ -111,7 +111,7 @@ export const dubaiSubLocations: SubLocationData[] = [
       { title: "نقل اثاث في نخلة جميرا", href: "/نقل-اثاث-نخلة-جميرا" },
       {
         title: "نقل بين الإمارات",
-        href: "/services/inter-emirate-furniture-moving",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA",
       },
     ],
   },
@@ -223,9 +223,9 @@ export const dubaiSubLocations: SubLocationData[] = [
       },
     ],
     internalLinks: [
-      { title: "نقل اثاث الفلل في دبي", href: "/services/villa-moving" },
-      { title: "نقل اثاث الشقق في دبي", href: "/services/apartment-moving" },
-      { title: "تخزين اثاث في دبي", href: "/services/furniture-storage" },
+      { title: "نقل اثاث الفلل في دبي", href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D9%86%D9%82%D9%84-%D8%A7%D8%AB%D8%A7%D8%AB-%D8%A7%D9%84%D9%81%D9%84%D9%84-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A" },
+      { title: "نقل اثاث الشقق في دبي", href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D9%86%D9%82%D9%84-%D8%A7%D8%AB%D8%A7%D8%AB-%D8%A7%D9%84%D8%B4%D9%82%D9%82-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A" },
+      { title: "تخزين اثاث في دبي", href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D8%AA%D8%AE%D8%B2%D9%8A%D9%86-%D8%A7%D8%AB%D8%A7%D8%AB-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A" },
       { title: "نقل اثاث في الخليج التجاري", href: "/نقل-اثاث-الخليج-التجاري" },
       { title: "نقل اثاث في دبي مارينا", href: "/نقل-اثاث-دبي-مارينا" },
       { title: "نقل اثاث في دبي هيلز", href: "/نقل-اثاث-دبي-هيلز" },
@@ -347,14 +347,14 @@ export const dubaiSubLocations: SubLocationData[] = [
       },
     ],
     internalLinks: [
-      { title: "نقل اثاث الشقق في دبي", href: "/services/apartment-moving" },
-      { title: "نقل اثاث المكاتب", href: "/services/office-moving" },
-      { title: "تخزين اثاث في القوز", href: "/services/furniture-storage" },
+      { title: "نقل اثاث الشقق في دبي", href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D9%86%D9%82%D9%84-%D8%A7%D8%AB%D8%A7%D8%AB-%D8%A7%D9%84%D8%B4%D9%82%D9%82-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A" },
+      { title: "نقل اثاث المكاتب", href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D9%86%D9%82%D9%84-%D8%A7%D8%AB%D8%A7%D8%AB-%D8%A7%D9%84%D9%85%D9%83%D8%A7%D8%AA%D8%A8-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A" },
+      { title: "تخزين اثاث في القوز", href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D8%AA%D8%AE%D8%B2%D9%8A%D9%86-%D8%A7%D8%AB%D8%A7%D8%AB-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A" },
       { title: "نقل اثاث في دبي مارينا", href: "/نقل-اثاث-دبي-مارينا" },
       { title: "نقل اثاث في الخليج التجاري", href: "/نقل-اثاث-الخليج-التجاري" },
       {
         title: "نقل بين الإمارات",
-        href: "/services/inter-emirate-furniture-moving",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA",
       },
     ],
   },
@@ -476,15 +476,15 @@ export const dubaiSubLocations: SubLocationData[] = [
       },
     ],
     internalLinks: [
-      { title: "نقل اثاث المكاتب في دبي", href: "/services/office-moving" },
-      { title: "نقل البيانو في دبي", href: "/services/piano-moving" },
+      { title: "نقل اثاث المكاتب في دبي", href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D9%86%D9%82%D9%84-%D8%A7%D8%AB%D8%A7%D8%AB-%D8%A7%D9%84%D9%85%D9%83%D8%A7%D8%AA%D8%A8-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A" },
+      { title: "نقل البيانو في دبي", href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA" },
       {
         title: "نقل الخزنة في دبي",
-        href: "/services/safe-heavy-equipment-moving",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA",
       },
       { title: "نقل اثاث في وسط مدينة دبي", href: "/نقل-اثاث-وسط-مدينة-دبي" },
-      { title: "نقل اثاث في DIFC", href: "/services/office-moving" },
-      { title: "تخزين اثاث في دبي", href: "/services/furniture-storage" },
+      { title: "نقل اثاث في DIFC", href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D9%86%D9%82%D9%84-%D8%A7%D8%AB%D8%A7%D8%AB-%D8%A7%D9%84%D9%85%D9%83%D8%A7%D8%AA%D8%A8-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A" },
+      { title: "تخزين اثاث في دبي", href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D8%AA%D8%AE%D8%B2%D9%8A%D9%86-%D8%A7%D8%AB%D8%A7%D8%AB-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A" },
     ],
   },
   {
@@ -601,11 +601,11 @@ export const dubaiSubLocations: SubLocationData[] = [
       },
     ],
     internalLinks: [
-      { title: "نقل اثاث الفلل في دبي", href: "/services/villa-moving" },
-      { title: "نقل اثاث الشقق في دبي", href: "/services/apartment-moving" },
+      { title: "نقل اثاث الفلل في دبي", href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D9%86%D9%82%D9%84-%D8%A7%D8%AB%D8%A7%D8%AB-%D8%A7%D9%84%D9%81%D9%84%D9%84-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A" },
+      { title: "نقل اثاث الشقق في دبي", href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D9%86%D9%82%D9%84-%D8%A7%D8%AB%D8%A7%D8%AB-%D8%A7%D9%84%D8%B4%D9%82%D9%82-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A" },
       {
         title: "تركيب الستائر والسجاد",
-        href: "/services/curtain-carpet-installation",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA",
       },
       { title: "نقل اثاث في البرشاء", href: "/نقل-اثاث-البرشاء" },
       { title: "نقل اثاث في موتور سيتي", href: "/نقل-اثاث-موتور-سيتي" },
@@ -740,14 +740,14 @@ export const dubaiSubLocations: SubLocationData[] = [
       },
     ],
     internalLinks: [
-      { title: "نقل اثاث الفلل في دبي", href: "/services/villa-moving" },
-      { title: "نقل البيانو في دبي", href: "/services/piano-moving" },
+      { title: "نقل اثاث الفلل في دبي", href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D9%86%D9%82%D9%84-%D8%A7%D8%AB%D8%A7%D8%AB-%D8%A7%D9%84%D9%81%D9%84%D9%84-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A" },
+      { title: "نقل البيانو في دبي", href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA" },
       {
         title: "تركيب الستائر والسجاد",
-        href: "/services/curtain-carpet-installation",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA",
       },
       { title: "نقل اثاث في دبي مارينا", href: "/نقل-اثاث-دبي-مارينا" },
-      { title: "تخزين اثاث في دبي", href: "/services/furniture-storage" },
+      { title: "تخزين اثاث في دبي", href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D8%AA%D8%AE%D8%B2%D9%8A%D9%86-%D8%A7%D8%AB%D8%A7%D8%AB-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A" },
     ],
   },
   {
@@ -857,12 +857,12 @@ export const dubaiSubLocations: SubLocationData[] = [
       },
     ],
     internalLinks: [
-      { title: "نقل اثاث الفلل في دبي", href: "/services/villa-moving" },
+      { title: "نقل اثاث الفلل في دبي", href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D9%86%D9%82%D9%84-%D8%A7%D8%AB%D8%A7%D8%AB-%D8%A7%D9%84%D9%81%D9%84%D9%84-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A" },
       {
         title: "التخلص من الاثاث القديم",
-        href: "/services/old-furniture-disposal",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA",
       },
-      { title: "تخزين اثاث في دبي", href: "/services/furniture-storage" },
+      { title: "تخزين اثاث في دبي", href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D8%AA%D8%AE%D8%B2%D9%8A%D9%86-%D8%A7%D8%AB%D8%A7%D8%AB-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A" },
       {
         title: "نقل اثاث في قرية جميرا الدائرية",
         href: "/نقل-اثاث-قرية-جميرا-الدائرية",
@@ -983,12 +983,12 @@ export const dubaiSubLocations: SubLocationData[] = [
       },
     ],
     internalLinks: [
-      { title: "نقل اثاث الشقق في دبي", href: "/services/apartment-moving" },
+      { title: "نقل اثاث الشقق في دبي", href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D9%86%D9%82%D9%84-%D8%A7%D8%AB%D8%A7%D8%AB-%D8%A7%D9%84%D8%B4%D9%82%D9%82-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A" },
       { title: "نقل اثاث في بر دبي", href: "/نقل-اثاث-بر-دبي" },
       { title: "نقل اثاث الشارقة", href: "/نقل-اثاث-الشارقة" },
       {
         title: "نقل اثاث نفس اليوم",
-        href: "/services/same-day-emergency-moving",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA",
       },
     ],
   },
@@ -1097,8 +1097,8 @@ export const dubaiSubLocations: SubLocationData[] = [
       },
     ],
     internalLinks: [
-      { title: "نقل اثاث الشقق في دبي", href: "/services/apartment-moving" },
-      { title: "تغليف اثاث في دبي", href: "/services/packing-wrapping" },
+      { title: "نقل اثاث الشقق في دبي", href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D9%86%D9%82%D9%84-%D8%A7%D8%AB%D8%A7%D8%AB-%D8%A7%D9%84%D8%B4%D9%82%D9%82-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A" },
+      { title: "تغليف اثاث في دبي", href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D8%AA%D8%BA%D9%84%D9%8A%D9%81-%D8%A7%D8%AB%D8%A7%D8%AB-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A" },
       { title: "نقل اثاث في ديرة", href: "/نقل-اثاث-ديرة" },
     ],
   },
@@ -1221,11 +1221,11 @@ export const dubaiSubLocations: SubLocationData[] = [
       },
     ],
     internalLinks: [
-      { title: "نقل اثاث الفلل في دبي", href: "/services/villa-moving" },
-      { title: "نقل البيانو في دبي", href: "/services/piano-moving" },
+      { title: "نقل اثاث الفلل في دبي", href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D9%86%D9%82%D9%84-%D8%A7%D8%AB%D8%A7%D8%AB-%D8%A7%D9%84%D9%81%D9%84%D9%84-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A" },
+      { title: "نقل البيانو في دبي", href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA" },
       {
         title: "تركيب الستائر والسجاد",
-        href: "/services/curtain-carpet-installation",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA",
       },
       { title: "نقل اثاث في نخلة جميرا", href: "/نقل-اثاث-نخلة-جميرا" },
       { title: "نقل اثاث في البرشاء", href: "/نقل-اثاث-البرشاء" },
@@ -1370,11 +1370,11 @@ export const dubaiSubLocations: SubLocationData[] = [
     internalLinks: [
       {
         title: "نقل اثاث الفلل في دبي",
-        href: "/services/villa-moving",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D9%86%D9%82%D9%84-%D8%A7%D8%AB%D8%A7%D8%AB-%D8%A7%D9%84%D9%81%D9%84%D9%84-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A",
       },
       {
         title: "نقل التاون هاوس",
-        href: "/services/villa-moving",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D9%86%D9%82%D9%84-%D8%A7%D8%AB%D8%A7%D8%AB-%D8%A7%D9%84%D9%81%D9%84%D9%84-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A",
       },
       {
         title: "نقل اثاث في قرية جميرا الدائرية",
@@ -1390,7 +1390,7 @@ export const dubaiSubLocations: SubLocationData[] = [
       },
       {
         title: "تخزين اثاث في دبي",
-        href: "/services/furniture-storage",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D8%AA%D8%AE%D8%B2%D9%8A%D9%86-%D8%A7%D8%AB%D8%A7%D8%AB-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A",
       },
     ],
   },
@@ -1532,15 +1532,15 @@ export const dubaiSubLocations: SubLocationData[] = [
     internalLinks: [
       {
         title: "نقل اثاث الفلل في دبي",
-        href: "/services/villa-moving",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D9%86%D9%82%D9%84-%D8%A7%D8%AB%D8%A7%D8%AB-%D8%A7%D9%84%D9%81%D9%84%D9%84-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A",
       },
       {
         title: "التخلص من الاثاث القديم",
-        href: "/services/old-furniture-disposal",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA",
       },
       {
         title: "تخزين اثاث في دبي",
-        href: "/services/furniture-storage",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D8%AA%D8%AE%D8%B2%D9%8A%D9%86-%D8%A7%D8%AB%D8%A7%D8%AB-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A",
       },
       {
         title: "نقل اثاث في الراشدية",
@@ -1695,11 +1695,11 @@ export const dubaiSubLocations: SubLocationData[] = [
     internalLinks: [
       {
         title: "نقل اثاث المكاتب في دبي",
-        href: "/services/office-moving",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D9%86%D9%82%D9%84-%D8%A7%D8%AB%D8%A7%D8%AB-%D8%A7%D9%84%D9%85%D9%83%D8%A7%D8%AA%D8%A8-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A",
       },
       {
         title: "نقل اثاث نفس اليوم",
-        href: "/services/same-day-emergency-moving",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA",
       },
       {
         title: "نقل اثاث الشارقة",
@@ -1858,15 +1858,15 @@ export const dubaiSubLocations: SubLocationData[] = [
     internalLinks: [
       {
         title: "نقل اثاث الشقق في دبي",
-        href: "/services/apartment-moving",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D9%86%D9%82%D9%84-%D8%A7%D8%AB%D8%A7%D8%AB-%D8%A7%D9%84%D8%B4%D9%82%D9%82-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A",
       },
       {
         title: "تخزين اثاث في دبي",
-        href: "/services/furniture-storage",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D8%AA%D8%AE%D8%B2%D9%8A%D9%86-%D8%A7%D8%AB%D8%A7%D8%AB-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A",
       },
       {
         title: "نقل اثاث نفس اليوم",
-        href: "/services/same-day-emergency-moving",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA",
       },
       {
         title: "نقل اثاث في الجداف",
@@ -2011,15 +2011,15 @@ export const dubaiSubLocations: SubLocationData[] = [
     internalLinks: [
       {
         title: "نقل اثاث الفلل في دبي",
-        href: "/services/villa-moving",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D9%86%D9%82%D9%84-%D8%A7%D8%AB%D8%A7%D8%AB-%D8%A7%D9%84%D9%81%D9%84%D9%84-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A",
       },
       {
         title: "تغليف اثاث في دبي",
-        href: "/services/packing-wrapping",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D8%AA%D8%BA%D9%84%D9%8A%D9%81-%D8%A7%D8%AB%D8%A7%D8%AB-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A",
       },
       {
         title: "تخزين اثاث في دبي",
-        href: "/services/furniture-storage",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D8%AA%D8%AE%D8%B2%D9%8A%D9%86-%D8%A7%D8%AB%D8%A7%D8%AB-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A",
       },
       {
         title: "نقل اثاث في مردف",
@@ -2173,15 +2173,15 @@ export const dubaiSubLocations: SubLocationData[] = [
     internalLinks: [
       {
         title: "نقل اثاث الشقق في دبي",
-        href: "/services/apartment-moving",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D9%86%D9%82%D9%84-%D8%A7%D8%AB%D8%A7%D8%AB-%D8%A7%D9%84%D8%B4%D9%82%D9%82-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A",
       },
       {
         title: "نقل اثاث نفس اليوم",
-        href: "/services/same-day-emergency-moving",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA",
       },
       {
         title: "تخزين اثاث في دبي",
-        href: "/services/furniture-storage",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D8%AA%D8%AE%D8%B2%D9%8A%D9%86-%D8%A7%D8%AB%D8%A7%D8%AB-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A",
       },
       {
         title: "نقل اثاث في وسط مدينة دبي",
@@ -2344,11 +2344,11 @@ export const dubaiSubLocations: SubLocationData[] = [
     internalLinks: [
       {
         title: "نقل اثاث الفلل في دبي",
-        href: "/services/villa-moving",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D9%86%D9%82%D9%84-%D8%A7%D8%AB%D8%A7%D8%AB-%D8%A7%D9%84%D9%81%D9%84%D9%84-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A",
       },
       {
         title: "نقل التاون هاوس",
-        href: "/services/villa-moving",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D9%86%D9%82%D9%84-%D8%A7%D8%AB%D8%A7%D8%AB-%D8%A7%D9%84%D9%81%D9%84%D9%84-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A",
       },
       {
         title: "نقل اثاث في قرية جميرا الدائرية",
@@ -2511,15 +2511,15 @@ export const dubaiSubLocations: SubLocationData[] = [
     internalLinks: [
       {
         title: "نقل اثاث الفلل في دبي",
-        href: "/services/villa-moving",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D9%86%D9%82%D9%84-%D8%A7%D8%AB%D8%A7%D8%AB-%D8%A7%D9%84%D9%81%D9%84%D9%84-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A",
       },
       {
         title: "نقل اثاث الشقق في دبي",
-        href: "/services/apartment-moving",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D9%86%D9%82%D9%84-%D8%A7%D8%AB%D8%A7%D8%AB-%D8%A7%D9%84%D8%B4%D9%82%D9%82-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A",
       },
       {
         title: "تخزين اثاث في دبي",
-        href: "/services/furniture-storage",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D8%AA%D8%AE%D8%B2%D9%8A%D9%86-%D8%A7%D8%AB%D8%A7%D8%AB-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A",
       },
       {
         title: "نقل اثاث في قرية جميرا الدائرية",
@@ -2683,15 +2683,15 @@ export const dubaiSubLocations: SubLocationData[] = [
     internalLinks: [
       {
         title: "نقل اثاث الفلل في دبي",
-        href: "/services/villa-moving",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D9%86%D9%82%D9%84-%D8%A7%D8%AB%D8%A7%D8%AB-%D8%A7%D9%84%D9%81%D9%84%D9%84-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A",
       },
       {
         title: "نقل المعدات الإلكترونية",
-        href: "/services/office-moving",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D9%86%D9%82%D9%84-%D8%A7%D8%AB%D8%A7%D8%AB-%D8%A7%D9%84%D9%85%D9%83%D8%A7%D8%AA%D8%A8-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A",
       },
       {
         title: "تخزين اثاث في دبي",
-        href: "/services/furniture-storage",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D8%AA%D8%AE%D8%B2%D9%8A%D9%86-%D8%A7%D8%AB%D8%A7%D8%AB-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A",
       },
       {
         title: "نقل اثاث في دبي هيلز",
@@ -2868,15 +2868,15 @@ export const dubaiSubLocations: SubLocationData[] = [
     internalLinks: [
       {
         title: "نقل اثاث الفلل في دبي",
-        href: "/services/villa-moving",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D9%86%D9%82%D9%84-%D8%A7%D8%AB%D8%A7%D8%AB-%D8%A7%D9%84%D9%81%D9%84%D9%84-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A",
       },
       {
         title: "تركيب الستائر والسجاد",
-        href: "/services/curtain-carpet-installation",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA",
       },
       {
         title: "نقل البيانو في دبي",
-        href: "/services/piano-moving",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA",
       },
       {
         title: "نقل اثاث في البرشاء",
@@ -3035,11 +3035,11 @@ export const dubaiSubLocations: SubLocationData[] = [
     internalLinks: [
       {
         title: "نقل اثاث الفلل في دبي",
-        href: "/services/villa-moving",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D9%86%D9%82%D9%84-%D8%A7%D8%AB%D8%A7%D8%AB-%D8%A7%D9%84%D9%81%D9%84%D9%84-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A",
       },
       {
         title: "نقل بين الإمارات",
-        href: "/services/inter-emirate-furniture-moving",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA",
       },
       {
         title: "نقل اثاث في الفرجان",
@@ -3055,7 +3055,7 @@ export const dubaiSubLocations: SubLocationData[] = [
       },
       {
         title: "تخزين اثاث في دبي",
-        href: "/services/furniture-storage",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D8%AA%D8%AE%D8%B2%D9%8A%D9%86-%D8%A7%D8%AB%D8%A7%D8%AB-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A",
       },
     ],
   },
@@ -3189,7 +3189,7 @@ export const dubaiSubLocations: SubLocationData[] = [
       },
       {
         title: "نقل المكاتب في دبي",
-        href: "/services/office-moving",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D9%86%D9%82%D9%84-%D8%A7%D8%AB%D8%A7%D8%AB-%D8%A7%D9%84%D9%85%D9%83%D8%A7%D8%AA%D8%A8-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A",
       },
       {
         title: "نقل اثاث في موتور سيتي",
@@ -3197,11 +3197,11 @@ export const dubaiSubLocations: SubLocationData[] = [
       },
       {
         title: "تخزين اثاث في دبي",
-        href: "/services/furniture-storage",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D8%AA%D8%AE%D8%B2%D9%8A%D9%86-%D8%A7%D8%AB%D8%A7%D8%AB-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A",
       },
       {
         title: "نقل اثاث نفس اليوم",
-        href: "/services/same-day-emergency-moving",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA",
       },
     ],
   },
@@ -3355,7 +3355,7 @@ export const dubaiSubLocations: SubLocationData[] = [
     internalLinks: [
       {
         title: "نقل المكاتب في دبي",
-        href: "/services/office-moving",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D9%86%D9%82%D9%84-%D8%A7%D8%AB%D8%A7%D8%AB-%D8%A7%D9%84%D9%85%D9%83%D8%A7%D8%AA%D8%A8-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A",
       },
       {
         title: "نقل اثاث في وسط مدينة دبي",
@@ -3367,11 +3367,11 @@ export const dubaiSubLocations: SubLocationData[] = [
       },
       {
         title: "تخزين اثاث في دبي",
-        href: "/services/furniture-storage",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D8%AA%D8%AE%D8%B2%D9%8A%D9%86-%D8%A7%D8%AB%D8%A7%D8%AB-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A",
       },
       {
         title: "فك وتركيب اثاث",
-        href: "/services/assembly-disassembly",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D9%81%D9%83-%D9%88%D8%AA%D8%B1%D9%83%D9%8A%D8%A8-%D8%A7%D8%AB%D8%A7%D8%AB-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A",
       },
       {
         title: "نقل اثاث في عود ميثاء",
@@ -3517,7 +3517,7 @@ export const dubaiSubLocations: SubLocationData[] = [
     internalLinks: [
       {
         title: "تخزين اثاث في دبي",
-        href: "/services/furniture-storage",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D8%AA%D8%AE%D8%B2%D9%8A%D9%86-%D8%A7%D8%AB%D8%A7%D8%AB-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A",
       },
       {
         title: "نقل اثاث في البرشاء",
@@ -3525,7 +3525,7 @@ export const dubaiSubLocations: SubLocationData[] = [
       },
       {
         title: "نقل اثاث نفس اليوم",
-        href: "/services/same-day-emergency-moving",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA",
       },
       {
         title: "نقل اثاث في جميرا",
@@ -3533,11 +3533,11 @@ export const dubaiSubLocations: SubLocationData[] = [
       },
       {
         title: "نقل المكاتب في دبي",
-        href: "/services/office-moving",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D9%86%D9%82%D9%84-%D8%A7%D8%AB%D8%A7%D8%AB-%D8%A7%D9%84%D9%85%D9%83%D8%A7%D8%AA%D8%A8-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A",
       },
       {
         title: "التخلص من الاثاث القديم",
-        href: "/services/old-furniture-disposal",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA",
       },
     ],
   },
@@ -3666,11 +3666,11 @@ export const dubaiSubLocations: SubLocationData[] = [
       },
       {
         title: "تخزين اثاث في دبي",
-        href: "/services/furniture-storage",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D8%AA%D8%AE%D8%B2%D9%8A%D9%86-%D8%A7%D8%AB%D8%A7%D8%AB-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A",
       },
       {
         title: "نقل الشقق في دبي",
-        href: "/services/apartment-moving",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D9%86%D9%82%D9%84-%D8%A7%D8%AB%D8%A7%D8%AB-%D8%A7%D9%84%D8%B4%D9%82%D9%82-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A",
       },
     ],
   },
@@ -3790,15 +3790,15 @@ export const dubaiSubLocations: SubLocationData[] = [
       },
       {
         title: "نقل الشقق في دبي",
-        href: "/services/apartment-moving",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D9%86%D9%82%D9%84-%D8%A7%D8%AB%D8%A7%D8%AB-%D8%A7%D9%84%D8%B4%D9%82%D9%82-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A",
       },
       {
         title: "نقل اثاث نفس اليوم",
-        href: "/services/same-day-emergency-moving",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA",
       },
       {
         title: "تخزين اثاث في دبي",
-        href: "/services/furniture-storage",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D8%AA%D8%AE%D8%B2%D9%8A%D9%86-%D8%A7%D8%AB%D8%A7%D8%AB-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A",
       },
     ],
   },
@@ -3931,11 +3931,11 @@ export const dubaiSubLocations: SubLocationData[] = [
       },
       {
         title: "التخلص من الاثاث القديم",
-        href: "/services/old-furniture-disposal",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA",
       },
       {
         title: "نقل اثاث نفس اليوم",
-        href: "/services/same-day-emergency-moving",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA",
       },
     ],
   },
@@ -4063,11 +4063,11 @@ export const dubaiSubLocations: SubLocationData[] = [
       },
       {
         title: "نقل اثاث نفس اليوم",
-        href: "/services/same-day-emergency-moving",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA",
       },
       {
         title: "تخزين اثاث",
-        href: "/services/furniture-storage",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D8%AA%D8%AE%D8%B2%D9%8A%D9%86-%D8%A7%D8%AB%D8%A7%D8%AB-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A",
       },
     ],
   },
@@ -4202,7 +4202,7 @@ export const dubaiSubLocations: SubLocationData[] = [
       },
       {
         title: "نقل الفلل في دبي",
-        href: "/services/villa-moving",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D9%86%D9%82%D9%84-%D8%A7%D8%AB%D8%A7%D8%AB-%D8%A7%D9%84%D9%81%D9%84%D9%84-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A",
       },
       {
         title: "نقل اثاث في القصيص",
@@ -4210,7 +4210,7 @@ export const dubaiSubLocations: SubLocationData[] = [
       },
       {
         title: "تخزين اثاث في دبي",
-        href: "/services/furniture-storage",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D8%AA%D8%AE%D8%B2%D9%8A%D9%86-%D8%A7%D8%AB%D8%A7%D8%AB-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A",
       },
     ],
   },
@@ -4340,15 +4340,15 @@ export const dubaiSubLocations: SubLocationData[] = [
     internalLinks: [
       {
         title: "نقل اثاث الفلل في دبي",
-        href: "/services/villa-moving",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D9%86%D9%82%D9%84-%D8%A7%D8%AB%D8%A7%D8%AB-%D8%A7%D9%84%D9%81%D9%84%D9%84-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A",
       },
       {
         title: "نقل البيانو في دبي",
-        href: "/services/piano-moving",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA",
       },
       {
         title: "تركيب الستائر والسجاد",
-        href: "/services/curtain-carpet-installation",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA",
       },
       {
         title: "نقل اثاث في جميرا",
@@ -4360,7 +4360,7 @@ export const dubaiSubLocations: SubLocationData[] = [
       },
       {
         title: "تخزين اثاث في دبي",
-        href: "/services/furniture-storage",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D8%AA%D8%AE%D8%B2%D9%8A%D9%86-%D8%A7%D8%AB%D8%A7%D8%AB-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A",
       },
     ],
   },
@@ -4502,11 +4502,11 @@ export const dubaiSubLocations: SubLocationData[] = [
       },
       {
         title: "نقل الشقق في دبي",
-        href: "/services/apartment-moving",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D9%86%D9%82%D9%84-%D8%A7%D8%AB%D8%A7%D8%AB-%D8%A7%D9%84%D8%B4%D9%82%D9%82-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A",
       },
       {
         title: "تخزين اثاث في دبي",
-        href: "/services/furniture-storage",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D8%AA%D8%AE%D8%B2%D9%8A%D9%86-%D8%A7%D8%AB%D8%A7%D8%AB-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A",
       },
     ],
   },
@@ -4648,11 +4648,11 @@ export const dubaiSubLocations: SubLocationData[] = [
       },
       {
         title: "نقل الشقق في دبي",
-        href: "/services/apartment-moving",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D9%86%D9%82%D9%84-%D8%A7%D8%AB%D8%A7%D8%AB-%D8%A7%D9%84%D8%B4%D9%82%D9%82-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A",
       },
       {
         title: "تخزين اثاث في دبي",
-        href: "/services/furniture-storage",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D8%AA%D8%AE%D8%B2%D9%8A%D9%86-%D8%A7%D8%AB%D8%A7%D8%AB-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A",
       },
     ],
   },
@@ -4828,11 +4828,11 @@ export const dubaiSubLocations: SubLocationData[] = [
       },
       {
         title: "نقل الفلل في دبي",
-        href: "/services/villa-moving",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D9%86%D9%82%D9%84-%D8%A7%D8%AB%D8%A7%D8%AB-%D8%A7%D9%84%D9%81%D9%84%D9%84-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A",
       },
       {
         title: "نقل بين الإمارات",
-        href: "/services/inter-emirate-furniture-moving",
+        href: "/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA",
       },
     ],
   },
