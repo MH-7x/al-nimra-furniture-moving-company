@@ -7,15 +7,21 @@ export function ReviewsSection() {
     <section className="py-16">
       <div className="max-w-6xl mx-auto px-4 grid lg:grid-cols-2 grid-cols-1 md:gap-16 gap-10 items-center md:mb-0 mb-5">
         <div>
-          <h2 className="leading-snug">
-            الدليل الاجتماعي - ماذا يقول سكان دبي عن النمره؟
+          <h2 className="leading-snug text-3xl">
+            الدليل الاجتماعي - ماذا يقول سكان دبي عن النمره النمرة نقل اثاث ؟
           </h2>
           <p className="text-muted-foreground text-sm my-5 ">
             سمعتنا هي رأسمالنا الحقيقي. نحن شركة نقل اثاث موثوقة في دبي لأننا
             نفي بوعودنا دائماً.
           </p>
-          <Button variant={"outline"}>
-            ⭐⭐⭐⭐⭐ شاهد تقييمات عملائنا على Google
+          <Button variant={"outline"} asChild>
+            <a
+              href="https://search.google.com/local/reviews?placeid=ChIJjeNo41ppXz4R34OmlNqaUBU"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              ⭐⭐⭐⭐⭐ شاهد تقييمات عملائنا على Google
+            </a>
           </Button>
         </div>
         <div className="grid grid-cols-3 gap-3">

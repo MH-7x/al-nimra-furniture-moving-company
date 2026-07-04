@@ -4,6 +4,7 @@ import CTASection from "@/components/utils/CTASection";
 import QuoteSection from "@/components/utils/QuoteSection";
 import { ReviewsSection } from "@/components/utils/ReviewsSection";
 import Link from "next/link";
+import { BreadcrumbSchema } from "@/components/utils/BreadcrumbSchema";
 import {
   Check,
   Shield,
@@ -23,6 +24,7 @@ import {
 } from "lucide-react";
 import { Button } from "../ui/button";
 import Image from "next/image";
+import { APP_URL, PHONE_LINK, WHATSAPP_LINK } from "@/lib/utils";
 
 export interface ServiceFeature {
   title: string;
@@ -69,11 +71,21 @@ interface ServicePageLayoutProps {
 const ServicePageLayout: React.FC<ServicePageLayoutProps> = ({ data }) => {
   return (
     <main className="text-foreground rtl pb-20" dir="rtl">
+      <BreadcrumbSchema
+        items={[
+          { name: "الرئيسية", url: APP_URL },
+          { name: "خدمات نقل اثاث", url: `${APP_URL}/خدمات` },
+          {
+            name: data.title,
+            url: `${APP_URL}/خدمات/${data.slug}`,
+          },
+        ]}
+      />
       {/* Premium Split Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-[#114e54] via-[#075056] to-[#08363a] text-white py-16 lg:py-24 px-4 border-b border-white/5">
         {/* Glow Effects */}
-        <div className="absolute left-1/4 top-1/4 w-96 h-96 rounded-full bg-primary/10 blur-[100px] pointer-events-none" />
-        <div className="absolute right-1/4 bottom-1/4 w-96 h-96 rounded-full bg-[#fd5b09]/5 blur-[120px] pointer-events-none" />
+        <div className="absolute end-1/4 top-1/4 w-96 h-96 rounded-full bg-primary/10 blur-[100px] pointer-events-none" />
+        <div className="absolute start-1/4 bottom-1/4 w-96 h-96 rounded-full bg-[#fd5b09]/5 blur-[120px] pointer-events-none" />
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
 
         <div className="relative z-10 max-w-6xl mx-auto">
@@ -95,7 +107,7 @@ const ServicePageLayout: React.FC<ServicePageLayoutProps> = ({ data }) => {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Right Side: Text content */}
-            <div className="lg:col-span-7 text-right space-y-6">
+            <div className="lg:col-span-7 text-start space-y-6">
               {/* Star rating badge */}
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-white/90">
                 <span className="flex text-amber-400">
@@ -117,8 +129,12 @@ const ServicePageLayout: React.FC<ServicePageLayoutProps> = ({ data }) => {
               <p className="text-white/80 mt-5">{data.introParagraphs[0]}</p>
 
               <div className="flex flex-wrap gap-4 pt-4">
-                <Button>احصل على عرض سعر واتساب</Button>
-                <Button variant={"secondary"}>اتصل الآن</Button>
+                <Button asChild>
+                  <a href={WHATSAPP_LINK}>احصل على عرض سعر واتساب</a>
+                </Button>
+                <Button variant={"secondary"} asChild>
+                  <a href={PHONE_LINK}>اتصل الآن</a>
+                </Button>
               </div>
             </div>
 
@@ -195,7 +211,7 @@ const ServicePageLayout: React.FC<ServicePageLayoutProps> = ({ data }) => {
             <div className="lg:col-span-8 space-y-16">
               {/* Introduction Text Block */}
               <div className="bg-[#ffece1]/10 border border-[#ffece1]/50 p-6 md:p-8 rounded-3xl space-y-6 text-muted-foreground leading-relaxed text-base md:text-lg relative overflow-hidden">
-                <div className="absolute -left-12 -top-12 w-32 h-32 rounded-full bg-primary/5 blur-xl pointer-events-none" />
+                <div className="absolute -end-12 -top-12 w-32 h-32 rounded-full bg-primary/5 blur-xl pointer-events-none" />
                 {data.introParagraphs.slice(1).map((para, i) => (
                   <p key={i} className="md:text-base text-sm">
                     {para}
@@ -205,7 +221,7 @@ const ServicePageLayout: React.FC<ServicePageLayoutProps> = ({ data }) => {
 
               {/* Mazaaya / Sub-services Feature Grid (Top-Accented Cards) */}
               <div>
-                <h2 className="text-2xl md:text-3xl font-extrabold mb-8 text-[#075056] flex items-center gap-3">
+                <h2 className="text-2xl md:text-3xl font-extrabold mb-8 text-secondary-foreground flex items-center gap-3">
                   <span className="w-2.5 h-8 bg-primary rounded-full" />
                   {data.featuresTitle}
                 </h2>
@@ -226,7 +242,7 @@ const ServicePageLayout: React.FC<ServicePageLayoutProps> = ({ data }) => {
 
               {/* EEAT Value Props Grid */}
               <div>
-                <h2 className="text-2xl md:text-3xl font-extrabold mb-8 text-[#075056] flex items-center gap-3">
+                <h2 className="text-2xl md:text-3xl font-extrabold mb-8 text-secondary-foreground flex items-center gap-3">
                   <span className="w-2.5 h-8 bg-primary rounded-full" />
                   {data.whyChooseUsTitle}
                 </h2>
@@ -250,7 +266,7 @@ const ServicePageLayout: React.FC<ServicePageLayoutProps> = ({ data }) => {
               {/* Asymmetric Timeline / Process Steps */}
               {data.processTitle && data.processSteps && (
                 <div>
-                  <h2 className="text-2xl md:text-3xl font-extrabold mb-8 text-[#075056] flex items-center gap-3">
+                  <h2 className="text-2xl md:text-3xl font-extrabold mb-8 text-secondary-foreground flex items-center gap-3">
                     <span className="w-2.5 h-8 bg-primary rounded-full" />
                     {data.processTitle}
                   </h2>
@@ -259,9 +275,9 @@ const ServicePageLayout: React.FC<ServicePageLayoutProps> = ({ data }) => {
                       {data.processIntro}
                     </p>
                   )}
-                  <div className="space-y-8 relative pr-4">
+                  <div className="space-y-8 relative ps-4">
                     {/* Timeline line */}
-                    <div className="absolute right-[21px] top-4 bottom-4 w-0.5 bg-gradient-to-b from-primary via-[#114e54]/50 to-muted z-0" />
+                    <div className="absolute start-[21px] top-4 bottom-4 w-0.5 bg-gradient-to-b from-primary via-[#114e54]/50 to-muted z-0" />
 
                     {data.processSteps.map((step, i) => (
                       <div key={i} className="flex gap-6 relative z-10 group">
@@ -290,7 +306,7 @@ const ServicePageLayout: React.FC<ServicePageLayoutProps> = ({ data }) => {
               {/* Pricing Section (Interactive & Badge-Highlighted) */}
               <div>
                 <div className="flex flex-wrap items-center justify-between gap-4 mb-8">
-                  <h2 className="text-2xl md:text-3xl font-extrabold text-[#075056] flex items-center gap-3">
+                  <h2 className="text-2xl md:text-3xl font-extrabold text-secondary-foreground flex items-center gap-3">
                     <span className="w-2.5 h-8 bg-primary rounded-full" />
                     {data.pricingTitle}
                   </h2>
@@ -300,7 +316,7 @@ const ServicePageLayout: React.FC<ServicePageLayoutProps> = ({ data }) => {
                 </div>
 
                 <div className="overflow-x-auto rounded-3xl bg-white border border-muted shadow-sm">
-                  <table className="w-full text-right border-collapse min-w-[500px]">
+                  <table className="w-full text-start border-collapse min-w-[500px]">
                     <thead>
                       <tr className="bg-gradient-to-r from-[#114e54] to-[#075056] text-white font-bold border-b border-muted">
                         {data.pricingHeaders.map((header, idx) => (
@@ -354,7 +370,7 @@ const ServicePageLayout: React.FC<ServicePageLayoutProps> = ({ data }) => {
 
               {/* Areas Served (Tag-Cloud styling) */}
               <div className="bg-slate-50/60 p-6 md:p-8 rounded-3xl border border-muted space-y-6">
-                <h2 className="text-xl md:text-2xl font-bold text-[#075056] flex items-center gap-2">
+                <h2 className="text-xl md:text-2xl font-bold text-secondary-foreground flex items-center gap-2">
                   <MapPin className="w-5.5 h-5.5 text-primary" />
                   {data.areasTitle}
                 </h2>
@@ -387,7 +403,7 @@ const ServicePageLayout: React.FC<ServicePageLayoutProps> = ({ data }) => {
               <div className="lg:sticky lg:top-28 space-y-8">
                 {/* Fast Booking glassmorphic card */}
                 <div className="bg-secondary-foreground p-8 rounded-[2rem] text-white shadow-xl relative overflow-hidden border border-white/5">
-                  <div className="absolute -left-16 -top-16 w-48 h-48 rounded-full bg-primary/10 blur-2xl pointer-events-none" />
+                  <div className="absolute -end-16 -top-16 w-48 h-48 rounded-full bg-primary/10 blur-2xl pointer-events-none" />
 
                   <h3 className="text-xl font-bold mb-6 border-b text-white border-white/10 pb-4 flex items-center gap-2.5">
                     <Clock className="w-5.5 h-5.5 text-primary" />
@@ -400,7 +416,7 @@ const ServicePageLayout: React.FC<ServicePageLayoutProps> = ({ data }) => {
 
                   <div className="space-y-4">
                     <a
-                      href="https://wa.me/971541767605"
+                      href={WHATSAPP_LINK}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center justify-center gap-2 bg-primary hover:bg-primary/95 text-white font-bold h-13 rounded-xl transition-all shadow-lg shadow-primary/25 w-full hover:-translate-y-0.5"
@@ -408,7 +424,7 @@ const ServicePageLayout: React.FC<ServicePageLayoutProps> = ({ data }) => {
                       <span>تواصل واتساب فوري</span>
                     </a>
                     <a
-                      href="tel:0541767605"
+                      href={PHONE_LINK}
                       className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/15 text-white border border-white/15 font-bold h-13 rounded-xl transition-all w-full"
                     >
                       <span>اتصال هاتفي مباشر</span>

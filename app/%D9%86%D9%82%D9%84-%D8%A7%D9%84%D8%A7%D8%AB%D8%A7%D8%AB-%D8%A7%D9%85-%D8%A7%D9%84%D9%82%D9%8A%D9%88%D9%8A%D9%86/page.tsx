@@ -1,9 +1,9 @@
+import MetadataTemplate from "@/lib/MetaDataTemplate";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import {
   Shield,
-  UserCheck,
   CheckCircle,
   ChevronLeft,
   AlertCircle,
@@ -31,114 +31,34 @@ import { Button } from "@/components/ui/button";
 import { FAQSection } from "@/components/utils/FaqsSection";
 import QuoteSection from "@/components/utils/QuoteSection";
 import { ReviewsSection } from "@/components/utils/ReviewsSection";
+import { uaqFaqs } from "@/lib/FaqsData";
+import { APP_URL, PHONE_LINK, WHATSAPP_LINK } from "@/lib/utils";
+import { BreadcrumbSchema } from "@/components/utils/BreadcrumbSchema";
 
-export const metadata: Metadata = {
-  title: "نقل الاثاث ام القيوين | النمره - أسعار تبدأ من 400 درهم",
-  description:
-    "شركة النمره لنقل الاثاث في ام القيوين. فك وتغليف وتركيب الاثاث مع تأمين شامل وشاحنات مغلقة. معاينة مجانية وعرض سعر فوري. اتصل الآن 0541767605",
-  alternates: {
-    canonical: "/نقل-الاثاث-ام-القيوين",
+export const metadata = MetadataTemplate({
+  meta: {
+    title: "نقل الاثاث ام القيوين | النمره - أسعار تبدأ من 400 درهم",
+    desc: "شركة النمره لنقل الاثاث في ام القيوين. فك وتغليف وتركيب الاثاث مع تأمين شامل وشاحنات مغلقة. معاينة مجانية وعرض سعر فوري. اتصل الآن 0541767605",
   },
-};
-
-const uaqFaqs = [
-  {
-    question: "كم تكلفة نقل الاثاث في ام القيوين؟",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          تبدأ اسعار نقل الاثاث من 400 درهم للاستوديو وتزيد حسب حجم الأثاث
-          والمسافة والطابق والخدمات المطلوبة. أرسل لنا تفاصيل أثاثك ونعطيك سعر
-          دقيق مجاناً.
-        </p>
-      </div>
-    ),
+  canonical: "/نقل-الاثاث-ام-القيوين",
+  image: {
+    path: "/uaq/نقل-اثاث-ام-القيوين-النمرة-شركة-نقل.jpg",
+    alt: "نقل الاثاث ام القيوين | النمره - أسعار تبدأ من 400 درهم",
   },
-  {
-    question: "هل شركة النمره مرخصة لنقل الاثاث في ام القيوين؟",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          نعم. شركة النمره مرخصة بالكامل ومؤمنة لتقديم خدمات نقل الأثاث في جميع
-          إمارات الدولة بما فيها ام القيوين.
-        </p>
-      </div>
-    ),
-  },
-  {
-    question: "هل تشمل الخدمة فك وتركيب الأثاث؟",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          نعم. كل عملية نقل تشمل فك وتركيب الأثاث بالكامل بواسطة نجارين متخصصين.
-          هالخدمة مشمولة في السعر وما فيها تكلفة إضافية.
-        </p>
-      </div>
-    ),
-  },
-  {
-    question: "كم يستغرق نقل الاثاث في ام القيوين؟",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          يعتمد على حجم الأثاث والطابق والمسافة. شقة غرفتين عادة تاخذ من 4 إلى 6
-          ساعات شاملة الفك والتغليف والتركيب. فيلا كاملة من 8 إلى 10 ساعات.
-          النقل بين الإمارات يحتاج يوم كامل في العادة. نوصلك بالوقت المتفق عليه
-          ونبدأ فوراً بدون تأخير.
-        </p>
-      </div>
-    ),
-  },
-  {
-    question: "هل تنقلون الأثاث من ام القيوين الى إمارات أخرى؟",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          نعم. ننقل من ام القيوين إلى دبي والشارقة وعجمان وأبوظبي ورأس الخيمة
-          والفجيرة والعين. نفس مستوى التغليف والتأمين والخدمة.
-        </p>
-      </div>
-    ),
-  },
-  {
-    question: "ماذا لو تضرر أثاثي أثناء النقل؟",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          كل شحنة مغطاة بتأمين شامل. في الحالات النادرة اللي يصير فيها ضرر،
-          نتحمل المسؤولية الكاملة ونعوضك حسب قيمة القطعة. هالشي يفرقنا عن العمال
-          العشوائيين اللي ما عندهم أي ضمان.
-        </p>
-      </div>
-    ),
-  },
-  {
-    question: "هل فيه إمكانية نقل في نفس اليوم؟",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          نعم، نوفر نقل اثاث في نفس اليوم حسب التوفر. تواصل معنا بأسرع وقت ممكن
-          وننسق معك فوراً.
-        </p>
-      </div>
-    ),
-  },
-  {
-    question: "هل أحتاج أدفع مقدم قبل النقل؟",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          لا. ما نطلب أي دفعة مقدمة. الدفع يكون بعد ما نخلص النقل بالكامل وتتأكد
-          من سلامة كل شي.
-        </p>
-      </div>
-    ),
-  },
-];
+});;
 
 export default function UmmAlQuwainMovingPage() {
   return (
     <main dir="rtl" className="text-foreground pb-20">
+      <BreadcrumbSchema
+        items={[
+          { name: "الرئيسية", url: APP_URL },
+          {
+            name: "نقل اثاث ام القيوين",
+            url: `${APP_URL}/نقل-الاثاث-ام-القيوين`,
+          },
+        ]}
+      />
       {/* ══════════════════════════════════════════
           HERO — white editorial, orange-led
       ══════════════════════════════════════════ */}
@@ -167,7 +87,7 @@ export default function UmmAlQuwainMovingPage() {
 
           {/* Orange eyebrow + star rating */}
           <div className="flex flex-wrap items-center gap-4 mb-5">
-            <span className="text-primary font-bold text-xs uppercase tracking-widest border-r-2 border-primary pr-3">
+            <span className="text-primary font-bold text-xs uppercase tracking-widest border-s-2 border-primary ps-3">
               النمرة موفرز · أم القيوين
             </span>
             <span className="inline-flex items-center gap-1.5 text-xs font-medium text-muted-foreground">
@@ -187,7 +107,7 @@ export default function UmmAlQuwainMovingPage() {
               <span className="relative z-10 text-primary">ام القيوين</span>
               <span
                 aria-hidden
-                className="absolute bottom-1 right-0 left-0 h-3 bg-primary/10 -skew-x-3 rounded-sm z-0"
+                className="absolute bottom-1 start-0 end-0 h-3 bg-primary/10 -skew-x-3 rounded-sm z-0"
               />
             </span>{" "}
             <span className="text-2xl block mt-5">
@@ -208,7 +128,7 @@ export default function UmmAlQuwainMovingPage() {
           <div className="flex flex-wrap gap-3 mb-10">
             <Button size="lg" className="h-12 px-7 font-bold gap-2" asChild>
               <a
-                href="https://wa.me/971541767605"
+                href={WHATSAPP_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
                 id="cta-whatsapp-hero"
@@ -223,9 +143,9 @@ export default function UmmAlQuwainMovingPage() {
               className="h-12 px-7 font-bold gap-2 border-2"
               asChild
             >
-              <a href="tel:0541767605" dir="ltr" id="cta-phone-hero">
+              <a href={PHONE_LINK} dir="ltr" id="cta-phone-hero">
                 <Phone className="w-4 h-4" />
-                054 1767605
+                0541767605
               </a>
             </Button>
           </div>
@@ -317,8 +237,8 @@ export default function UmmAlQuwainMovingPage() {
               لماذا تختار شركة النمره لنقل الاثاث في ام القيوين؟
             </h2>
             <p className="text-white/70 max-w-4xl text-sm md:text-base leading-relaxed">
-              في شركات نقل كثيرة في السوق، وكلهم يقولون نفس الكلام: "نحن
-              الأفضل". لكن الفرق الحقيقي يبان في التفاصيل وفي تجربة العميل
+              في شركات نقل كثيرة في السوق، وكلهم يقولون نفس الكلام: &quot;نحن
+              الأفضل&quot;. لكن الفرق الحقيقي يبان في التفاصيل وفي تجربة العميل
               الفعلية. وهذي التفاصيل اللي تميّز شركة النمره كواحدة من افضل شركات
               نقل الاثاث في ام القيوين:
             </p>
@@ -769,9 +689,9 @@ export default function UmmAlQuwainMovingPage() {
               اسعار نقل الاثاث في ام القيوين
             </h2>
             <p className="text-muted-foreground text-sm md:text-base leading-relaxed max-w-3xl mx-auto">
-              من أكثر الأسئلة اللي نسمعها: "كم يكلف نقل الاثاث في ام القيوين؟"
-              الجواب يعتمد على عدة عوامل، لكن هنا فكرة عامة عن اسعار نقل الاثاث
-              لتساعدك في التخطيط:
+              من أكثر الأسئلة اللي نسمعها: &quot;كم يكلف نقل الاثاث في ام
+              القيوين؟&quot; الجواب يعتمد على عدة عوامل، لكن هنا فكرة عامة عن
+              اسعار نقل الاثاث لتساعدك في التخطيط:
             </p>
           </div>
 
@@ -779,7 +699,7 @@ export default function UmmAlQuwainMovingPage() {
             {/* Table */}
             <div className="lg:col-span-7 space-y-4">
               <div className="overflow-x-auto rounded-2xl border border-muted bg-white shadow-sm">
-                <table className="w-full text-right border-collapse text-xs md:text-sm">
+                <table className="w-full text-start border-collapse text-xs md:text-sm">
                   <thead>
                     <tr className="border-b border-muted bg-slate-50/80 text-secondary-foreground font-semibold">
                       <th className="py-3.5 px-5">نوع النقل</th>
@@ -1234,11 +1154,7 @@ export default function UmmAlQuwainMovingPage() {
               className="h-14 px-8 font-bold gap-2 text-base"
               asChild
             >
-              <a
-                href="https://wa.me/971541767605"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="w-5 h-5" />
                 راسلنا على واتساب
               </a>
@@ -1249,9 +1165,9 @@ export default function UmmAlQuwainMovingPage() {
               className="h-14 px-8 font-bold gap-2 text-base bg-white"
               asChild
             >
-              <a href="tel:0541767605" dir="ltr">
+              <a href={PHONE_LINK} dir="ltr">
                 <Phone className="w-5 h-5" />
-                054 1767605
+                0541767605
               </a>
             </Button>
           </div>

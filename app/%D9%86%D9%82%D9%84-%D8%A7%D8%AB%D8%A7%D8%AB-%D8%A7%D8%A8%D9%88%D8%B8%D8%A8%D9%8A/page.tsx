@@ -1,3 +1,4 @@
+import MetadataTemplate from "@/lib/MetaDataTemplate";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -20,135 +21,34 @@ import { FAQSection } from "@/components/utils/FaqsSection";
 import CTASection from "@/components/utils/CTASection";
 import QuoteSection from "@/components/utils/QuoteSection";
 import { ReviewsSection } from "@/components/utils/ReviewsSection";
+import { auhFaqs } from "@/lib/FaqsData";
+import { APP_URL, PHONE_LINK, WHATSAPP_LINK } from "@/lib/utils";
+import { BreadcrumbSchema } from "@/components/utils/BreadcrumbSchema";
 
-export const metadata: Metadata = {
-  title: "نقل اثاث ابوظبي | شركة النمره - 054 1767605",
-  description:
-    "شركة النمره لنقل اثاث ابوظبي – فك وتغليف وتركيب مع تأمين شامل وشاحنات مغلقة ومكيفة. معاينة مجانية وعرض سعر فوري. اتصل الآن!",
-  alternates: {
-    canonical: "/نقل-اثاث-ابوظبي",
+export const metadata = MetadataTemplate({
+  meta: {
+    title: "نقل اثاث ابوظبي | شركة النمرة نقل اثاث  - 0541767605",
+    desc: "شركة النمره نقل اثاث ابوظبي - فك وتركيب وتغليف ونقل بأمان. تأمين شامل، شاحنات مغلقة، معاينة مجانية. اتصل الآن 0541767605 واحصل على عرض سعر فوري.",
   },
-};
-
-const auhFaqs = [
-  {
-    question: "كم تكلفة نقل اثاث في ابوظبي؟",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          التكلفة تعتمد على حجم الشقة أو الفيلا والمسافة والطابق والخدمات
-          المطلوبة. كبداية، استوديو يبدأ من حوالي 800 درهم، وشقة غرفتين وصالة من
-          حوالي 1,400 درهم، والفلل تبدأ من 2,000 درهم وتزيد حسب الحجم. هذي
-          الأسعار تشمل الفك والتغليف والنقل والتركيب والتأمين. للحصول على سعر
-          دقيق لحالتك، تواصل معنا لترتيب معاينة مجانية أو أرسل صور وتفاصيل عبر
-          واتساب.
-        </p>
-      </div>
-    ),
+  canonical: "/نقل-اثاث-ابوظبي",
+  image: {
+    path: "/auh/نقل-اثاث-ابوظبي-النمره-شركة-نقل.jpg",
+    alt: "نقل اثاث ابوظبي | شركة النمرة نقل اثاث  - 0541767605",
   },
-  {
-    question: "ما هي افضل شركة نقل اثاث في ابوظبي؟",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          أفضل شركة نقل أثاث أبوظبي هي اللي تجمع بين الترخيص الرسمي والتأمين
-          الفعلي وشفافية الأسعار وتقييمات عملاء إيجابية على Google. قبل ما
-          تختار، اطلب وثيقة التأمين واسأل عن سياسة التعويض. شركة النمره مرخصة
-          ومؤمّنة وبخبرة تتجاوز 10 سنوات في نقل اثاث ابوظبي ودبي وباقي الإمارات.
-          شوف تقييماتنا واحكم بنفسك.
-        </p>
-      </div>
-    ),
-  },
-  {
-    question: "هل يوجد تأمين على الاثاث أثناء النقل؟",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          نعم. كل عملية نقل اثاث ابوظبي مع شركة النمره تشمل تأمين شامل على جميع
-          القطع بدون استثناء. أي ضرر يحصل أثناء الفك أو التغليف أو النقل أو
-          التركيب مغطى بالكامل. لو انكسرت مرآة أو تخدش سطح طاولة أو تعطل جهاز
-          بسبب النقل، التأمين يغطي التعويض. هذا التأمين جزء أساسي من الخدمة
-          ومشمول في السعر بدون أي مبلغ إضافي. قبل ما تختار أي شركة نقل، اسأل عن
-          وثيقة التأمين واطلب تشوفها.
-        </p>
-      </div>
-    ),
-  },
-  {
-    question: "كم يستغرق نقل اثاث شقة في ابوظبي؟",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          الوقت يعتمد على حجم الشقة ومحتوياتها وعدد الطوابق ونوع المبنى. استوديو
-          أو غرفة وصالة يأخذ من 3 إلى 5 ساعات شاملة الفك والتغليف والنقل
-          والتركيب. شقة غرفتين أو ثلاث غرف تأخذ من 5 إلى 8 ساعات. الفلل الكبيرة
-          ممكن تأخذ يوم كامل حسب الحجم وعدد الطوابق وكمية الأثاث. لو المبنى ما
-          فيه مصعد خدمة أو الشقة في دور عالي، الوقت يزيد شوية. نحدد لك الوقت
-          المتوقع بدقة بعد المعاينة.
-        </p>
-      </div>
-    ),
-  },
-  {
-    question: "هل تقدمون خدمة نقل اثاث من ابوظبي الى دبي؟",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          نعم، وهذا أكثر خط نقل نشتغل عليه لأن مقرنا في دبي. المسافة بين ابوظبي
-          ودبي حوالي 130 كيلومتر ونغطيها يومياً بنفس مستوى الخدمة والتأمين. كذلك
-          ننقل اثاث للشارقة وعجمان والعين ورأس الخيمة والفجيرة وأم القيوين.
-        </p>
-      </div>
-    ),
-  },
-  {
-    question: "هل يمكن نقل الاثاث في نفس اليوم في ابوظبي؟",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          نعم، حسب التوفر وحجم النقل. لو النقل صغير مثل استوديو أو غرفة وصالة،
-          غالباً نقدر نرتب خلال ساعات قليلة من الطلب. النقل الأكبر يحتاج تنسيق
-          أكثر لكن نحاول نوفر أقرب موعد ممكن. تواصل معنا عبر واتساب على 054
-          1767605 للطلبات العاجلة. نعطي أولوية لحالات النقل الطارئ مثل الإخلاء
-          المفاجئ أو انتهاء عقد الإيجار بشكل مبكر.
-        </p>
-      </div>
-    ),
-  },
-  {
-    question: "ما هي مواد التغليف المستخدمة لحماية الاثاث؟",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          نستخدم كراتين مقوّاة بسماكات مختلفة، غلاف فقاعات، بلاستيك مقوى للأسطح
-          الحساسة، بطانيات حماية سميكة، شرائط تثبيت، وصناديق مخصصة للزجاج
-          والأجهزة الإلكترونية والثريات. كل مادة مختارة لتناسب نوع القطعة اللي
-          تحميها. القطع الخشبية الثمينة نغلفها بطبقتين: بطانية ناعمة ملاصقة
-          للسطح ثم غلاف خارجي مقوى. ما نستخدم مواد رخيصة أو معاد تدويرها لأنها
-          ما توفر الحماية الكافية خصوصاً في حرارة ابوظبي.
-        </p>
-      </div>
-    ),
-  },
-  {
-    question: "هل تخدمون مناطق مصفح والرويس؟",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          نعم، وبشكل منتظم. نقدم خدمات نقل اثاث مصفح في المنطقة الصناعية بكل
-          أقسامها، ونقل اثاث الرويس في المنطقة الغربية بشاحنات مخصصة للمسافات
-          الطويلة. نغطي كل مناطق إمارة ابوظبي بدون استثناء، من وسط المدينة إلى
-          أبعد نقطة في المنطقة الغربية.
-        </p>
-      </div>
-    ),
-  },
-];
+});;
 
 export default function AbuDhabiMovingPage() {
   return (
     <main dir="rtl" className="text-foreground pb-20">
+      <BreadcrumbSchema
+        items={[
+          { name: "الرئيسية", url: APP_URL },
+          {
+            name: "نقل اثاث ابوظبي",
+            url: `${APP_URL}/نقل-اثاث-ابوظبي`,
+          },
+        ]}
+      />
       {/* ══════════════════════════════════════════
           HERO — white editorial, orange-led
       ══════════════════════════════════════════ */}
@@ -170,8 +70,8 @@ export default function AbuDhabiMovingPage() {
 
           {/* Orange eyebrow + star rating */}
           <div className="flex flex-wrap items-center gap-4 mb-5">
-            <span className="text-primary font-bold text-xs uppercase tracking-widest border-r-2 border-primary pr-3">
-              شركة النمره · ابوظبي
+            <span className="text-primary font-bold text-xs uppercase tracking-widest border-s-2 border-primary ps-3">
+              شركة النمرة نقل اثاث · ابوظبي
             </span>
             <span className="inline-flex items-center gap-1.5 text-xs font-medium text-muted-foreground">
               <span className="flex text-amber-400">
@@ -190,24 +90,28 @@ export default function AbuDhabiMovingPage() {
               <span className="relative z-10 text-primary">ابوظبي</span>
               <span
                 aria-hidden
-                className="absolute bottom-1 right-0 left-0 h-3 bg-primary/10 -skew-x-3 rounded-sm z-0"
+                className="absolute bottom-1 start-0 end-0 h-3 bg-primary/10 -skew-x-3 rounded-sm z-0"
               />
+            </span>
+            <span className="text-2xl block mt-5">
+              شركة النمره للنقل الآمن والمضمون
             </span>
           </h1>
 
           <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-2xl mb-8">
             تبحث عن خدمة نقل اثاث ابوظبي تضمن وصول كل قطعة من أثاثك كما هي؟ هذا
-            بالضبط ما نفعله في شركة النمره. على مدار أكثر من 10 سنوات، تولينا
-            آلاف عمليات نقل الأثاث في ابوظبي وبقية الإمارات، من شقق الاستوديو
-            الصغيرة إلى الفلل الكبيرة والمكاتب التجارية. مقرنا الرئيسي في دبي،
-            لكن فريقنا في أبوظبي يعمل يومياً في كل أحياء المدينة وضواحيها.
+            بالضبط ما نفعله في شركة النمرة نقل اثاث . على مدار أكثر من 10 سنوات،
+            تولينا آلاف عمليات نقل الأثاث في ابوظبي وبقية الإمارات، من شقق
+            الاستوديو الصغيرة إلى الفلل الكبيرة والمكاتب التجارية. مقرنا الرئيسي
+            في دبي، لكن فريقنا في أبوظبي يعمل يومياً في كل أحياء المدينة
+            وضواحيها.
           </p>
 
           {/* CTA row */}
           <div className="flex flex-wrap gap-3 mb-10">
             <Button size="lg" className="h-12 px-7 font-bold gap-2" asChild>
               <a
-                href="https://wa.me/971541767605"
+                href={WHATSAPP_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
                 id="cta-whatsapp-hero"
@@ -222,9 +126,9 @@ export default function AbuDhabiMovingPage() {
               className="h-12 px-7 font-bold gap-2 border-2"
               asChild
             >
-              <a href="tel:0541767605" dir="ltr" id="cta-phone-hero">
+              <a href={PHONE_LINK} dir="ltr" id="cta-phone-hero">
                 <Phone className="w-4 h-4" />
-                054 1767605
+                0541767605
               </a>
             </Button>
           </div>
@@ -252,7 +156,7 @@ export default function AbuDhabiMovingPage() {
           <div className="w-full aspect-video rounded-t-3xl overflow-hidden relative border-x border-t border-muted">
             <Image
               src="/auh/نقل-اثاث-ابوظبي-النمره-شركة-نقل.jpg"
-              alt="شركة النمره نقل اثاث في ابوظبي - شاحنة نقل أثاث أمام فيلا مع فريق عمل محترف"
+              alt="شركة النمرة نقل اثاث  نقل اثاث في ابوظبي - شاحنة نقل أثاث أمام فيلا مع فريق عمل محترف"
               fill
               className="object-cover"
               loading="eager"
@@ -303,11 +207,11 @@ export default function AbuDhabiMovingPage() {
           <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
             كل عملية نقل مؤمّنة بالكامل وبدون أي دفعة مقدمة. اتصل على{" "}
             <a
-              href="tel:0541767605"
+              href={PHONE_LINK}
               dir="ltr"
               className="text-primary font-bold hover:underline"
             >
-              054 1767605
+              0541767605
             </a>{" "}
             أو أرسل رسالة واتساب واحصل على عرض سعر خلال دقائق.
           </p>
@@ -379,7 +283,7 @@ export default function AbuDhabiMovingPage() {
                 </Link>
               </div>
               {/* Image */}
-              <div className="aspect-[4/3] md:aspect-auto relative order-1 md:order-2 min-h-[220px]">
+              <div className="aspect-4/3 relative order-1 md:order-2">
                 <Image
                   src="/auh/نقل-اثاث-شقق-ابوظبي-النمره.jpg"
                   alt="نقل أثاث الشقق في ابوظبي - فريق النمره ينقل أثاث من شقة سكنية"
@@ -458,7 +362,7 @@ export default function AbuDhabiMovingPage() {
                   <ArrowLeft className="w-4 h-4" />
                 </Link>
               </div>
-              <div className="aspect-[4/3] md:aspect-auto relative order-1 md:order-2 min-h-[220px]">
+              <div className="aspect-4/3 relative order-1 md:order-2">
                 <Image
                   src="/auh/نقل-اثاث-مكاتب-شركات-ابوظبي-النمره.jpg"
                   alt="نقل أثاث المكاتب والشركات في ابوظبي - فريق النمره ينقل أثاث مكتبي"
@@ -525,7 +429,7 @@ export default function AbuDhabiMovingPage() {
       </section>
 
       {/* ══════════════════════════════════════════
-          WHY CHOOSE US (لماذا تختار شركة النمره لنقل اثاث في ابوظبي؟)
+          WHY CHOOSE US (لماذا تختار شركة النمرة نقل اثاث  لنقل اثاث في ابوظبي؟)
       ══════════════════════════════════════════ */}
       <section className="py-16 px-4 bg-[#18232a] text-white mt-10">
         <div className="max-w-6xl mx-auto">
@@ -609,11 +513,11 @@ export default function AbuDhabiMovingPage() {
               هل تبحث عن افضل شركة نقل اثاث في ابوظبي؟ جرّب النمره واحكم بنفسك.
               اتصل بنا:{" "}
               <a
-                href="tel:0541767605"
+                href={PHONE_LINK}
                 dir="ltr"
                 className="text-primary font-bold hover:underline"
               >
-                054 1767605
+                0541767605
               </a>
             </p>
           </div>
@@ -630,7 +534,7 @@ export default function AbuDhabiMovingPage() {
               خطوة بخطوة
             </p>
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              كيف تتم عملية نقل الاثاث مع شركة النمره؟
+              كيف تتم عملية نقل الاثاث مع شركة النمرة نقل اثاث ؟
             </h2>
             <p className="text-muted-foreground max-w-2xl text-sm md:text-base leading-relaxed">
               كثير من الناس اللي يتواصلون معنا لأول مرة يسألون: كيف تمشي عملية
@@ -644,7 +548,7 @@ export default function AbuDhabiMovingPage() {
             {[
               {
                 title: "1. التواصل وطلب عرض السعر",
-                desc: "اتصل على 054 1767605 أو أرسل واتساب أو عبّي نموذج الموقع. نعطيك عرض سعر أولي فوري بناءً على المعلومات اللي توفرها، أو نرتب معاينة مجانية في الموقع إذا تفضل دقة أكبر في التسعير.",
+                desc: "اتصل على 0541767605 أو أرسل واتساب أو عبّي نموذج الموقع. نعطيك عرض سعر أولي فوري بناءً على المعلومات اللي توفرها، أو نرتب معاينة مجانية في الموقع إذا تفضل دقة أكبر في التسعير.",
               },
               {
                 title: "2. المعاينة وتحديد الاحتياجات",
@@ -671,7 +575,7 @@ export default function AbuDhabiMovingPage() {
                 key={i}
                 className="bg-white rounded-2xl border border-muted p-6 relative"
               >
-                <span className="text-5xl font-black text-primary/10 absolute top-4 left-4 leading-none select-none">
+                <span className="text-5xl font-black text-primary/10 absolute top-4 end-4 leading-none select-none">
                   {i + 1}
                 </span>
                 <h3 className="font-bold text-secondary-foreground text-sm mb-2 mt-6">
@@ -699,8 +603,8 @@ export default function AbuDhabiMovingPage() {
                 تحتاج نقل اثاث في أبوظبي؟ اتصل الآن واحجز معاينة مجانية.
               </span>
               <Button size="sm" asChild>
-                <a href="tel:0541767605" dir="ltr">
-                  054 1767605
+                <a href={PHONE_LINK} dir="ltr">
+                  0541767605
                 </a>
               </Button>
             </div>
@@ -765,7 +669,7 @@ export default function AbuDhabiMovingPage() {
                 </span>
                 <Button size="sm" asChild>
                   <a
-                    href="https://wa.me/971541767605"
+                    href={WHATSAPP_LINK}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -777,7 +681,7 @@ export default function AbuDhabiMovingPage() {
 
             <div className="space-y-6">
               <div className="overflow-x-auto rounded-2xl border border-muted bg-white">
-                <table className="w-full text-right border-collapse text-xs md:text-sm">
+                <table className="w-full text-start border-collapse text-xs md:text-sm">
                   <thead>
                     <tr className="border-b border-muted bg-slate-50 text-secondary-foreground font-semibold">
                       <th className="py-3.5 px-5">حجم النقل</th>
@@ -1231,7 +1135,7 @@ export default function AbuDhabiMovingPage() {
             ].map((tip, i) => (
               <div
                 key={i}
-                className="flex gap-5 p-6 md:p-7 border-b md:border-b border-muted last:border-b-0 md:[&:nth-child(odd)]:border-l"
+                className="flex gap-5 p-6 md:p-7 border-b md:border-b border-muted last:border-b-0 md:[&:nth-child(odd)]:border-e"
               >
                 <span className="w-7 h-7 rounded-full bg-primary text-white flex items-center justify-center shrink-0 text-xs font-black mt-0.5">
                   {i + 1}
@@ -1253,8 +1157,8 @@ export default function AbuDhabiMovingPage() {
               جاهز تبدأ عملية نقل اثاث ابوظبي؟ اتصل الآن واحجز معاينة مجانية.
             </span>
             <Button size="sm" asChild>
-              <a href="tel:0541767605" dir="ltr">
-                054 1767605
+              <a href={PHONE_LINK} dir="ltr">
+                0541767605
               </a>
             </Button>
           </div>
@@ -1299,7 +1203,7 @@ export default function AbuDhabiMovingPage() {
               <div className="flex flex-wrap gap-3">
                 <Button asChild>
                   <a
-                    href="https://wa.me/971541767605"
+                    href={WHATSAPP_LINK}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -1463,18 +1367,18 @@ export default function AbuDhabiMovingPage() {
               احصل على عرض سعر مجاني لنقل اثاثك في ابوظبي
             </h2>
             <p className="text-muted-foreground text-sm md:text-base leading-relaxed mb-8 max-w-3xl mx-auto">
-              جاهز لنقل اثاثك في ابوظبي؟ تواصل مع شركة النمره الآن واحصل على عرض
-              سعر مجاني خلال دقائق. سواء كنت تنقل شقة صغيرة في الخالدية أو فيلا
-              كبيرة في مدينة خليفة أو مكتب تجاري في جزيرة المارية، فريقنا جاهز
-              يتولى كل شيء من أول اتصال حتى آخر قطعة تتركب في مكانها الجديد.
-              معاينة مجانية في الموقع أو تقدير فوري عبر واتساب. اتصل على 054
-              1767605 أو أرسل رسالة عبر واتساب وخلنا نتكفل بكل شيء. نقل آمن ·
-              تسليم مضمون · أسعار تنافسية.
+              جاهز لنقل اثاثك في ابوظبي؟ تواصل مع شركة النمرة نقل اثاث الآن
+              واحصل على عرض سعر مجاني خلال دقائق. سواء كنت تنقل شقة صغيرة في
+              الخالدية أو فيلا كبيرة في مدينة خليفة أو مكتب تجاري في جزيرة
+              المارية، فريقنا جاهز يتولى كل شيء من أول اتصال حتى آخر قطعة تتركب
+              في مكانها الجديد. معاينة مجانية في الموقع أو تقدير فوري عبر
+              واتساب. اتصل على 0541767605 أو أرسل رسالة عبر واتساب وخلنا نتكفل
+              بكل شيء. نقل آمن · تسليم مضمون · أسعار تنافسية.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-6">
               <Button size="lg" className="h-13 px-8 font-bold gap-2" asChild>
                 <a
-                  href="https://wa.me/971541767605"
+                  href={WHATSAPP_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
                   id="cta-whatsapp-bottom"
@@ -1489,9 +1393,9 @@ export default function AbuDhabiMovingPage() {
                 className="h-13 px-8 font-bold border-2 gap-2"
                 asChild
               >
-                <a href="tel:0541767605" dir="ltr" id="cta-phone-bottom">
+                <a href={PHONE_LINK} dir="ltr" id="cta-phone-bottom">
                   <Phone className="w-5 h-5" />
-                  054 1767605
+                  0541767605
                 </a>
               </Button>
             </div>

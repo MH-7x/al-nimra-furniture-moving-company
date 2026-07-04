@@ -1,17 +1,9 @@
+import MetadataTemplate from "@/lib/MetaDataTemplate";
 import React from "react";
 import { Metadata } from "next";
 import ServicePageLayout, {
   ServicePageData,
 } from "@/components/utils/ServicePageLayout";
-
-export const metadata: Metadata = {
-  title: "نقل اثاث المكاتب في دبي | شركة النمره — نقل تجاري سريع",
-  description:
-    "شركة نقل اثاث المكاتب في دبي. نقل سريع بعطلة نهاية الأسبوع، تعطيل أدنى للعمل، تأمين شامل على المعدات. 054 1767605",
-  alternates: {
-    canonical: "/خدمات/نقل-اثاث-المكاتب-في-دبي",
-  },
-};
 
 const pageData: ServicePageData = {
   title: "نقل اثاث المكاتب في دبي",
@@ -140,6 +132,17 @@ const pageData: ServicePageData = {
     "نقل اثاث مكتب تجاري في دبي مع شركة النمره نقل اثاث بدون تعطيل العمل",
 };
 
+export const metadata = MetadataTemplate({
+  meta: {
+    title: "نقل اثاث المكاتب في دبي | شركة النمره — نقل تجاري سريع",
+    desc: "شركة نقل اثاث المكاتب في دبي. نقل سريع بعطلة نهاية الأسبوع، تعطيل أدنى للعمل، تأمين شامل على المعدات. 054 1767605",
+  },
+  canonical: "/خدمات/نقل-اثاث-المكاتب-في-دبي",
+  image: {
+    path: `/${pageData.imageName}`,
+    alt: pageData.imageAlt,
+  },
+});
 export default function OfficeMovingPage() {
   return <ServicePageLayout data={pageData} />;
 }

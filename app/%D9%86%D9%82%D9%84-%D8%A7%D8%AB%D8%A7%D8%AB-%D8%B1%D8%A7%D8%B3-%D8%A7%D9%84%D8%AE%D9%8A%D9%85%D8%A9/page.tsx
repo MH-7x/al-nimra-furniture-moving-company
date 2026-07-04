@@ -1,3 +1,4 @@
+import MetadataTemplate from "@/lib/MetaDataTemplate";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -27,15 +28,20 @@ import { FAQSection } from "@/components/utils/FaqsSection";
 import CTASection from "@/components/utils/CTASection";
 import QuoteSection from "@/components/utils/QuoteSection";
 import { ReviewsSection } from "@/components/utils/ReviewsSection";
+import { APP_URL, PHONE_LINK, WHATSAPP_LINK } from "@/lib/utils";
+import { BreadcrumbSchema } from "@/components/utils/BreadcrumbSchema";
 
-export const metadata: Metadata = {
-  title: "نقل اثاث راس الخيمة |  النمرة نقل اثاث - فك تغليف نقل وتركيب",
-  description:
-    "شركة نقل اثاث راس الخيمة مع  النمرة نقل اثاث. فك وتغليف ونقل وتركيب بشاحنات مغلقة وفريق محترف. أسعار ثابتة بدون رسوم خفية. احصل على عرض سعر مجاني الحين!",
-  alternates: {
-    canonical: "/نقل-اثاث-راس-الخيمة",
+export const metadata = MetadataTemplate({
+  meta: {
+    title: "نقل اثاث راس الخيمة |  النمرة نقل اثاث - فك تغليف نقل وتركيب",
+    desc: "شركة نقل اثاث راس الخيمة مع  النمرة نقل اثاث. فك وتغليف ونقل وتركيب بشاحنات مغلقة وفريق محترف. أسعار ثابتة بدون رسوم خفية. احصل على عرض سعر مجاني الحين!",
   },
-};
+  canonical: "/نقل-اثاث-راس-الخيمة",
+  image: {
+    path: "/rak/نقل-اثاث-راس-الخيمة-النمره-فك-تغليف-نقل.jpg",
+    alt: "نقل اثاث راس الخيمة |  النمرة نقل اثاث - فك تغليف نقل وتركيب",
+  },
+});;
 
 const rakFaqs = [
   {
@@ -189,6 +195,15 @@ const rakFaqs = [
 export default function RasAlKhaimahMovingPage() {
   return (
     <main dir="rtl" className="text-foreground pb-20">
+      <BreadcrumbSchema
+        items={[
+          { name: "الرئيسية", url: APP_URL },
+          {
+            name: "نقل اثاث راس الخيمة",
+            url: `${APP_URL}/نقل-اثاث-راس-الخيمة`,
+          },
+        ]}
+      />
       {/* ══════════════════════════════════════════
           HERO — white editorial, orange-led
       ══════════════════════════════════════════ */}
@@ -217,7 +232,7 @@ export default function RasAlKhaimahMovingPage() {
 
           {/* Orange eyebrow + star rating */}
           <div className="flex flex-wrap items-center gap-4 mb-5">
-            <span className="text-primary font-bold text-xs uppercase tracking-widest border-r-2 border-primary pr-3">
+            <span className="text-primary font-bold text-xs uppercase tracking-widest border-s-2 border-primary ps-3">
               النمرة نقل اثاث · رأس الخيمة
             </span>
             <span className="inline-flex items-center gap-1.5 text-xs font-medium text-muted-foreground">
@@ -237,7 +252,7 @@ export default function RasAlKhaimahMovingPage() {
               <span className="relative z-10 text-primary">راس الخيمة</span>
               <span
                 aria-hidden
-                className="absolute bottom-1 right-0 left-0 h-3 bg-primary/10 -skew-x-3 rounded-sm z-0"
+                className="absolute bottom-1 start-0 end-0 h-3 bg-primary/10 -skew-x-3 rounded-sm z-0"
               />
             </span>{" "}
             <span className="text-2xl block mt-5">
@@ -257,7 +272,7 @@ export default function RasAlKhaimahMovingPage() {
           <div className="flex flex-wrap gap-3 mb-10">
             <Button size="lg" className="h-12 px-7 font-bold gap-2" asChild>
               <a
-                href="https://wa.me/971541767605"
+                href={WHATSAPP_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
                 id="cta-whatsapp-hero"
@@ -272,9 +287,9 @@ export default function RasAlKhaimahMovingPage() {
               className="h-12 px-7 font-bold gap-2 border-2"
               asChild
             >
-              <a href="tel:0541767605" dir="ltr" id="cta-phone-hero">
+              <a href={PHONE_LINK} dir="ltr" id="cta-phone-hero">
                 <Phone className="w-4 h-4" />
-                054 1767605
+                0541767605
               </a>
             </Button>
           </div>
@@ -301,7 +316,7 @@ export default function RasAlKhaimahMovingPage() {
           {/* Hero image — 16:9 */}
           <div className="w-full aspect-video rounded-t-3xl overflow-hidden relative border-x border-t border-muted">
             <Image
-              src="/rak/نقل-اثاث-راس-الخيمة-النمرة-شركة-نقل.jpg"
+              src="/rak/نقل-اثاث-راس-الخيمة-النمره-فك-تغليف-نقل.jpg"
               alt=" النمرة نقل اثاث يحملون اثاث مغلف في شاحنة مغلقة في منطقة سكنية في راس الخيمة"
               fill
               className="object-cover"
@@ -356,8 +371,8 @@ export default function RasAlKhaimahMovingPage() {
               الساعة.
             </span>
             <Button size="sm" asChild>
-              <a href="tel:0541767605" dir="ltr">
-                054 1767605
+              <a href={PHONE_LINK} dir="ltr">
+                0541767605
               </a>
             </Button>
           </div>
@@ -689,7 +704,7 @@ export default function RasAlKhaimahMovingPage() {
             {/* Table */}
             <div className="lg:col-span-8 space-y-4">
               <div className="overflow-x-auto rounded-2xl border border-muted bg-white shadow-sm">
-                <table className="w-full text-right border-collapse text-xs md:text-sm">
+                <table className="w-full text-start border-collapse text-xs md:text-sm">
                   <thead>
                     <tr className="border-b border-muted bg-slate-50/80 text-secondary-foreground font-semibold">
                       <th className="py-3.5 px-5">نوع السكن</th>
@@ -805,7 +820,7 @@ export default function RasAlKhaimahMovingPage() {
                   asChild
                 >
                   <a
-                    href="https://wa.me/971541767605"
+                    href={WHATSAPP_LINK}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -891,7 +906,7 @@ export default function RasAlKhaimahMovingPage() {
 
           <div className="relative">
             {/* Connection line for desktop */}
-            <div className="hidden md:block absolute top-[45px] left-0 right-0 h-0.5 bg-muted z-0" />
+            <div className="hidden md:block absolute top-[45px] end-0 start-0 h-0.5 bg-muted z-0" />
 
             <div className="grid grid-cols-1 md:grid-cols-5 gap-8 relative z-10">
               {[
@@ -931,7 +946,7 @@ export default function RasAlKhaimahMovingPage() {
                     <item.icon className="w-8 h-8 text-primary" />
                   </div>
                   <h3 className="font-bold text-base mb-3 text-secondary-foreground">
-                    <span className="text-primary ml-1 block text-sm mb-1">
+                    <span className="text-primary me-1 block text-sm mb-1">
                       الخطوة {item.step}
                     </span>
                     {item.title}
@@ -1040,7 +1055,7 @@ export default function RasAlKhaimahMovingPage() {
           </div>
 
           <div className="overflow-x-auto border border-muted rounded-2xl shadow-sm">
-            <table className="w-full text-right text-sm">
+            <table className="w-full text-start text-sm">
               <thead>
                 <tr className="bg-slate-50 border-b border-muted">
                   <th className="py-3 px-5 font-semibold text-secondary-foreground">
@@ -1186,10 +1201,7 @@ export default function RasAlKhaimahMovingPage() {
               </h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
                 نقل اثاث من راس الخيمة الى{" "}
-                <Link
-                  href="/"
-                  className="text-primary hover:underline"
-                >
+                <Link href="/" className="text-primary hover:underline">
                   دبي
                 </Link>{" "}
                 من أكثر الطلبات عندنا. الطريق يكون عن طريق طريق الإمارات (E311)

@@ -1,17 +1,9 @@
+import MetadataTemplate from "@/lib/MetaDataTemplate";
 import React from "react";
 import { Metadata } from "next";
 import ServicePageLayout, {
   ServicePageData,
 } from "@/components/utils/ServicePageLayout";
-
-export const metadata: Metadata = {
-  title: "تخزين اثاث في دبي | شركة النمره — مستودعات مكيفة 24/7",
-  description:
-    "تخزين اثاث في دبي بمستودعات مكيفة ومراقبة 24/7. أسعار من 500 درهم شهرياً، خدمة استلام وتسليم، تأمين شامل. 054 1767605",
-  alternates: {
-    canonical: "/خدمات/تخزين-اثاث-في-دبي",
-  },
-};
 
 const pageData: ServicePageData = {
   title: "تخزين اثاث في دبي",
@@ -162,6 +154,18 @@ const pageData: ServicePageData = {
   imageAlt:
     " مستودع تخزين اثاث مكيف ومراقب على مدار الساعة من شركة النمره نقل اثاث في دبي",
 };
+
+export const metadata = MetadataTemplate({
+  meta: {
+    title: "تخزين اثاث في دبي | شركة النمره — مستودعات مكيفة 24/7",
+    desc: "تخزين اثاث في دبي بمستودعات مكيفة ومراقبة 24/7. أسعار من 500 درهم شهرياً، خدمة استلام وتسليم، تأمين شامل. 054 1767605",
+  },
+  canonical: "/خدمات/تخزين-اثاث-في-دبي",
+  image: {
+    path: `/${pageData.imageName}`,
+    alt: pageData.imageAlt,
+  },
+});
 
 export default function StoragePage() {
   return <ServicePageLayout data={pageData} />;

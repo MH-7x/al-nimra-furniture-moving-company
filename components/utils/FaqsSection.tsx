@@ -18,7 +18,7 @@ export const FAQItem: React.FC<{ faq: FAQData }> = ({ faq }) => {
   return (
     <details className="group [&_summary::-webkit-details-marker]:hidden">
       <summary className="flex cursor-pointer items-start between md:gap-6 py-6 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:ring-offset-4 rounded-sm">
-        <span className="ml-4 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-slate-200 bg-white transition-all duration-300 group-open:rotate-180 group-open:border-slate-300 group-open:bg-slate-50 group-hover:bg-slate-50">
+        <span className="me-4 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-slate-200 bg-white transition-all duration-300 group-open:rotate-180 group-open:border-slate-300 group-open:bg-slate-50 group-hover:bg-slate-50">
           <svg
             className="h-4 w-4 text-slate-500"
             fill="none"
@@ -59,7 +59,7 @@ export const FAQSection: React.FC<FAQProps> = ({
   const FaqsSchema = generateFAQSchema(convertFaqsForSchema(faqs));
   return (
     <>
-      <Script
+      <script
         id="FAQSchema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: FaqsSchema }}

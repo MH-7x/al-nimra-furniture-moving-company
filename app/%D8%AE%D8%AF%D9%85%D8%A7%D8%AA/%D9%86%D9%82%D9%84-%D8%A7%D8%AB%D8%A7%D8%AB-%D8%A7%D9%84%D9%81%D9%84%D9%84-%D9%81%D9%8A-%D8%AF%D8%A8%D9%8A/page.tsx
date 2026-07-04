@@ -1,17 +1,9 @@
+import MetadataTemplate from "@/lib/MetaDataTemplate";
 import React from "react";
 import { Metadata } from "next";
 import ServicePageLayout, {
   ServicePageData,
 } from "@/components/utils/ServicePageLayout";
-
-export const metadata: Metadata = {
-  title: "نقل اثاث الفلل في دبي | شركة النمره — أسعار من 4000 درهم",
-  description:
-    "شركة متخصصة في نقل اثاث الفلل في دبي. فريق كبير، شاحنات متعددة، نجارون لفك المطابخ وغرف النوم. تأمين شامل. 054 1767605",
-  alternates: {
-    canonical: "/خدمات/نقل-اثاث-الفلل-في-دبي",
-  },
-};
 
 const pageData: ServicePageData = {
   title: "نقل اثاث الفلل في دبي",
@@ -136,6 +128,17 @@ const pageData: ServicePageData = {
     "فريق شركة النمره نقل اثاث ينقل اثاث فيلا فاخرة في دبي بشاحنة كبيرة",
 };
 
+export const metadata = MetadataTemplate({
+  meta: {
+    title: "نقل اثاث الفلل في دبي | شركة النمره — أسعار من 4000 درهم",
+    desc: "شركة متخصصة في نقل اثاث الفلل في دبي. فريق كبير، شاحنات متعددة، نجارون لفك المطابخ وغرف النوم. تأمين شامل. 054 1767605",
+  },
+  canonical: "/خدمات/نقل-اثاث-الفلل-في-دبي",
+  image: {
+    path: `/${pageData.imageName}`,
+    alt: pageData.imageAlt,
+  },
+});
 export default function VillaMovingPage() {
   return <ServicePageLayout data={pageData} />;
 }

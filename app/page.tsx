@@ -1,46 +1,106 @@
+import MetadataTemplate from "@/lib/MetaDataTemplate";
 import { Button } from "@/components/ui/button";
 import imgsrc from "@/public/شركة-النمره-نقل-اثاث-في-دبي.jpg";
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata = MetadataTemplate({
+  meta: {
+    title: "نقل اثاث دبي | شركة النمره - بدون دفعة مقدمة وتأمين شامل",
+    desc: "أفضل شركة نقل اثاث في دبي بخبرة +10 سنوات. شاحنات مغلقة ومكيفة، تأمين شامل، أسعار شفافة بدون دفعة مقدمة. احصل على عرض سعر مجاني عبر واتساب الآن!",
+  },
+  canonical: "/",
+  image: {
+    path: "/فريق-النمره-نقل-اثاث-دبي.jpg",
+    alt: "نقل اثاث دبي | شركة النمره - بدون دفعة مقدمة وتأمين شامل",
+  },
+});;
+
 export default function Home() {
   return (
     <main>
-      <section id="hero" className=" ">
-        <div className="bg-linear-0 from-secondary-foreground/90 via-secondary-foreground/80 md:to-secondary-foreground/40 to-secondary-foreground/60 md:py-32 py-20 md:px-28 px-4 relative overflow-hidden ">
-          <h1 className="md:text-5xl text-4xl text-white leading-tight md:text-start text-center">
-            شركة نقل اثاث دبي <br />
-            <span className="md:text-3xl text-lg text-secondary">
-              نقل آمن · تسليم مضمون · أسعار تنافسية
+      <BreadcrumbSchema items={[{ name: "الرئيسية", url: APP_URL }]} />
+      <section
+        id="hero"
+        className="relative pt-20 pb-0 overflow-hidden"
+        dir="rtl"
+      >
+        {/* Top Text Content */}
+        <div className="max-w-4xl mx-auto px-4 text-center flex flex-col items-center z-10 relative">
+          <span className="text-primary font-bold text-sm tracking-widest uppercase mb-6 px-6 py-2 rounded-full border border-primary/20 bg-primary/5">
+            نقل آمن · تسليم مضمون · أسعار تنافسية
+          </span>
+
+          <h1 className="text-4xl md:text-6xl font-bold text-secondary-foreground leading-tight tracking-tight mb-8">
+            شركة النمره <br className="block md:hidden" /> نقل اثاث في{" "}
+            <span className="text-primary relative inline-block">
+              دبي
+              <div className="absolute -bottom-2 end-0 w-full h-2 bg-primary/20 -z-10 rounded-full" />
             </span>
           </h1>
-          <div className="mt-5 flex flex-col gap-y-2 max-w-4xl md:text-start text-center">
-            <p className="text-white/90">
-              نقل اثاث دبي يبدأ بقرار واحد صح. في شركة النمره، نحمل أثاثك كما
-              نحمل أثاث بيتنا - بعناية، بأمان، وبدون أي ضغوط. منذ أكثر من ١٠
-              سنوات وفريقنا ينقل شقق وفلل ومكاتب دبي من أول صندوق لآخر قطعة.
+
+          <div className="text-muted-foreground md:text-lg  leading-relaxed space-y-4 max-w-4xl mx-auto text-center">
+            <p>
+              <span className="text-foreground font-medium">
+                نقل اثاث دبي يبدأ بقرار واحد صح.
+              </span>{" "}
+              في شركة النمره، نحمل أثاثك كما نحمل أثاث بيتنا - بعناية، بأمان،
+              وبدون أي ضغوط. منذ أكثر من ١٠ سنوات وفريقنا ينقل شقق وفلل ومكاتب
+              دبي من أول صندوق لآخر قطعة.
             </p>
-            <p className="text-white/90">
+            <p>
               نحن ندرك تماماً أن الانتقال لمكان جديد قد يكون مرهقاً، ولهذا جعلنا
-              مهمتنا هي تبسيط هذه العملية بالكامل. نحن لسنا مجرد شركة نقل؛ نحن
-              شركاؤك في هذه الرحلة الجديدة.
+              مهمتنا هي تبسيط هذه العملية بالكامل. نحن لسنا مجرد شركة نقل؛{" "}
+              <span className="text-foreground font-medium">
+                نحن شركاؤك في هذه الرحلة الجديدة.
+              </span>
             </p>
-            <p className="text-white/90">
+          </div>
+
+          <div className="mt-8 bg-secondary/50 rounded-2xl p-6 border border-secondary/10 w-full max-w-3xl mx-auto shadow-sm">
+            <p className="text-secondary-foreground font-bold md:text-lg ">
               لا دفعة مقدمة، تأمين شامل على كل القطع، وعرض سعر فوري على
-              الواتساب. اتصل بنا أو راسلنا الآن ودعنا نهتم بالباقي.
+              الواتساب.
+            </p>
+            <p className="text-muted-foreground text-sm mt-2">
+              اتصل بنا أو راسلنا الآن ودعنا نهتم بالباقي.
             </p>
           </div>
-          <div className="mt-7 flex gap-3">
-            <Button>احصل على عرض سعر عبر واتساب</Button>
-            <Button variant={"secondary"}>اتصل بنا الآن</Button>
+
+          <div className="flex flex-col sm:flex-row gap-4 mt-8 w-full sm:w-auto">
+            <Button
+              size="lg"
+              className="h-12 px-8 text-base font-bold shadow-xl shadow-primary/20 w-full sm:w-auto rounded-full hover:scale-105 transition-transform"
+            >
+              <a href={WHATSAPP_LINK}>احصل على عرض سعر عبر واتساب</a>
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="h-12 px-8 text-base font-bold border-2 w-full sm:w-auto rounded-full hover:bg-secondary/5 hover:scale-105 transition-transform"
+            >
+              <a href={PHONE_LINK}>اتصل بنا الآن</a>
+            </Button>
           </div>
-          <Image
-            src={imgsrc}
-            alt="شركة النمره نقل اثاث في دبي"
-            fill
-            placeholder="blur"
-            loading="eager"
-            className="object-cover md:object-top object-top-left -z-10"
-          />
         </div>
+
+        {/* Bottom Image */}
+        <div className="relative w-full max-w-5xl mx-auto mt-16 px-4">
+          <div className="relative w-full aspect-video rounded-t-[2.5rem] overflow-hidden shadow-2xl border-t border-e border-s border-border/50">
+            <Image
+              src={imgsrc}
+              alt="شركة النمره نقل اثاث في دبي"
+              fill
+              placeholder="blur"
+              loading="eager"
+              className="object-cover object-top hover:scale-105 transition-transform duration-1000"
+            />
+            {/* Soft gradient to fade into background at the top slightly if wanted, but left clean here */}
+          </div>
+        </div>
+
+        {/* Decorative Grid Background for a modern clean touch */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] -z-10 [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none"></div>
       </section>
       <section className="w-full bg-muted/60 py-10 ">
         <div className="max-w-6xl mx-auto px-4">
@@ -138,9 +198,9 @@ export default function Home() {
 
           {/* القسم الفرعي الأول: الخدمات الأساسية */}
           <div className="mb-20 md:mb-28">
-            <div className="flex items-center gap-3 mb-10 border-r-4 border-primary pr-3">
+            <div className="flex items-center gap-3 mb-10 border-s-4 border-primary ps-3">
               <h3 className="text-foreground font-bold text-xl md:text-2xl leading-none">
-                الخدمات الأساسية
+                <Link href="/خدمات">الخدمات الأساسية</Link>
               </h3>
             </div>
 
@@ -162,9 +222,11 @@ export default function Home() {
                     <Button
                       size={"sm"}
                       variant={"secondary"}
-                      className="absolute bottom-2 left-2"
+                      className="absolute bottom-2 end-2"
                     >
-                      اتصل بنال{service.cta}
+                      <Link href={`${servicesItems[index].href}`}>
+                        اتصل بنال{service.cta}
+                      </Link>
                     </Button>
                   </div>
 
@@ -184,7 +246,7 @@ export default function Home() {
 
           {/* القسم الفرعي الثاني: خدمات متخصصة واحترافية */}
           <div>
-            <div className="flex items-center gap-3 mb-10 border-r-4 border-primary pr-3">
+            <div className="flex items-center gap-3 mb-10 border-s-4 border-primary ps-3">
               <h3 className="text-foreground font-bold text-xl md:text-2xl leading-none">
                 خدمات متخصصة واحترافية
               </h3>
@@ -204,7 +266,7 @@ export default function Home() {
                       {service.title}
                     </h4>
                   </div>
-                  <p className="text-muted-foreground text-xs md:text-sm leading-relaxed pr-3.5">
+                  <p className="text-muted-foreground text-xs md:text-sm leading-relaxed ps-3.5">
                     {service.desc}
                   </p>
                 </div>
@@ -229,21 +291,23 @@ export default function Home() {
                 خطوة بخطوة منذ اللحظة الأولى لضمان تجربة نقل خالية تماماً من
                 المتاعب:
               </p>
-              <Button className="mt-5">احصل على عرض سعر لنقل الأثاث</Button>
+              <Button className="mt-5" asChild>
+                <Link href="/اتصل-بن">احصل على عرض سعر لنقل الأثاث</Link>
+              </Button>
             </div>
 
             {/* العمود الأيسر: الخطوات المتتابعة المتصلة بخط دليل ناعم */}
             <div className="lg:col-span-7">
               <div className="relative">
                 {/* الخط الرأسي الدليل */}
-                <div className="absolute right-5 top-5 bottom-5 w-[2px] bg-primary/20 z-0" />
+                <div className="absolute start-5 top-5 bottom-5 w-[2px] bg-primary/20 z-0" />
 
                 {/* قائمة الخطوات */}
                 <div className="flex flex-col gap-1">
                   {steps.map((step, index) => (
-                    <div key={index} className="relative pr-14 pb-12 last:pb-0">
+                    <div key={index} className="relative ps-14 pb-12 last:pb-0">
                       {/* عقدة رقم الخطوة (Step Node) */}
-                      <div className="absolute right-0 top-0 w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm z-10 shadow-sm">
+                      <div className="absolute start-0 top-0 w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm z-10 shadow-sm">
                         {index + 1}
                       </div>
 
@@ -288,13 +352,13 @@ export default function Home() {
 
               {/* حاوية الجدول لحماية العرض على شاشات الموبايل */}
               <div className="overflow-x-auto rounded-2xl bg-muted/20 p-1">
-                <table className="w-full text-right border-collapse min-w-[550px]">
+                <table className="w-full text-start border-collapse min-w-[550px]">
                   <thead>
                     <tr className="text-foreground font-black text-sm bg-muted/40">
-                      <th className="py-4 px-5 rounded-r-xl">نوع الوحدة</th>
+                      <th className="py-4 px-5 rounded-s-xl">نوع الوحدة</th>
                       <th className="py-4 px-5">عدد العمال</th>
                       <th className="py-4 px-5">نوع الشاحنة</th>
-                      <th className="py-4 px-5 rounded-l-xl text-left">
+                      <th className="py-4 px-5 rounded-e-xl text-end">
                         السعر التقديري (درهم)
                       </th>
                     </tr>
@@ -311,7 +375,7 @@ export default function Home() {
                         <td className="py-4 px-5">{row.workers}</td>
                         <td className="py-4 px-5">{row.truck}</td>
                         <td
-                          className="py-4 px-5 text-primary font-black text-left"
+                          className="py-4 px-5 text-primary font-black text-end"
                           dir="ltr"
                         >
                           {row.price}
@@ -346,8 +410,8 @@ export default function Home() {
                 على السعر. مهما كانت التفاصيل، نحن نعطيك سعراً نهائياً قبل
                 البدء.
               </p>
-              <Button variant={"secondary"} className="mt-5">
-                الاتصال بنا للحصول على التسعير
+              <Button variant={"secondary"} className="mt-5" asChild>
+                <Link href="/اتصل-بن">الاتصال بنا للحصول على التسعير</Link>
               </Button>
             </div>
           </div>
@@ -413,13 +477,14 @@ export default function Home() {
               {/* سحابة بطاقات التغطية المنسقة */}
               <div className="flex flex-wrap gap-2 md:gap-2.5">
                 {areas.map((area, idx) => (
-                  <span
+                  <Link
+                    href={"#"}
                     title={`نقل اثاث في ${area}`}
                     key={idx}
                     className="bg-muted/30 text-foreground/85 text-xs font-semibold py-2 px-4 rounded-full inline-block transition-colors duration-200 hover:bg-primary/10 hover:text-primary"
                   >
                     {area}
-                  </span>
+                  </Link>
                 ))}
               </div>
             </div>
@@ -451,7 +516,7 @@ export default function Home() {
                 شركة النمره
                 {/* Decorative underline */}
                 <svg
-                  className="absolute w-full h-2 -bottom-2 left-0 text-muted "
+                  className="absolute w-full h-2 -bottom-2 end-0 text-muted "
                   viewBox="0 0 100 10"
                   preserveAspectRatio="none"
                 >
@@ -497,8 +562,12 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex gap-3 mt-5">
-                <Button>تواصل معنا الآن</Button>
-                <Button variant={"secondary"}>تواصل معنا على الواتساب</Button>
+                <Button asChild>
+                  <a href={PHONE_LINK}>تواصل معنا الآن</a>
+                </Button>
+                <Button variant={"secondary"} asChild>
+                  <a href={WHATSAPP_LINK}>تواصل معنا على الواتساب</a>
+                </Button>
               </div>
             </div>
           </div>
@@ -515,7 +584,7 @@ export default function Home() {
 
             {}
             {/* Floating Stats Card */}
-            <div className="absolute bottom-6 right-6 lg:bottom-12 lg:right-12 bg-secondary/80 backdrop-blur-md p-4 rounded-2xl shadow-lg z-20 flex items-center gap-4">
+            <div className="absolute bottom-6 start-6 lg:bottom-12 lg:start-12 bg-secondary/80 backdrop-blur-md p-4 rounded-2xl shadow-lg z-20 flex items-center gap-4">
               <div className="bg-muted w-10 h-10 flex items-center justify-center rounded-full text-primary">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -579,8 +648,11 @@ import { FAQSection } from "@/components/utils/FaqsSection";
 import { HomeFaqs } from "@/lib/FaqsData";
 import QuoteSection from "@/components/utils/QuoteSection";
 import CTASection from "@/components/utils/CTASection";
-import { servicesImages } from "@/lib/data";
+import { servicesImages, servicesItems } from "@/lib/data";
 import { ReviewsSection } from "@/components/utils/ReviewsSection";
+import { APP_URL, PHONE_LINK, WHATSAPP_LINK } from "@/lib/utils";
+import Link from "next/link";
+import { BreadcrumbSchema } from "@/components/utils/BreadcrumbSchema";
 const features = [
   {
     icon: Banknote,

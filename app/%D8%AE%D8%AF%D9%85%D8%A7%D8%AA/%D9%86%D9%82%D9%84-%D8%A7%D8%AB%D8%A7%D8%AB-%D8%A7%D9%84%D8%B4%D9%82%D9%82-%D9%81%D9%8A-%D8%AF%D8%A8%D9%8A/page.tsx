@@ -1,17 +1,9 @@
+import MetadataTemplate from "@/lib/MetaDataTemplate";
 import React from "react";
 import { Metadata } from "next";
 import ServicePageLayout, {
   ServicePageData,
 } from "@/components/utils/ServicePageLayout";
-
-export const metadata: Metadata = {
-  title: "نقل اثاث الشقق في دبي | شركة النمره — أسعار من 750 درهم",
-  description:
-    "شركة متخصصة في نقل اثاث الشقق في دبي. خبرة بأبراج المارينا، JLT، الخليج التجاري. تغليف وفك وتركيب وتأمين شامل. 054 1767605",
-  alternates: {
-    canonical: "/خدمات/نقل-اثاث-الشقق-في-دبي",
-  },
-};
 
 const pageData: ServicePageData = {
   title: "نقل اثاث الشقق في دبي",
@@ -141,6 +133,18 @@ const pageData: ServicePageData = {
   imageName: "نقل-اثاث-الشقق-في-دبي-ابراج-شركة-النمره.jpg",
   imageAlt: "نقل اثاث شقة في برج سكني بدبي مع فريق شركة النمره نقل اثاث",
 };
+
+export const metadata = MetadataTemplate({
+  meta: {
+    title: "نقل اثاث الشقق في دبي | شركة النمره — أسعار من 750 درهم",
+    desc: "شركة متخصصة في نقل اثاث الشقق في دبي. خبرة بأبراج المارينا، JLT، الخليج التجاري. تغليف وفك وتركيب وتأمين شامل. 054 1767605",
+  },
+  canonical: "/خدمات/نقل-اثاث-الشقق-في-دبي",
+  image: {
+    path: `/${pageData.imageName}`,
+    alt: pageData.imageAlt,
+  },
+});
 
 export default function ApartmentMovingPage() {
   return <ServicePageLayout data={pageData} />;

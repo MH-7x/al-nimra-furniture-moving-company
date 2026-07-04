@@ -5,11 +5,13 @@ import { useState, useEffect } from "react";
 import { MapPin } from "lucide-react";
 import logo from "@/public/logo-1.svg";
 import Image from "next/image";
+import { PHONE_LINK } from "@/lib/utils";
 import {
   locationsItems,
   servicesItems,
   dubaiSubLocationsItems,
 } from "@/lib/data";
+import Link from "next/link";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -33,7 +35,7 @@ export default function Header() {
   // Mock drop-down datasets
 
   return (
-    <header className="w-full fixed top-0 left-0 right-0 z-50 shadow-md transition-all duration-300">
+    <header className="w-full fixed top-0 end-0 start-0 z-50 shadow-md transition-all duration-300">
       {/* 1. TOP BAR */}
       <div
         className={`bg-secondary-foreground text-background text-xs border-b border-foreground/10 md:block hidden transition-all duration-300 ease-in-out ${
@@ -57,7 +59,7 @@ export default function Header() {
           {/* Social Icons */}
           <div className="flex items-center gap-4">
             <a
-              href="#"
+              href="/"
               className="hover:text-primary transition-colors"
               aria-label="Facebook"
             >
@@ -66,7 +68,7 @@ export default function Header() {
               </svg>
             </a>
             <a
-              href="#"
+              href="/"
               className="hover:text-primary transition-colors"
               aria-label="Twitter"
             >
@@ -75,7 +77,7 @@ export default function Header() {
               </svg>
             </a>
             <a
-              href="#"
+              href="/"
               className="hover:text-primary transition-colors"
               aria-label="Pinterest"
             >
@@ -84,7 +86,7 @@ export default function Header() {
               </svg>
             </a>
             <a
-              href="#"
+              href="/"
               className="hover:text-primary transition-colors"
               aria-label="Instagram"
             >
@@ -93,7 +95,7 @@ export default function Header() {
               </svg>
             </a>
             <a
-              href="#"
+              href="/"
               className="hover:text-primary transition-colors"
               aria-label="YouTube"
             >
@@ -143,11 +145,11 @@ export default function Header() {
                   رقم التليفون
                 </span>
                 <a
-                  href="tel:+9715041767605"
+                  href={PHONE_LINK}
                   dir="ltr"
                   className="not-italic text-sm text-muted-foreground font-medium "
                 >
-                  054 1767605
+                  0541767605
                 </a>
               </div>
             </div>
@@ -182,13 +184,15 @@ export default function Header() {
           </div>
           {/* Logo */}
           <div className="md:w-48 w-44 md:h-12 h-11 relative overflow-hidden">
-            <Image
-              src={logo}
-              alt="شركة النمره نقل اثاث شعار"
-              fill
-              loading="eager"
-              className="object-contain"
-            />
+            <Link aria-label="Al Nimra Furniture Moving Company Logo" href="/">
+              <Image
+                src={logo}
+                alt="شركة النمره نقل اثاث شعار"
+                fill
+                loading="eager"
+                className="object-contain"
+              />
+            </Link>
           </div>
 
           {/* Info Blocks (Locations & Opening Hours) */}
@@ -229,19 +233,19 @@ export default function Header() {
 
             {/* Mobile Get Free Quote Indicator */}
             <a
-              href="/quote"
+              href="/اتصل-بن"
               className="md:hidden bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-xs uppercase tracking-wider py-2 px-4 rounded transition-colors"
             >
               احصل على عرض أسعار
             </a>
 
             {/* Main Menu Links Container */}
-            <div className="hidden md:flex md:items-center absolute md:relative top-full left-0 w-full md:w-auto bg-secondary-foreground z-40 border-t border-background/10 md:border-none">
+            <div className="hidden md:flex md:items-center absolute md:relative top-full end-0 w-full md:w-auto bg-secondary-foreground z-40 border-t border-background/10 md:border-none">
               <ul className="flex flex-col md:flex-row md:items-center text-sm font-semibold tracking-wide uppercase">
                 {/* Regular Link: About Us */}
                 <li>
                   <a
-                    href="/about"
+                    href="/من-نحن"
                     className="block py-4 px-4 hover:bg-background/10 md:hover:bg-transparent md:hover:text-primary transition-colors border-b border-background/5 md:border-none"
                   >
                     من نحن
@@ -267,7 +271,7 @@ export default function Header() {
                     </svg>
                   </button>
                   {/* Hover dropdown list */}
-                  <ul className="absolute right-0 top-full hidden group-hover:block bg-white min-w-[220px] py-2 shadow-xl border-t-2 border-primary">
+                  <ul className="absolute start-0 top-full hidden group-hover:block bg-white min-w-[220px] py-2 shadow-xl border-t-2 border-primary">
                     {servicesItems.map((item, idx) => (
                       <li key={idx}>
                         <a
@@ -300,7 +304,7 @@ export default function Header() {
                     </svg>
                   </button>
                   {/* Hover dropdown list */}
-                  <ul className="absolute right-0 top-full hidden group-hover:block bg-white min-w-[220px] py-2 shadow-xl border-t-2 border-primary">
+                  <ul className="absolute start-0 top-full hidden group-hover:block bg-white min-w-[220px] py-2 shadow-xl border-t-2 border-primary">
                     {locationsItems.map((item, idx) => (
                       <li key={idx}>
                         <a
@@ -333,7 +337,7 @@ export default function Header() {
                     </svg>
                   </button>
                   {/* Hover dropdown list */}
-                  <ul className="absolute right-0 top-full hidden group-hover:block bg-white min-w-[220px] py-2 shadow-xl border-t-2 border-primary">
+                  <ul className="absolute start-0 top-full hidden group-hover:block bg-white min-w-[220px] py-2 shadow-xl border-t-2 border-primary">
                     {dubaiSubLocationsItems.map((item, idx) => (
                       <li key={idx}>
                         <a
@@ -350,7 +354,7 @@ export default function Header() {
                 {/* Regular Link: Blogs */}
                 <li>
                   <a
-                    href="/blogs"
+                    href="/"
                     className="block py-4 px-4 hover:bg-background/10 md:hover:bg-transparent md:hover:text-primary transition-colors border-b border-background/5 md:border-none"
                   >
                     مدونات
@@ -360,7 +364,7 @@ export default function Header() {
                 {/* Regular Link: Contact Us */}
                 <li>
                   <a
-                    href="/contact"
+                    href="/اتصل-بن"
                     className="block py-4 px-4 hover:bg-background/10 md:hover:bg-transparent md:hover:text-primary transition-colors border-b border-background/5 md:border-none"
                   >
                     اتصل بن
@@ -372,7 +376,7 @@ export default function Header() {
             {/* Desktop-only Right Side Quote Button */}
             <div className="hidden md:block">
               <a
-                href="/quote"
+                href="/اتصل-بن"
                 className="inline-block bg-primary hover:bg-primary/95 text-primary-foreground font-bold text-sm uppercase tracking-wider py-5 px-8 transition-colors"
               >
                 الحصول على الاقتباس
@@ -386,7 +390,7 @@ export default function Header() {
               {/* Regular Link: About Us */}
               <li>
                 <a
-                  href="/about"
+                  href="/من-نحن"
                   className="block py-4 px-4 hover:bg-background/10 transition-colors border-b border-background/5"
                 >
                   من نحن
@@ -412,7 +416,7 @@ export default function Header() {
                       />
                     </svg>
                   </summary>
-                  <ul className="bg-background/5 pl-4 border-l-2 border-primary/40">
+                  <ul className="bg-background/5 pe-4 border-e-2 border-primary/40">
                     {servicesItems.map((item, idx) => (
                       <li key={idx}>
                         <a
@@ -446,7 +450,7 @@ export default function Header() {
                       />
                     </svg>
                   </summary>
-                  <ul className="bg-background/5 pl-4 border-l-2 border-primary/40">
+                  <ul className="bg-background/5 pe-4 border-e-2 border-primary/40">
                     {locationsItems.map((item, idx) => (
                       <li key={idx}>
                         <a
@@ -480,7 +484,7 @@ export default function Header() {
                       />
                     </svg>
                   </summary>
-                  <ul className="bg-background/5 pl-4 border-l-2 border-primary/40">
+                  <ul className="bg-background/5 pe-4 border-e-2 border-primary/40">
                     {dubaiSubLocationsItems.map((item, idx) => (
                       <li key={idx}>
                         <a
@@ -498,7 +502,7 @@ export default function Header() {
               {/* Regular Link: Blogs */}
               <li>
                 <a
-                  href="/blogs"
+                  href="/"
                   className="block py-4 px-4 hover:bg-background/10 transition-colors border-b border-background/5"
                 >
                   مدونات
@@ -508,7 +512,7 @@ export default function Header() {
               {/* Regular Link: Contact Us */}
               <li>
                 <a
-                  href="/contact"
+                  href="/اتصل-بن"
                   className="block py-4 px-4 hover:bg-background/10 transition-colors border-b border-background/5"
                 >
                   اتصل بن

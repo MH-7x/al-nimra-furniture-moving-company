@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import MetadataTemplate from "@/lib/MetaDataTemplate";
 import { dubaiSubLocations } from "@/lib/dubai-locations-data";
 import SubLocationLayout from "@/components/utils/SubLocationLayout";
 import { notFound } from "next/navigation";
@@ -18,14 +19,19 @@ export async function generateMetadata({
     return {
       title: "الصفحة غير موجودة",
     };
-  } else
-    return {
-      title: location.metaTitle,
-      description: location.metaDescription,
-      alternates: {
-        canonical: `/${location.slug}`,
+  } else {
+    return MetadataTemplate({
+      meta: {
+        title: location.metaTitle,
+        desc: location.metaDescription,
       },
-    };
+      canonical: `/${location.slug}`,
+      image: {
+        path: location.images[0].src,
+        alt: location.images[0].alt,
+      },
+    });
+  }
 }
 
 export default async function SubLocationPage({ params }: PageProps) {

@@ -1,8 +1,8 @@
-import type { Metadata } from "next";
 import "./globals.css";
 import HeaderWrapper from "@/components/utils/HeaderWrapper";
 import Footer from "@/components/utils/Footer";
 import localFont from "next/font/local";
+import { Metadata } from "next";
 
 const tajLoc = localFont({
   src: [
@@ -25,9 +25,26 @@ const tajLoc = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "شركة النمره نقل اثاث",
-  description:
-    "فريقنا يتولى الفك والتغليف والنقل والتركيب بشاحنات مغلقة. السعر يُحدد قبل وصولنا ولا يتغير يوم النقل — ما اتفقنا عليه هو ما تدفعه، بدون مفاجآت.",
+  applicationName: "شركة النمره نقل اثاث",
+  robots: {
+    "max-image-preview": "large",
+    follow: true,
+    googleBot: {
+      notranslate: true,
+      "max-image-preview": "large",
+      index: true,
+      follow: true,
+    },
+    index: true,
+  },
+  icons: {
+    icon: [
+      { url: "/icons/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/icons/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: "/icons/apple-touch-icon.png",
+    shortcut: "/icons/favicon-32x32.png",
+  },
 };
 
 export default function RootLayout({
@@ -36,8 +53,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ar-AE" dir="rtl" className={`${tajLoc.className} antialiased`}>
-      <body className="relative">
+    <html lang="ar" dir="rtl" className={`${tajLoc.className} antialiased`}>
+      <body
+        className="relative"
+        style={{ fontFamily: "var(--font-tajawal), Tahoma, Arial, sans-serif" }}
+      >
         <div
           className="fixed inset-0 z-0"
           style={{

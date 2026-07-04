@@ -1,17 +1,9 @@
+import MetadataTemplate from "@/lib/MetaDataTemplate";
 import React from "react";
 import { Metadata } from "next";
 import ServicePageLayout, {
   ServicePageData,
 } from "@/components/utils/ServicePageLayout";
-
-export const metadata: Metadata = {
-  title: "فك وتركيب اثاث في دبي | شركة النمره — نجارون محترفون",
-  description:
-    "خدمة فك وتركيب اثاث في دبي بأيدي نجارين متخصصين: غرف نوم، خزائن، مطابخ، ايكيا، ومكاتب. ضمان على العمل. 054 1767605",
-  alternates: {
-    canonical: "/خدمات/فك-وتركيب-اثاث-في-دبي",
-  },
-};
 
 const pageData: ServicePageData = {
   title: "فك وتركيب اثاث في دبي",
@@ -179,6 +171,17 @@ const pageData: ServicePageData = {
   ),
 };
 
+export const metadata = MetadataTemplate({
+  meta: {
+    title: "فك وتركيب اثاث في دبي | شركة النمره — نجارون محترفون",
+    desc: "خدمة فك وتركيب اثاث في دبي بأيدي نجارين متخصصين: غرف نوم، خزائن، مطابخ، ايكيا، ومكاتب. ضمان على العمل. 054 1767605",
+  },
+  canonical: "/خدمات/فك-وتركيب-اثاث-في-دبي",
+  image: {
+    path: `/${pageData.imageName}`,
+    alt: pageData.imageAlt,
+  },
+});
 export default function AssemblyPage() {
   return <ServicePageLayout data={pageData} />;
 }

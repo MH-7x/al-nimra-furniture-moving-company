@@ -1,15 +1,19 @@
+import MetadataTemplate from "@/lib/MetaDataTemplate";
 import React from "react";
 import { Metadata } from "next";
 import ServicePageLayout, { ServicePageData } from "@/components/utils/ServicePageLayout";
 
-export const metadata: Metadata = {
-  title: "نقل اثاث المنزل في دبي | شركة النمره — أسعار من 750 درهم",
-  description:
-    "شركة نقل اثاث المنزل في دبي بخبرة +10 سنوات. تغليف، فك، نقل، تركيب، تأمين شامل. عرض سعر فوري عبر الواتساب: 054 1767605",
-  alternates: {
-    canonical: "/خدمات/نقل-اثاث-المنزل-في-دبي",
+export const metadata = MetadataTemplate({
+  meta: {
+    title: "نقل اثاث المنزل في دبي | شركة النمره — أسعار من 750 درهم",
+    desc: "شركة نقل اثاث المنزل في دبي بخبرة +10 سنوات. تغليف، فك، نقل، تركيب، تأمين شامل. عرض سعر فوري عبر الواتساب: 054 1767605",
   },
-};
+  canonical: "/خدمات/نقل-اثاث-المنزل-في-دبي",
+  image: {
+    path: "/شركة-النمره-نقل-اثاث-في-دبي.jpg",
+    alt: "نقل اثاث المنزل في دبي | شركة النمره — أسعار من 750 درهم",
+  },
+});;
 
 const pageData: ServicePageData = {
   title: "نقل اثاث المنزل في دبي",

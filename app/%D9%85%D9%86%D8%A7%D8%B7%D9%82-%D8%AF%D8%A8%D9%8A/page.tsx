@@ -1,21 +1,36 @@
+import MetadataTemplate from "@/lib/MetaDataTemplate";
 import { Metadata } from "next";
 import { dubaiSubLocations } from "@/lib/dubai-locations-data";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { MapPin } from "lucide-react";
+import { APP_URL, WHATSAPP_LINK } from "@/lib/utils";
+import { BreadcrumbSchema } from "@/components/utils/BreadcrumbSchema";
 
-export const metadata: Metadata = {
-  title: "مناطق خدمات نقل الاثاث في دبي - شركة النمرة",
-  description:
-    "دليل كامل لجميع مناطق وأحياء دبي التي نغطيها بخدمات نقل الأثاث والفك والتغليف والتركيب الاحترافية. تصفح أسعار وتفاصيل منطقتك الآن.",
-  alternates: {
-    canonical: "/مناطق-دبي",
+export const metadata = MetadataTemplate({
+  meta: {
+    title: "مناطق خدمات نقل الاثاث في دبي - شركة النمرة",
+    desc: "دليل كامل لجميع مناطق وأحياء دبي التي نغطيها بخدمات نقل الأثاث والفك والتغليف والتركيب الاحترافية. تصفح أسعار وتفاصيل منطقتك الآن.",
   },
-};
+  canonical: "/مناطق-دبي",
+  image: {
+    path: "/شركة-النمره-نقل-اثاث-في-دبي.jpg",
+    alt: "مناطق خدمات نقل الاثاث في دبي - شركة النمرة",
+  },
+});;
 
 export default function LocationsPage() {
   return (
     <main className="bg-background text-foreground rtl pb-24" dir="rtl">
+      <BreadcrumbSchema
+        items={[
+          { name: "الرئيسية", url: APP_URL },
+          {
+            name: "مناطق دبي",
+            url: `${APP_URL}/مناطق-دبي`,
+          },
+        ]}
+      />
       {/* Hero Header Section */}
       <section className="relative overflow-hidden bg-secondary-foreground md:py-28 py-16 md:px-28 px-4 text-center">
         <div className="relative z-10 max-w-4xl mx-auto">
@@ -83,9 +98,7 @@ export default function LocationsPage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button asChild size="lg" className="h-12 px-8 text-base font-bold">
-              <Link href="https://wa.me/971541767605">
-                تواصل معنا عبر واتساب
-              </Link>
+              <Link href={WHATSAPP_LINK}>تواصل معنا عبر واتساب</Link>
             </Button>
             <Button
               asChild
@@ -93,7 +106,7 @@ export default function LocationsPage() {
               variant="secondary"
               className="h-12 px-8 text-base font-bold"
             >
-              <Link href="/contact">اتصل بنا هاتفياً</Link>
+              <Link href="/اتصل-بن">اتصل بنا هاتفياً</Link>
             </Button>
           </div>
         </div>

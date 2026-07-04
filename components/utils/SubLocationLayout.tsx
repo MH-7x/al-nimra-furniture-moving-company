@@ -6,6 +6,8 @@ import CTASection from "@/components/utils/CTASection";
 import QuoteSection from "@/components/utils/QuoteSection";
 import { Check } from "lucide-react";
 import { ReviewsSection } from "./ReviewsSection";
+import { APP_URL, PHONE_LINK, WHATSAPP_LINK } from "@/lib/utils";
+import { BreadcrumbSchema } from "@/components/utils/BreadcrumbSchema";
 
 export interface PricingRow {
   type: string;
@@ -52,6 +54,13 @@ interface SubLocationLayoutProps {
 const SubLocationLayout: React.FC<SubLocationLayoutProps> = ({ data }) => {
   return (
     <main className="bg-background text-foreground rtl pb-20" dir="rtl">
+      <BreadcrumbSchema
+        items={[
+          { name: "الرئيسية", url: `${APP_URL}` },
+          { name: "مناطق دبي", url: `${APP_URL}/مناطق-دبي` },
+          { name: data.title, url: `${APP_URL}/${data.slug}` },
+        ]}
+      />
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-secondary-foreground md:py-32 py-20 md:px-48 px-4">
         <div className="relative z-10 max-w-4xl">

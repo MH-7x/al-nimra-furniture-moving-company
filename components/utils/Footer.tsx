@@ -1,14 +1,17 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 import Image from "next/image";
+import Link from "next/link";
 import { MapPin, Phone, Clock, ArrowLeft } from "lucide-react";
 import logo from "@/public/logo-2.svg";
 import { locationsItems, servicesItems } from "@/lib/data";
+import { PHONE_LINK } from "@/lib/utils";
 
 export default function Footer() {
   const quickLinks = [
-    { name: "من نحن", href: "/about" },
+    { name: "من نحن", href: "/من-نحن" },
     { name: "مناطق دبي", href: "/dubai-areas" },
-    { name: "مدونات", href: "/blogs" },
-    { name: "اتصل بنا", href: "/contact" },
+    { name: "مدونات", href: "/" },
+    { name: "اتصل بنا", href: "/اتصل-بن" },
   ];
 
   return (
@@ -33,11 +36,25 @@ export default function Footer() {
             السكني والتجاري في دبي وباقي إمارات الدولة، ونتعامل مع سكان الشقق
             وأصحاب الفلل والشركات على حد سواء
           </p>
-
+          <div className="flex items-center gap-4 mt-3">
+            <Link
+              href="/سياسة-الخصوصية"
+              className="text-sm text-background/70 hover:text-primary transition-colors"
+            >
+              سياسة الخصوصية
+            </Link>
+            <span className="text-background/30">|</span>
+            <Link
+              href="/شروط-الخدمة"
+              className="text-sm text-background/70 hover:text-primary transition-colors"
+            >
+              شروط الخدمة
+            </Link>
+          </div>
           {/* أيقونات التواصل الاجتماعي */}
           <div className="flex items-center gap-4 mt-2">
             <a
-              href="#"
+              href="/"
               className="w-8 h-8 rounded-full bg-background/10 hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-colors duration-300"
               aria-label="Facebook"
             >
@@ -46,7 +63,7 @@ export default function Footer() {
               </svg>
             </a>
             <a
-              href="#"
+              href="/"
               className="w-8 h-8 rounded-full bg-background/10 hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-colors duration-300"
               aria-label="Twitter"
             >
@@ -55,7 +72,7 @@ export default function Footer() {
               </svg>
             </a>
             <a
-              href="#"
+              href="/"
               className="w-8 h-8 rounded-full bg-background/10 hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-colors duration-300"
               aria-label="Pinterest"
             >
@@ -64,7 +81,7 @@ export default function Footer() {
               </svg>
             </a>
             <a
-              href="#"
+              href="/"
               className="w-8 h-8 rounded-full bg-background/10 hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-colors duration-300"
               aria-label="Instagram"
             >
@@ -73,7 +90,7 @@ export default function Footer() {
               </svg>
             </a>
             <a
-              href="#"
+              href="/"
               className="w-8 h-8 rounded-full bg-background/10 hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-colors duration-300"
               aria-label="YouTube"
             >
@@ -82,11 +99,13 @@ export default function Footer() {
               </svg>
             </a>
           </div>
+
+          {/* روابط قانونية */}
         </div>
 
         {/* العمود الثاني: الخدمات */}
         <div>
-          <h3 className="text-background font-bold text-lg mb-6 border-r-4 border-primary pr-3 inline-block leading-none">
+          <h3 className="text-background font-bold text-lg mb-6 border-s-4 border-primary ps-3 inline-block leading-none">
             خدماتنا
           </h3>
           <ul className="flex flex-col gap-3.5">
@@ -109,7 +128,7 @@ export default function Footer() {
 
         {/* العمود الثالث: المواقع */}
         <div>
-          <h3 className="text-background font-bold text-lg mb-6 border-r-4 border-primary pr-3 inline-block leading-none">
+          <h3 className="text-background font-bold text-lg mb-6 border-s-4 border-primary ps-3 inline-block leading-none">
             مواقع الخدمة
           </h3>
           <ul className="flex flex-col gap-3.5">
@@ -144,7 +163,7 @@ export default function Footer() {
 
         {/* العمود الرابع: معلومات الاتصال */}
         <div>
-          <h3 className="text-background font-bold text-lg mb-6 border-r-4 border-primary pr-3 inline-block leading-none">
+          <h3 className="text-background font-bold text-lg mb-6 border-s-4 border-primary ps-3 inline-block leading-none">
             معلومات الاتصال
           </h3>
           <ul className="flex flex-col gap-5 text-sm text-background/80">
@@ -167,11 +186,11 @@ export default function Footer() {
                   رقم التليفون
                 </span>
                 <a
-                  href="tel:+9715041767605"
+                  href={PHONE_LINK}
                   dir="ltr"
                   className="hover:text-primary transition-colors block text-sm font-semibold text-end "
                 >
-                  054 1767605
+                  0541767605
                 </a>
               </div>
             </li>

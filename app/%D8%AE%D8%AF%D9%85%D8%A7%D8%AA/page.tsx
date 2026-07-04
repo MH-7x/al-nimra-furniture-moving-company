@@ -1,3 +1,4 @@
+import MetadataTemplate from "@/lib/MetaDataTemplate";
 import React from "react";
 import { Metadata } from "next";
 import Link from "next/link";
@@ -5,6 +6,8 @@ import { FAQSection } from "@/components/utils/FaqsSection";
 import CTASection from "@/components/utils/CTASection";
 import QuoteSection from "@/components/utils/QuoteSection";
 import { ReviewsSection } from "@/components/utils/ReviewsSection";
+import { APP_URL, PHONE_LINK, WHATSAPP_LINK } from "@/lib/utils";
+import { BreadcrumbSchema } from "@/components/utils/BreadcrumbSchema";
 import {
   Home,
   Building2,
@@ -22,17 +25,21 @@ import {
   CheckCircle2,
   Sparkles,
   ArrowLeft,
-  MapPin
+  MapPin,
 } from "lucide-react";
+import Image from "next/image";
 
-export const metadata: Metadata = {
-  title: "خدمات نقل اثاث في دبي | شركة النمره — 13 خدمة احترافية",
-  description:
-    "خدمات نقل اثاث متكاملة في دبي: شقق، فلل، مكاتب، تغليف، فك وتركيب، تخزين. خبرة +10 سنوات، تأمين شامل، عرض سعر فوري. اتصل: 054 1767605",
-  alternates: {
-    canonical: "/خدمات",
+export const metadata = MetadataTemplate({
+  meta: {
+    title: "خدمات نقل اثاث في دبي | شركة النمره — 13 خدمة احترافية",
+    desc: "خدمات نقل اثاث متكاملة في دبي: شقق، فلل، مكاتب، تغليف، فك وتركيب، تخزين. خبرة +10 سنوات، تأمين شامل، عرض سعر فوري. اتصل: 0541767605",
   },
-};
+  canonical: "/خدمات",
+  image: {
+    path: "/النمره-نقل-اثاث-خدمة-شاملة-دبي.jpg",
+    alt: "خدمات نقل اثاث في دبي ",
+  },
+});
 
 export default function ServicesHubPage() {
   const mainServices = [
@@ -164,23 +171,28 @@ export default function ServicesHubPage() {
   const faqs = [
     {
       question: "كم تكلفة نقل الاثاث في دبي؟",
-      answer: "يتراوح السعر بين 750 درهم لشقة استوديو و6,500 درهم لفيلا كبيرة. السعر النهائي يعتمد على حجم الأثاث، عدد الغرف، الخدمات الإضافية، والمسافة.",
+      answer:
+        "يتراوح السعر بين 750 درهم لشقة استوديو و6,500 درهم لفيلا كبيرة. السعر النهائي يعتمد على حجم الأثاث، عدد الغرف، الخدمات الإضافية، والمسافة.",
     },
     {
       question: "هل تقدمون عرض سعر مجاني؟",
-      answer: "نعم. نقدّم معاينة مجانية في الموقع أو عرض سعر فوري عبر الواتساب بناءً على وصفك للأثاث والمسافة، دون أي التزام.",
+      answer:
+        "نعم. نقدّم معاينة مجانية في الموقع أو عرض سعر فوري عبر الواتساب بناءً على وصفك للأثاث والمسافة، دون أي التزام.",
     },
     {
       question: "هل لديكم تأمين على الأثاث؟",
-      answer: "نعم، كل عملية نقل مغطاة بتأمين شامل ضد التلف. في حال أي ضرر، نتحمل المسؤولية الكاملة.",
+      answer:
+        "نعم، كل عملية نقل مغطاة بتأمين شامل ضد التلف. في حال أي ضرر، نتحمل المسؤولية الكاملة.",
     },
     {
       question: "هل تنقلون اثاث بين الإمارات؟",
-      answer: "نعم، نقدّم خدمة نقل الاثاث بين دبي وكافة إمارات الدولة، بما فيها أبوظبي، الشارقة، العين، وعجمان.",
+      answer:
+        "نعم، نقدّم خدمة نقل الاثاث بين دبي وكافة إمارات الدولة، بما فيها أبوظبي، الشارقة، العين، وعجمان.",
     },
     {
       question: "كم تستغرق عملية نقل الاثاث؟",
-      answer: "شقة استوديو: 4-6 ساعات. شقة كبيرة: 6-10 ساعات. فيلا: يوم كامل أو أكثر. نلتزم بالموعد المتفق عليه.",
+      answer:
+        "شقة استوديو: 4-6 ساعات. شقة كبيرة: 6-10 ساعات. فيلا: يوم كامل أو أكثر. نلتزم بالموعد المتفق عليه.",
     },
     {
       question: "هل أحتاج لدفع مقدم؟",
@@ -189,14 +201,26 @@ export default function ServicesHubPage() {
   ];
 
   return (
-    <main className="bg-background text-foreground rtl pb-20 animate-fade-in" dir="rtl">
+    <main
+      className="bg-background text-foreground rtl pb-20 animate-fade-in"
+      dir="rtl"
+    >
+      <BreadcrumbSchema
+        items={[
+          { name: "الرئيسية", url: APP_URL },
+          {
+            name: "خدمات نقل اثاث",
+            url: `${APP_URL}/خدمات`,
+          },
+        ]}
+      />
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-b from-[#114e54] to-[#075056] text-white py-20 md:py-28 px-4">
         {/* Gradients */}
-        <div className="absolute -left-32 -top-32 w-96 h-96 rounded-full bg-primary/15 blur-3xl pointer-events-none" />
-        <div className="absolute -right-32 -bottom-32 w-96 h-96 rounded-full bg-primary/5 blur-3xl pointer-events-none" />
+        <div className="absolute -end-32 -top-32 w-96 h-96 rounded-full bg-primary/15 blur-3xl pointer-events-none" />
+        <div className="absolute -start-32 -bottom-32 w-96 h-96 rounded-full bg-primary/5 blur-3xl pointer-events-none" />
 
-        <div className="relative z-10 max-w-6xl mx-auto text-center md:text-right">
+        <div className="relative z-10 max-w-6xl mx-auto text-center md:text-start">
           {/* Breadcrumbs */}
           <nav className="flex items-center justify-center md:justify-start gap-2 text-xs md:text-sm text-white/80 mb-6 font-medium">
             <Link href="/" className="hover:text-primary transition-colors">
@@ -216,12 +240,14 @@ export default function ServicesHubPage() {
           </h1>
 
           <p className="text-base md:text-xl text-white/85 max-w-3xl mb-8 leading-relaxed">
-            تقدّم شركة النمره خدمات نقل اثاث في دبي بثلاث عشرة خدمة متكاملة تغطي كل سيناريو ممكن للنقل، من شقة استوديو إلى فيلا متعددة الطوابق، ومن مكتب صغير إلى مقر شركة كامل.
+            تقدّم شركة النمره خدمات نقل اثاث في دبي بثلاث عشرة خدمة متكاملة تغطي
+            كل سيناريو ممكن للنقل، من شقة استوديو إلى فيلا متعددة الطوابق، ومن
+            مكتب صغير إلى مقر شركة كامل.
           </p>
 
           <div className="flex flex-wrap justify-center md:justify-start gap-4">
             <a
-              href="https://wa.me/971541767605"
+              href={WHATSAPP_LINK}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-white font-bold text-sm md:text-base py-4 px-8 rounded-xl shadow-lg shadow-primary/20 transition-all"
@@ -229,10 +255,10 @@ export default function ServicesHubPage() {
               عرض سعر فوري عبر الواتساب
             </a>
             <a
-              href="tel:0541767605"
+              href={PHONE_LINK}
               className="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 text-white font-bold text-sm md:text-base py-4 px-8 rounded-xl border border-white/20 transition-all"
             >
-              اتصل بنا: 054 1767605
+              اتصل بنا: 0541767605
             </a>
           </div>
         </div>
@@ -242,32 +268,31 @@ export default function ServicesHubPage() {
       <section className="max-w-6xl mx-auto px-4 -mt-10 relative z-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           {/* Main Image placeholder */}
-          <div className="lg:col-span-6 aspect-video lg:aspect-auto bg-gradient-to-br from-[#ffece1]/30 via-slate-100 to-[#114e54]/5 rounded-3xl overflow-hidden shadow-xl border-4 border-white flex flex-col items-center justify-center p-8 text-center relative select-none">
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,#e5e7eb_1px,transparent_1px),linear-gradient(to_bottom,#e5e7eb_1px,transparent_1px)] bg-[size:3rem_3rem] opacity-20 pointer-events-none" />
-            <div className="w-14 h-14 rounded-2xl bg-white border border-[#ffece1] flex items-center justify-center text-primary mb-3 shadow-sm">
-              <Sparkles className="w-7 h-7" />
-            </div>
-            <p className="text-secondary-foreground font-black text-lg mb-1">
-              [معاينة صورة دليل الخدمات: Hub Page]
-            </p>
-            <p className="text-muted-foreground text-xs mb-3">
-              الاسم المقترح: <code className="bg-slate-100 px-2 py-0.5 rounded text-primary">naql-athath-services-dubai.jpg</code>
-            </p>
-            <span className="text-xs text-primary font-bold border border-primary/20 bg-primary/5 px-4 py-1.5 rounded-full">
-              نسبة العرض إلى الارتفاع 16:9 / 4:3 (placeholder)
-            </span>
+          <div className="lg:col-span-6 rounded-3xl border border-muted shadow-sm aspect-4/3 relative overflow-hidden">
+            <Image
+              src={"/النمره-نقل-اثاث-خدمة-شاملة-دبي.jpg"}
+              alt="خدمات نقل اثاث في دبي"
+              loading="lazy"
+              fill
+              className="object-cover "
+            />
           </div>
 
           {/* Core Hub Introduction */}
           <div className="lg:col-span-6 bg-white p-8 md:p-10 rounded-3xl border border-muted shadow-sm flex flex-col justify-center">
-            <h2 className="text-xl md:text-2xl font-bold mb-4 text-[#075056]">
+            <h2 className="text-xl md:text-2xl font-bold mb-4 text-secondary-foreground">
               اثاثك يصل بنفس الحالة التي غادر بها
             </h2>
             <p className="text-muted-foreground leading-relaxed text-sm md:text-base space-y-4">
-              نحن شركة نقل اثاث مرخصة في دبي بخبرة تتجاوز عشر سنوات، ونقدّم عرض سعر فوري عبر الواتساب أو بمعاينة ميدانية مجانية، دون أي دفعة مقدمة.
+              نحن شركة نقل اثاث مرخصة في دبي بخبرة تتجاوز عشر سنوات، ونقدّم عرض
+              سعر فوري عبر الواتساب أو بمعاينة ميدانية مجانية، دون أي دفعة
+              مقدمة.
               <br />
               <br />
-              لتحقيق غايتنا، نستخدم شاحنات مغلقة ومكيّفة، ومواد تغليف عالية الجودة تتحمل حرارة دبي ورطوبتها، وفريقاً مدرباً على فك وتركيب جميع أنواع الأثاث. كل خدماتنا مغطاة بتأمين شامل، وتتوفر 7 أيام في الأسبوع.
+              لتحقيق غايتنا، نستخدم شاحنات مغلقة ومكيّفة، ومواد تغليف عالية
+              الجودة تتحمل حرارة دبي ورطوبتها، وفريقاً مدرباً على فك وتركيب جميع
+              أنواع الأثاث. كل خدماتنا مغطاة بتأمين شامل، وتتوفر 7 أيام في
+              الأسبوع.
             </p>
           </div>
         </div>
@@ -277,11 +302,12 @@ export default function ServicesHubPage() {
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#075056]">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-secondary-foreground">
               خدمات نقل الاثاث الأساسية
             </h2>
             <p className="text-muted-foreground text-sm md:text-base">
-              تشمل خدمات النقل السكني والتجاري والخدمات التكميلية الأساسية في دبي
+              تشمل خدمات النقل السكني والتجاري والخدمات التكميلية الأساسية في
+              دبي
             </p>
           </div>
 
@@ -322,11 +348,12 @@ export default function ServicesHubPage() {
       <section className="py-20 px-4 bg-slate-50/60 border-y border-muted">
         <div className="max-w-6xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#075056]">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-secondary-foreground">
               خدمات النقل المتخصصة
             </h2>
             <p className="text-muted-foreground text-sm md:text-base">
-              بعض عمليات النقل تحتاج فريقاً ومعدات مختلفة، ونحن جاهزون تماماً لتلبيتها
+              بعض عمليات النقل تحتاج فريقاً ومعدات مختلفة، ونحن جاهزون تماماً
+              لتلبيتها
             </p>
           </div>
 
@@ -360,11 +387,12 @@ export default function ServicesHubPage() {
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#075056]">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-secondary-foreground">
               لماذا تختار شركة النمره؟
             </h2>
             <p className="text-muted-foreground text-sm md:text-base">
-              نحن لسنا شركة نقل اثاث عادية في دبي. إليك ما يميّزنا ويضمن سلامة أثاثك بالكامل:
+              نحن لسنا شركة نقل اثاث عادية في دبي. إليك ما يميّزنا ويضمن سلامة
+              أثاثك بالكامل:
             </p>
           </div>
 
@@ -394,15 +422,16 @@ export default function ServicesHubPage() {
       {/* Pricing Table Section */}
       <section className="py-20 px-4 bg-slate-50/60 border-y border-muted">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold mb-4 text-[#075056] text-center">
+          <h2 className="text-3xl font-bold mb-4 text-secondary-foreground text-center">
             أسعار خدمات نقل الاثاث في دبي
           </h2>
           <p className="text-muted-foreground text-center text-sm md:text-base mb-10 max-w-2xl mx-auto">
-            الأسعار تختلف حسب حجم الأثاث، نوع العقار، المسافة، والخدمات المطلوبة. للتخطيط الأولي:
+            الأسعار تختلف حسب حجم الأثاث، نوع العقار، المسافة، والخدمات
+            المطلوبة. للتخطيط الأولي:
           </p>
 
           <div className="overflow-x-auto rounded-2xl bg-white border border-muted shadow-sm">
-            <table className="w-full text-right border-collapse min-w-[500px]">
+            <table className="w-full text-start border-collapse min-w-[500px]">
               <thead>
                 <tr className="bg-slate-50 text-secondary-foreground font-bold border-b border-muted">
                   {pricingHeaders.map((header, idx) => (
@@ -439,7 +468,9 @@ export default function ServicesHubPage() {
           <div className="bg-[#ffece1]/30 p-5 rounded-2xl border border-[#ffece1] mt-6 text-xs md:text-sm text-secondary-foreground flex gap-3 items-start">
             <span className="text-primary mt-0.5 font-bold">ℹ</span>
             <p className="leading-relaxed">
-              هذه النطاقات تقريبية. للحصول على <strong>عرض سعر دقيق</strong>، تواصل معنا مباشرة عبر الواتساب على <strong>054 1767605</strong> ونرسل لك تقديراً في نفس اليوم.
+              هذه النطاقات تقريبية. للحصول على <strong>عرض سعر دقيق</strong>،
+              تواصل معنا مباشرة عبر الواتساب على <strong>0541767605</strong>{" "}
+              ونرسل لك تقديراً في نفس اليوم.
             </p>
           </div>
         </div>
@@ -451,23 +482,30 @@ export default function ServicesHubPage() {
           <div className="w-12 h-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6 mx-auto">
             <MapPin className="w-6 h-6" />
           </div>
-          <h2 className="text-3xl font-bold mb-6 text-[#075056]">
+          <h2 className="text-3xl font-bold mb-6 text-secondary-foreground">
             المناطق التي نخدمها
           </h2>
           <p className="text-muted-foreground leading-relaxed text-sm md:text-base mb-8">
-            نغطي معظم مناطق دبي الرئيسية: دبي مارينا، الجميرا، البرشاء، ديرة، بر دبي، وسط مدينة دبي، الخليج التجاري، أبراج بحيرات جميرا (JLT)، قرية جميرا الدائرية (JVC)، قرية جميرا الثلاثية (JVT)، مردف، القصيص، القرهود، الراشدية، الجداف، الفرجان، موتور سيتي، واحة دبي للسيليكون، دبي هيلز، دبي الجنوب، مدينة دبي للإنتاج، DIFC، القوز، عود ميثاء، منخول، الكرامة، النهضة، الممزر، نخلة جميرا، جميرا غولف إستيتس، ريمرام، ليوان، ودبي لاند.
+            نغطي معظم مناطق دبي الرئيسية: دبي مارينا، الجميرا، البرشاء، ديرة، بر
+            دبي، وسط مدينة دبي، الخليج التجاري، أبراج بحيرات جميرا (JLT)، قرية
+            جميرا الدائرية (JVC)، قرية جميرا الثلاثية (JVT)، مردف، القصيص،
+            القرهود، الراشدية، الجداف، الفرجان، موتور سيتي، واحة دبي للسيليكون،
+            دبي هيلز، دبي الجنوب، مدينة دبي للإنتاج، DIFC، القوز، عود ميثاء،
+            منخول، الكرامة، النهضة، الممزر، نخلة جميرا، جميرا غولف إستيتس،
+            ريمرام، ليوان، ودبي لاند.
           </p>
           <p className="text-secondary-foreground font-semibold text-sm md:text-base border border-dashed border-primary/20 bg-primary/5 py-4 px-6 rounded-2xl inline-block">
-            كما تصل خدماتنا إلى باقي إمارات الدولة: <strong>أبوظبي، الشارقة، عجمان، رأس الخيمة، الفجيرة، أم القيوين، والعين</strong>.
+            كما تصل خدماتنا إلى باقي إمارات الدولة:{" "}
+            <strong>
+              أبوظبي، الشارقة، عجمان، رأس الخيمة، الفجيرة، أم القيوين، والعين
+            </strong>
+            .
           </p>
         </div>
       </section>
 
       {/* FAQ Section */}
-      <FAQSection
-        title="أسئلة شائعة عن خدمات نقل الاثاث"
-        faqs={faqs}
-      />
+      <FAQSection title="أسئلة شائعة عن خدمات نقل الاثاث" faqs={faqs} />
 
       {/* Reviews, Quote and CTA Sections */}
       <ReviewsSection />

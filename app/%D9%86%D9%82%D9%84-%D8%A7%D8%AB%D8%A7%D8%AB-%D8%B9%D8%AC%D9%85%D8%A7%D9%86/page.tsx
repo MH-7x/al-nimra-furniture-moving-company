@@ -1,3 +1,4 @@
+import MetadataTemplate from "@/lib/MetaDataTemplate";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -17,205 +18,36 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { FAQSection } from "@/components/utils/FaqsSection";
-import CTASection from "@/components/utils/CTASection";
 import QuoteSection from "@/components/utils/QuoteSection";
 import { ReviewsSection } from "@/components/utils/ReviewsSection";
+import { ajmanFaqs } from "@/lib/FaqsData";
+import { APP_URL, PHONE_LINK, WHATSAPP_LINK } from "@/lib/utils";
+import { BreadcrumbSchema } from "@/components/utils/BreadcrumbSchema";
 
-export const metadata: Metadata = {
-  title: "نقل اثاث عجمان | النمره نقل اثاث - فك تغليف نقل وتركيب",
-  description:
-    "نقل اثاث عجمان مع النمره نقل اثاث. فك وتغليف وتركيب بأيدي فريق محترف وشاحنات مغلقة. أسعار واضحة بدون رسوم خفية. احصل على عرض سعر مجاني اليوم!",
-  alternates: {
-    canonical: "/نقل-اثاث-عجمان",
+export const metadata = MetadataTemplate({
+  meta: {
+    title: "نقل اثاث عجمان | النمره نقل اثاث - فك تغليف نقل وتركيب",
+    desc: "نقل اثاث عجمان مع النمرة نقل اثاث. فك وتغليف وتركيب بأيدي فريق محترف وشاحنات مغلقة. أسعار واضحة بدون رسوم خفية. احصل على عرض سعر مجاني اليوم!",
   },
-};
-
-const ajmanFaqs = [
-  {
-    question: "كم تكلفة نقل اثاث في عجمان؟",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          تكلفة نقل اثاث عجمان تبدأ من حوالي 500 درهم للاستوديو وتوصل 3,500 درهم
-          وأكثر للفلل الكبيرة. السعر يعتمد على حجم الاثاث، الطابق، وضع المصعد،
-          والمسافة بين البيتين. تواصل معنا ونعطيك سعر دقيق بعد ما نعرف تفاصيل
-          بيتك.
-        </p>
-      </div>
-    ),
+  canonical: "/نقل-اثاث-عجمان",
+  image: {
+    path: "/ajm/نقل-اثاث-عجمان-النمره-شركة-نقل.jpg",
+    alt: "نقل اثاث عجمان | النمره نقل اثاث - فك تغليف نقل وتركيب",
   },
-  {
-    question: "ليش نقل اثاث عجمان أرخص من دبي؟",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          نقل عجمان أوفر بحوالي 15 لين 25 بالمية لأن تكاليف التشغيل والمواقف
-          والتصاريح أقل. نفس الجودة ونفس الفريق ونفس المعدات — الفرق بس في
-          تكاليف الإمارة.
-        </p>
-      </div>
-    ),
-  },
-  {
-    question: "هل السعر اللي تعطوني نهائي ولا تطلع رسوم خفية؟",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          السعر نهائي وثابت. ما فيه رسم وقود ولا فك سراير ولا كراتين تطلع يوم
-          النقل. الشي الوحيد اللي يغير السعر هو لو ضفت أغراض أو خدمات ما كانت
-          بالعرض.
-        </p>
-      </div>
-    ),
-  },
-  {
-    question: "هل تقدمون خدمة فك وتركيب الاثاث؟",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          نعم. عندنا نجار محترف يتعامل مع كل أنواع الاثاث — غرف نوم، كباتات،
-          طاولات، واثاث ايكيا. نفك كل قطعة ونرقم أجزاءها ونركبها في بيتك الجديد
-          بنفس الشكل.
-        </p>
-      </div>
-    ),
-  },
-  {
-    question: "هل تنقلون من عجمان الى دبي والشارقة؟",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          نعم. النقل بين عجمان وباقي الإمارات من أكثر شغلنا. رسوم سالك والطريق
-          محسوبة في العرض من البداية. أغلب النقلات تخلص في نفس اليوم.
-        </p>
-      </div>
-    ),
-  },
-  {
-    question: "قبل كم يوم لازم أحجز موعد النقل؟",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          احجز قبل 3 لين 5 أيام عشان تضمن الفريق والموعد المناسب. لو ناقل آخر
-          الشهر، احجز قبل أسبوعين لأن الطلب عالي. مواعيد الصيف تنحجز أسرع.
-        </p>
-      </div>
-    ),
-  },
-  {
-    question: "هل تنقلون في نفس اليوم؟",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          نعم لو عندنا فريق متوفر. قول لنا موقعك وحجم أغراضك ونأكد لك خلال
-          الساعة. النقلة الطارية تاخذ نفس التغليف والجودة.
-        </p>
-      </div>
-    ),
-  },
-  {
-    question: "كيف تتأكدون إن أثاثي ما ينخدش؟",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          كل قطعة خشب نلفها ببطانية مبطنة قبل ما تطلع من الغرفة. كنب ومراتب
-          نغلفها بفيلم تمدد. الزجاج والرخام لهم صناديق خشبية وحماية حواف.
-          والشاحنة المغلقة تحمي كل شي من الشمس والغبار.
-        </p>
-      </div>
-    ),
-  },
-  {
-    question: "شو يصير لو انكسرت قطعة وقت النقل؟",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          لو انكسرت أو تخربت قطعة، نكتبها بتقرير الشغل وانت حاضر قبل ما الفريق
-          يمشي. كل نقلة فيها تأمين نقل أساسي يغطي الضرر. ولو عندك قطع غالية،
-          نرتب تأمين إضافي قبل النقل.
-        </p>
-      </div>
-    ),
-  },
-  {
-    question: "هل لازم أسكر حساب فيوا قبل النقل؟",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          نعم. سدد فاتورة فيوا الأخيرة قبل ما تسلم البيت. صاحب البيت يخصم أي
-          مبلغ ناقص من تأمينك. مكتب فيوا قريب من سيتي سنتر عجمان لو تبا تروح
-          بنفسك.
-        </p>
-      </div>
-    ),
-  },
-  {
-    question: "هل توفرون كراتين ومواد تغليف؟",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          نعم. نجيب كل شي معنا: كراتين بجدار مزدوج، فيلم تمدد، بطانيات مبطنة،
-          صناديق دواليب، وواقيات حواف. ما يلزمك تشتري ولا كرتون.
-        </p>
-      </div>
-    ),
-  },
-  {
-    question: "هل تقدرون تنقلون في الصيف بدون ما تتضرر الأغراض؟",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          نعم. نقل الصيف تخصصنا. نستخدم شاحنات مغلقة تحمي من الحرارة والرطوبة،
-          ونبدأ بدري أو بعد العصر. الإلكترونيات والخشب نغلفها بمواد تمنع التأثر
-          بالحرارة.
-        </p>
-      </div>
-    ),
-  },
-  {
-    question: "هل تسوون معاينة قبل النقل؟",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          نعم ودائماً ننصح فيها. نسوي معاينة مجانية — إما بزيارة لبيتك أو عن
-          طريق فيديو كول على الواتساب. نشوف كمية الاثاث ونوعه ووضع الشارع
-          والمصعد وحالة البناية. بعدها نعطيك عرض سعر دقيق ما يتغير. المعاينة
-          تمنع المفاجآت يوم النقل وتخلينا نجهز عدد العمال والشاحنة والمواد الصح
-          من أول مرة.
-        </p>
-      </div>
-    ),
-  },
-  {
-    question: "هل تنقلون اثاث ايكيا؟",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          نعم. اثاث ايكيا يحتاج دقة في الفك والتركيب لأن أجزاءه صغيرة وتتكرر.
-          نجارنا متعود على هالنوع ويعرف يفكه ويركبه بدون ما يتلف. نرقم كل قطعة
-          ونحفظ البراغي في أكياس مرقمة عشان ما نضيع شي.
-        </p>
-      </div>
-    ),
-  },
-  {
-    question: "هل تتعاملون مع الأجهزة الكهربائية مثل الغسالة والثلاجة؟",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          نعم. الغسالة نفصل خراطيم المياه ونثبتها للنقل. الثلاجة نفصلها قبل
-          النقل بساعتين على الأقل عشان تبرد ونفرغ الماي منها. وبعد ما نوصلها
-          البيت الجديد، ننصحك تستنى ساعتين قبل ما تشغلها عشان ما يتأثر
-          الكمبريسور.
-        </p>
-      </div>
-    ),
-  },
-];
+});;
 
 export default function AjmanMovingPage() {
   return (
     <main dir="rtl" className="text-foreground pb-20">
+      <BreadcrumbSchema
+        items={[
+          { name: "الرئيسية", url: APP_URL },
+          {
+            name: "نقل اثاث عجمان",
+            url: `${APP_URL}/نقل-اثاث-عجمان`,
+          },
+        ]}
+      />
       {/* ══════════════════════════════════════════
           HERO — white editorial, orange-led
       ══════════════════════════════════════════ */}
@@ -237,7 +69,7 @@ export default function AjmanMovingPage() {
 
           {/* Orange eyebrow + star rating */}
           <div className="flex flex-wrap items-center gap-4 mb-5">
-            <span className="text-primary font-bold text-xs uppercase tracking-widest border-r-2 border-primary pr-3">
+            <span className="text-primary font-bold text-xs uppercase tracking-widest border-s-2 border-primary ps-3">
               النمره نقل اثاث · عجمان
             </span>
             <span className="inline-flex items-center gap-1.5 text-xs font-medium text-muted-foreground">
@@ -257,8 +89,11 @@ export default function AjmanMovingPage() {
               <span className="relative z-10 text-primary">عجمان</span>
               <span
                 aria-hidden
-                className="absolute bottom-1 right-0 left-0 h-3 bg-primary/10 -skew-x-3 rounded-sm z-0"
+                className="absolute bottom-1 start-0 end-0 h-3 bg-primary/10 -skew-x-3 rounded-sm z-0"
               />
+            </span>
+            <span className="text-2xl block mt-5">
+              خدمة فك وتغليف ونقل وتركيب من النمره لنقل الأثاث
             </span>
           </h1>
 
@@ -274,7 +109,7 @@ export default function AjmanMovingPage() {
           <div className="flex flex-wrap gap-3 mb-10">
             <Button size="lg" className="h-12 px-7 font-bold gap-2" asChild>
               <a
-                href="https://wa.me/971541767605"
+                href={WHATSAPP_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
                 id="cta-whatsapp-hero"
@@ -289,9 +124,9 @@ export default function AjmanMovingPage() {
               className="h-12 px-7 font-bold gap-2 border-2"
               asChild
             >
-              <a href="tel:0541767605" dir="ltr" id="cta-phone-hero">
+              <a href={PHONE_LINK} dir="ltr" id="cta-phone-hero">
                 <Phone className="w-4 h-4" />
-                054 1767605
+                0541767605
               </a>
             </Button>
           </div>
@@ -372,8 +207,8 @@ export default function AjmanMovingPage() {
               الساعة.
             </span>
             <Button size="sm" asChild>
-              <a href="tel:0541767605" dir="ltr">
-                054 1767605
+              <a href={PHONE_LINK} dir="ltr">
+                0541767605
               </a>
             </Button>
           </div>
@@ -494,7 +329,7 @@ export default function AjmanMovingPage() {
                   تفاصيل خدمة نقل الشقق <ArrowLeft className="w-4 h-4" />
                 </Link>
               </div>
-              <div className="aspect-[4/3] md:aspect-auto relative order-1 md:order-2 min-h-[220px]">
+              <div className="aspect-4/3 relative order-1 md:order-2 ">
                 <Image
                   src="/ajm/نقل-اثاث-شقق-عجمان-النمره.jpg"
                   alt="نقل أثاث الشقق في عجمان - فريق النمره موفرز"
@@ -506,7 +341,7 @@ export default function AjmanMovingPage() {
 
             {/* Service 2 — فلل | image left */}
             <article className="grid grid-cols-1 md:grid-cols-2 gap-0 rounded-3xl overflow-hidden border border-muted">
-              <div className="aspect-[4/3] md:aspect-auto relative min-h-[220px]">
+              <div className="aspect-4/3  relative ">
                 <Image
                   src="/ajm/نقل-اثاث-فلل-عجمان-النمره.jpg"
                   alt="نقل أثاث الفلل في عجمان - فريق النمره موفرز"
@@ -566,7 +401,7 @@ export default function AjmanMovingPage() {
                   تفاصيل خدمة نقل المكاتب <ArrowLeft className="w-4 h-4" />
                 </Link>
               </div>
-              <div className="aspect-[4/3] md:aspect-auto relative order-1 md:order-2 min-h-[220px]">
+              <div className="aspect-4/3 relative order-1 md:order-2 ">
                 <Image
                   src="/ajm/نقل-اثاث-مكاتب-شركات-عجمان-النمره.jpg"
                   alt="نقل أثاث المكاتب والشركات في عجمان - النمره موفرز"
@@ -604,7 +439,7 @@ export default function AjmanMovingPage() {
 
             {/* Service 5 — فك وتركيب | image left */}
             <article className="grid grid-cols-1 md:grid-cols-2 gap-0 rounded-3xl overflow-hidden border border-muted">
-              <div className="aspect-[4/3] md:aspect-auto relative min-h-[220px]">
+              <div className="aspect-video  relative ">
                 <Image
                   src="/ajm/فك-تغليف-تركيب-اثاث-عجمان-النمره.jpg"
                   alt="نجار شركة النمره موفرز يفك الاثاث في عجمان"
@@ -639,55 +474,49 @@ export default function AjmanMovingPage() {
             </article>
 
             {/* Service 6 — تخزين الاثاث */}
-            <article className="grid grid-cols-1 md:grid-cols-2 gap-0 rounded-3xl overflow-hidden border border-muted">
-              <div className="p-8 md:p-10 flex flex-col justify-center order-2 md:order-1">
-                <h3 className="font-medium text-xl text-secondary-foreground mb-4">
-                  تخزين الاثاث في مستودعات آمنة
-                </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                  لو بيتك الجديد ما جهز أو مسافر لفترة، نوفر تخزين اثاث عجمان في
-                  مستودعات مكيفة ونظيفة. نسوي جرد لكل قطعة وننظمها على باليتات
-                  بعيد عن الأرض. عندنا خيارات تخزين قصير وطويل المدى.
-                </p>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-5">
-                  وميزة إن مخازن عجمان أرخص من دبي. حتى ناس ساكنين بدبي يخزنون
-                  عندنا لأن السعر أوفر بنسبة ملحوظة. نعطيك مفتاح وحدة التخزين
-                  ورقم تعريف الجرد، وتقدر تزور أغراضك أو تطلب توصيلها بأي وقت.
-                </p>
-                <Link
-                  href="/خدمات/تخزين-اثاث-في-دبي"
-                  className="inline-flex items-center gap-1.5 text-primary text-sm font-bold hover:gap-2.5 transition-all"
-                >
-                  تفاصيل خدمات التخزين <ArrowLeft className="w-4 h-4" />
-                </Link>
-              </div>
-              <div className="aspect-[4/3] md:aspect-auto relative order-1 md:order-2 min-h-[220px]">
-                <Image
-                  src="/ajm/تخزين-اثاث-عجمان-النمرة-مستودع.jpg"
-                  alt="مستودع تخزين أثاث النمره نقل اثاث  في عجمان"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            </article>
+            <div className="grid md:grid-cols-2 grid-cols-1 gap-6">
+              <article className=" rounded-3xl overflow-hidden border border-muted">
+                <div className="p-8 md:p-10 flex flex-col justify-center order-2 md:order-1">
+                  <h3 className="font-medium text-xl text-secondary-foreground mb-4">
+                    تخزين الاثاث في مستودعات آمنة
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                    لو بيتك الجديد ما جهز أو مسافر لفترة، نوفر تخزين اثاث عجمان
+                    في مستودعات مكيفة ونظيفة. نسوي جرد لكل قطعة وننظمها على
+                    باليتات بعيد عن الأرض. عندنا خيارات تخزين قصير وطويل المدى.
+                  </p>
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-5">
+                    وميزة إن مخازن عجمان أرخص من دبي. حتى ناس ساكنين بدبي يخزنون
+                    عندنا لأن السعر أوفر بنسبة ملحوظة. نعطيك مفتاح وحدة التخزين
+                    ورقم تعريف الجرد، وتقدر تزور أغراضك أو تطلب توصيلها بأي وقت.
+                  </p>
+                  <Link
+                    href="/خدمات/تخزين-اثاث-في-دبي"
+                    className="inline-flex items-center gap-1.5 text-primary text-sm font-bold hover:gap-2.5 transition-all"
+                  >
+                    تفاصيل خدمات التخزين <ArrowLeft className="w-4 h-4" />
+                  </Link>
+                </div>
+              </article>
 
-            {/* Service 7 — نفس اليوم */}
-            <article className="rounded-3xl overflow-hidden border border-muted p-8 md:p-10 bg-slate-50">
-              <h3 className="font-medium text-xl text-secondary-foreground mb-4">
-                خدمة نقل اثاث في نفس اليوم
-              </h3>
-              <p className="text-muted-foreground text-sm md:text-base leading-relaxed mb-4">
-                وضعك طاري وتبا تنقل اليوم؟ اتصل فينا وقول لنا موقعك وحجم أغراضك.
-                لو عندنا فريق فاضي، نأكد لك خلال الساعة. النقلة الطارية تحتاج
-                ترتيب أسرع بس تاخذ نفس الجودة ونفس التغليف.
-              </p>
-              <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
-                هالخدمة مطلوبة كثير من اللي يشترون اثاث جديد ويبون ينقلونه من
-                المعرض لبيتهم، أو اللي يحصلون شقة فجأة ولازم ينقلون قبل ما تروح.
-                نقل اثاث عجمان في نفس اليوم ممكن لو النقلة صغيرة أو متوسطة
-                والمسافة قصيرة.
-              </p>
-            </article>
+              {/* Service 7 — نفس اليوم */}
+              <article className="rounded-3xl overflow-hidden border border-muted p-8 md:p-10 bg-slate-50">
+                <h3 className="font-medium text-xl text-secondary-foreground mb-4">
+                  خدمة نقل اثاث في نفس اليوم
+                </h3>
+                <p className="text-muted-foreground text-sm md:text-base leading-relaxed mb-4">
+                  وضعك طاري وتبا تنقل اليوم؟ اتصل فينا وقول لنا موقعك وحجم
+                  أغراضك. لو عندنا فريق فاضي، نأكد لك خلال الساعة. النقلة
+                  الطارية تحتاج ترتيب أسرع بس تاخذ نفس الجودة ونفس التغليف.
+                </p>
+                <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
+                  هالخدمة مطلوبة كثير من اللي يشترون اثاث جديد ويبون ينقلونه من
+                  المعرض لبيتهم، أو اللي يحصلون شقة فجأة ولازم ينقلون قبل ما
+                  تروح. نقل اثاث عجمان في نفس اليوم ممكن لو النقلة صغيرة أو
+                  متوسطة والمسافة قصيرة.
+                </p>
+              </article>
+            </div>
 
             {/* Service 8 — القطع الخاصة */}
             <article className="rounded-3xl overflow-hidden border border-muted p-8 md:p-10 bg-white">
@@ -741,7 +570,7 @@ export default function AjmanMovingPage() {
             {/* Table */}
             <div className="lg:col-span-8 space-y-4">
               <div className="overflow-x-auto rounded-2xl border border-muted bg-white shadow-sm">
-                <table className="w-full text-right border-collapse text-xs md:text-sm">
+                <table className="w-full text-start border-collapse text-xs md:text-sm">
                   <thead>
                     <tr className="border-b border-muted bg-slate-50/80 text-secondary-foreground font-semibold">
                       <th className="py-3.5 px-5">نوع السكن</th>
@@ -851,7 +680,7 @@ export default function AjmanMovingPage() {
               <div className="space-y-2">
                 <Button className="w-full font-bold gap-2" asChild>
                   <a
-                    href="https://wa.me/971541767605"
+                    href={WHATSAPP_LINK}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -864,9 +693,9 @@ export default function AjmanMovingPage() {
                   className="w-full font-bold gap-2 border-2"
                   asChild
                 >
-                  <a href="tel:0541767605" dir="ltr">
+                  <a href={PHONE_LINK} dir="ltr">
                     <Phone className="w-4 h-4" />
-                    054 1767605
+                    0541767605
                   </a>
                 </Button>
               </div>
@@ -1016,7 +845,7 @@ export default function AjmanMovingPage() {
                 className="bg-white rounded-2xl border border-muted p-6 relative flex flex-col justify-between"
               >
                 <div>
-                  <span className="text-4xl font-black text-primary/10 absolute top-4 left-4 leading-none select-none">
+                  <span className="text-4xl font-black text-primary/10 absolute top-4 end-4 leading-none select-none">
                     {i + 1}
                   </span>
                   <h3 className="font-bold text-secondary-foreground text-sm mb-3 mt-6">
@@ -1121,7 +950,7 @@ export default function AjmanMovingPage() {
           </div>
 
           <div className="overflow-x-auto rounded-2xl border border-muted bg-white mb-8">
-            <table className="w-full text-right border-collapse text-xs md:text-sm">
+            <table className="w-full text-start border-collapse text-xs md:text-sm">
               <thead>
                 <tr className="border-b border-muted bg-slate-50 text-secondary-foreground font-semibold">
                   <th className="py-3.5 px-5">المنطقة</th>
@@ -1465,66 +1294,6 @@ export default function AjmanMovingPage() {
       </section>
 
       {/* ══════════════════════════════════════════
-          FINAL CTA BLOCK (inline — before FAQs)
-      ══════════════════════════════════════════ */}
-      <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="rounded-3xl border-2 border-dashed border-primary/20 bg-primary/3 p-10 md:p-14 text-center">
-            <p className="text-primary font-bold text-xs uppercase tracking-widest mb-4">
-              احجز الآن
-            </p>
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              احجز نقل اثاثك في عجمان مع النمره نقل اثاث
-            </h2>
-            <p className="text-muted-foreground text-sm md:text-base leading-relaxed mb-4 max-w-3xl mx-auto">
-              جاهز تنقل؟ تواصل معنا بالطريقة اللي تناسبك. ما نطلب عربون. عرض
-              السعر مجاني. ولو ما عجبك السعر، ما نضغط عليك. نبا تنقل معنا لأن
-              الخدمة عجبتك مو لأنك ملزوم.
-            </p>
-            <div className="text-xs md:text-sm text-secondary-foreground/80 space-y-2 mb-8 max-w-md mx-auto border-y border-muted py-4">
-              <p>
-                📍 <strong>العنوان:</strong> القوز الصناعية الثانية، دبي (نخدم
-                جميع الإمارات بما فيها عجمان)
-              </p>
-              <p>
-                🕒 <strong>أوقات العمل:</strong> 7 أيام في الأسبوع
-              </p>
-            </div>
-            <div className="flex flex-wrap justify-center gap-4 mb-6">
-              <Button size="lg" className="h-13 px-8 font-bold gap-2" asChild>
-                <a
-                  href="https://wa.me/971541767605"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  id="cta-whatsapp-bottom"
-                >
-                  <MessageCircle className="w-5 h-5" />
-                  واتساب — أرسل رسالة الآن
-                </a>
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="h-13 px-8 font-bold border-2 gap-2"
-                asChild
-              >
-                <a href="tel:0541767605" dir="ltr" id="cta-phone-bottom">
-                  <Phone className="w-5 h-5" />
-                  054 1767605
-                </a>
-              </Button>
-            </div>
-            <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-xs text-muted-foreground">
-              <span>✓ المعاينة مجانية بالفيديو</span>
-              <span>✓ ما نطلب دفعة مقدمة</span>
-              <span>✓ الخدمة متوفرة كل أيام الأسبوع</span>
-              <span>✓ نرسل مندوب في نفس اليوم</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ══════════════════════════════════════════
           FAQS (utility component)
       ══════════════════════════════════════════ */}
       <FAQSection
@@ -1576,9 +1345,64 @@ export default function AjmanMovingPage() {
       </section>
 
       {/* ══════════════════════════════════════════
-          CTA SECTION (utility component)
+          FINAL CTA BLOCK (inline — before FAQs)
       ══════════════════════════════════════════ */}
-      <CTASection />
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="rounded-3xl border-2 border-dashed border-primary/20 bg-primary/3 p-10 md:p-14 text-center">
+            <p className="text-primary font-bold text-xs uppercase tracking-widest mb-4">
+              احجز الآن
+            </p>
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+              احجز نقل اثاثك في عجمان مع النمره نقل اثاث
+            </h2>
+            <p className="text-muted-foreground text-sm md:text-base leading-relaxed mb-4 max-w-3xl mx-auto">
+              جاهز تنقل؟ تواصل معنا بالطريقة اللي تناسبك. ما نطلب عربون. عرض
+              السعر مجاني. ولو ما عجبك السعر، ما نضغط عليك. نبا تنقل معنا لأن
+              الخدمة عجبتك مو لأنك ملزوم.
+            </p>
+            <div className="text-xs md:text-sm text-secondary-foreground/80 space-y-2 mb-8 max-w-md mx-auto border-y border-muted py-4">
+              <p>
+                📍 <strong>العنوان:</strong> القوز الصناعية الثانية، دبي (نخدم
+                جميع الإمارات بما فيها عجمان)
+              </p>
+              <p>
+                🕒 <strong>أوقات العمل:</strong> 7 أيام في الأسبوع
+              </p>
+            </div>
+            <div className="flex flex-wrap justify-center gap-4 mb-6">
+              <Button size="lg" className="h-13 px-8 font-bold gap-2" asChild>
+                <a
+                  href={WHATSAPP_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  id="cta-whatsapp-bottom"
+                >
+                  <MessageCircle className="w-5 h-5" />
+                  واتساب — أرسل رسالة الآن
+                </a>
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="h-13 px-8 font-bold border-2 gap-2"
+                asChild
+              >
+                <a href={PHONE_LINK} dir="ltr" id="cta-phone-bottom">
+                  <Phone className="w-5 h-5" />
+                  0541767605
+                </a>
+              </Button>
+            </div>
+            <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-xs text-muted-foreground">
+              <span>✓ المعاينة مجانية بالفيديو</span>
+              <span>✓ ما نطلب دفعة مقدمة</span>
+              <span>✓ الخدمة متوفرة كل أيام الأسبوع</span>
+              <span>✓ نرسل مندوب في نفس اليوم</span>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

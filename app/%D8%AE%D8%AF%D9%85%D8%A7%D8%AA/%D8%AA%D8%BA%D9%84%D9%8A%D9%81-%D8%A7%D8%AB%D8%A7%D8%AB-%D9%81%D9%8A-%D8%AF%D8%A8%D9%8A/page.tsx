@@ -1,17 +1,8 @@
+import MetadataTemplate from "@/lib/MetaDataTemplate";
 import React from "react";
-import { Metadata } from "next";
 import ServicePageLayout, {
   ServicePageData,
 } from "@/components/utils/ServicePageLayout";
-
-export const metadata: Metadata = {
-  title: "تغليف اثاث في دبي | شركة النمره — تعبئة احترافية بأمان",
-  description:
-    "خدمة تغليف اثاث في دبي بمواد عالية الجودة: بلاستيك فقاعي، فوم، صناديق كرتون مقوى. حماية كاملة من الخدش والكسر. 054 1767605",
-  alternates: {
-    canonical: "/خدمات/تغليف-اثاث-في-دبي",
-  },
-};
 
 const pageData: ServicePageData = {
   title: "تغليف اثاث في دبي",
@@ -146,6 +137,17 @@ const pageData: ServicePageData = {
     " تغليف اثاث احترافي في دبي بمواد عالية الجودة من شركة النمره نقل اثاث",
 };
 
+export const metadata = MetadataTemplate({
+  meta: {
+    title: "تغليف اثاث في دبي | شركة النمره — تعبئة احترافية بأمان",
+    desc: "خدمة تغليف اثاث في دبي بمواد عالية الجودة: بلاستيك فقاعي، فوم، صناديق كرتون مقوى. حماية كاملة من الخدش والكسر. 054 1767605",
+  },
+  canonical: "/خدمات/تغليف-اثاث-في-دبي",
+  image: {
+    path: `/${pageData.imageName}`,
+    alt: pageData.imageAlt,
+  },
+});
 export default function PackingPage() {
   return <ServicePageLayout data={pageData} />;
 }
