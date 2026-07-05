@@ -1,4 +1,4 @@
-/* eslint-disable @next/next/no-before-interactive-script-outside-document */
+ 
 import { convertFaqsForSchema } from "@/lib/ConvertFaqsInRaw";
 import { generateFAQSchema } from "@/lib/GenerateFaqSchema";
 import Script from "next/script";
