@@ -128,9 +128,7 @@ export default function UmmAlQuwainMovingPage() {
           <div className="flex flex-wrap gap-3 mb-10">
             <Button size="lg" className="h-12 px-7 font-bold gap-2" asChild>
               <a
-                href={WHATSAPP_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer"
                 id="cta-whatsapp-hero"
               >
                 <MessageCircle className="w-4 h-4" />

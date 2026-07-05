@@ -130,7 +130,7 @@ const ServicePageLayout: React.FC<ServicePageLayoutProps> = ({ data }) => {
 
               <div className="flex flex-wrap gap-4 pt-4">
                 <Button asChild>
-                  <a href={WHATSAPP_LINK}>احصل على عرض سعر واتساب</a>
+                  <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">احصل على عرض سعر واتساب</a>
                 </Button>
                 <Button variant={"secondary"} asChild>
                   <a href={PHONE_LINK}>اتصل الآن</a>
@@ -416,9 +416,7 @@ const ServicePageLayout: React.FC<ServicePageLayoutProps> = ({ data }) => {
 
                   <div className="space-y-4">
                     <a
-                      href={WHATSAPP_LINK}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer"
                       className="flex items-center justify-center gap-2 bg-primary hover:bg-primary/95 text-white font-bold h-13 rounded-xl transition-all shadow-lg shadow-primary/25 w-full hover:-translate-y-0.5"
                     >
                       <span>تواصل واتساب فوري</span>

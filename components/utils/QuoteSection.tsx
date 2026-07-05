@@ -1,6 +1,89 @@
-import { Phone, MapPin, Clock, Send } from "lucide-react";
+"use client";
+import { SendMail } from "@/lib/FormSubmission";
+import { Phone, MapPin, Clock, Send, Loader } from "lucide-react";
+import { useState } from "react";
+import { toast } from "sonner";
+export type FormDataType = {
+  movingType: string;
+  movingFrom: string;
+  movingTo: string;
+  name: string;
+  phone: string;
+};
 
 export default function QuoteSection() {
+  const [loading, setLoading] = useState(false);
+  const handleSubmit: React.FormEventHandler<HTMLFormElement> = async (e) => {
+    setLoading(true);
+    e.preventDefault();
+
+    const formData = new FormData(e.currentTarget);
+    const data = Object.fromEntries(formData.entries()) as FormDataType;
+
+    if (!data.name || !data.phone || !data.movingFrom || !data.movingTo) {
+      toast.error("Please fill in all required fields.", {
+        action: {
+          label: "close",
+          onClick: () => {
+            toast.dismiss();
+          },
+        },
+      });
+      setLoading(false);
+      return;
+    }
+    try {
+      const response = await SendMail({ data });
+
+      if (!response.success) {
+        toast.error(
+          response.error || "Failed to send quote request. Please try again.",
+          {
+            action: {
+              label: "close",
+              onClick: () => {
+                toast.dismiss();
+              },
+            },
+          },
+        );
+        setLoading(false);
+      } else {
+        toast.success(
+          "Quote request sent successfully! We'll get back to you within 10 minutes.",
+          {
+            action: {
+              label: "ok",
+              onClick: () => {
+                toast.dismiss();
+              },
+            },
+          },
+        );
+        setLoading(false);
+        setTimeout(() => {
+          window.location.reload();
+        }, 2000);
+      }
+    } catch (error) {
+      toast.error(
+        error instanceof Error
+          ? error.message
+          : "An unexpected error occurred. Please try again.",
+        {
+          action: {
+            label: "close",
+            onClick: () => {
+              toast.dismiss();
+            },
+          },
+        },
+      );
+    } finally {
+      setLoading(false);
+    }
+  };
+
   const emiratesList = [
     { value: "dubai", label: "دبي (Dubai)" },
     { value: "abu-dhabi", label: "أبو ظبي (Abu Dhabi)" },
@@ -19,6 +102,7 @@ export default function QuoteSection() {
     { value: "inter-emirate", label: "نقل بين الإمارات (Inter-Emirate)" },
     { value: "same-day", label: "نفس اليوم (Same-Day)" },
   ];
+
   return (
     <section className="py-16 " dir="rtl">
       <div className="max-w-6xl mx-auto px-4">
@@ -91,14 +175,14 @@ export default function QuoteSection() {
             <h3 className="text-center text-lg mb-5 text-secondary-foreground">
               املأ نموذج طلب عرض الأسعار
             </h3>
-            <form className="flex flex-col gap-5">
+            <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
               {/* السطر الأول: نوع النقل */}
               <div className="flex flex-col gap-1.5">
                 <label className="text-foreground font-bold text-xs pr-1">
                   نوع النقل
                 </label>
                 <select
-                  name="moving-type"
+                  name="movingType"
                   required
                   className="bg-background text-foreground/85 rounded-xl px-4 py-3.5 text-sm outline-none focus:ring-2 focus:ring-primary/20 appearance-none cursor-pointer"
                 >
@@ -118,7 +202,7 @@ export default function QuoteSection() {
                     النقل من
                   </label>
                   <select
-                    name="moving-from"
+                    name="movingFrom"
                     required
                     className="bg-background text-foreground/85 rounded-xl px-4 py-3.5 text-sm outline-none focus:ring-2 focus:ring-primary/20 appearance-none cursor-pointer"
                   >
@@ -136,7 +220,7 @@ export default function QuoteSection() {
                     النقل إلى
                   </label>
                   <select
-                    name="moving-to"
+                    name="movingTo"
                     required
                     className="bg-background text-foreground/85 rounded-xl px-4 py-3.5 text-sm outline-none focus:ring-2 focus:ring-primary/20 appearance-none cursor-pointer"
                   >
@@ -157,7 +241,7 @@ export default function QuoteSection() {
                 </label>
                 <input
                   type="text"
-                  name="full-name"
+                  name="name"
                   required
                   placeholder="اكتب اسمك الكامل هنا..."
                   className="bg-background text-foreground/85 rounded-xl px-4 py-3.5 text-sm outline-none focus:ring-2 focus:ring-primary/20"
@@ -182,10 +266,21 @@ export default function QuoteSection() {
               {/* زر الإرسال والطلب */}
               <button
                 type="submit"
+                disabled={loading}
                 className="bg-primary hover:bg-primary/95 text-primary-foreground font-bold text-sm py-4 px-6 rounded-xl transition-colors duration-200 flex items-center justify-center gap-2 mt-2 outline-none cursor-pointer"
               >
-                <Send size={16} className="rotate-180" />
-                <span>إرسال الطلب الآن</span>
+                {loading ? (
+                  <>
+                    <Loader size={16} className="animate-spin" />
+                    <span>إرسال الطلب</span>
+                  </>
+                ) : (
+                  <>
+                    {" "}
+                    <Send size={16} className="rotate-180" />
+                    <span>إرسال الطلب الآن</span>
+                  </>
+                )}
               </button>
             </form>
           </div>

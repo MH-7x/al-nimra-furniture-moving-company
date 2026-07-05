@@ -3,6 +3,7 @@ import HeaderWrapper from "@/components/utils/HeaderWrapper";
 import Footer from "@/components/utils/Footer";
 import localFont from "next/font/local";
 import { Metadata } from "next";
+import { Toaster } from "sonner";
 
 const tajLoc = localFont({
   src: [
@@ -78,6 +79,7 @@ export default function RootLayout({
         {children}
 
         <Footer />
+        <Toaster />
       </body>
     </html>
   );

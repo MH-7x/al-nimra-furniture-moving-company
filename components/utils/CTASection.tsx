@@ -18,19 +18,20 @@ export default function CTASection() {
               ابدأ اليوم
             </span>
             <h2 className="text-background text-2xl md:text-4xl font-black leading-tight">
-              ابدأ رحلتك الجديدة مع النمره اليوم
+              ابدأ رحلتك الجديدة مع <br className="hidden md:block" /> النمره
+              نقل اثاث اليوم
             </h2>
             <p className="text-background/80 text-xs md:text-sm leading-relaxed max-w-xl">
-              لا تدع هم النقل يفسد عليك فرحة المنزل الجديد. فريق النمره هنا
-              ليتولى كل التفاصيل بدلاً منك. سواء كنت تبحث عن ارخص شركة نقل اثاث
-              في دبي أو كنت تبحث عن الخدمة الأكثر أماناً، نحن هنا.
+              لا تدع هم النقل يفسد عليك فرحة المنزل الجديد. فريق النمره نقل اثاث
+              هنا ليتولى كل التفاصيل بدلاً منك. سواء كنت تبحث عن ارخص شركة نقل
+              اثاث في دبي أو كنت تبحث عن الخدمة الأكثر أماناً، نحن هنا.
             </p>
           </div>
 
           {/* أزرار الاتصال التفاعلية المنسقة (5 أعمدة - محاذية لليسار) */}
           <div className="lg:col-span-5 w-full flex flex-col gap-4 relative z-10 lg:ms-auto lg:max-w-xs">
             <Button asChild>
-              <a href={WHATSAPP_LINK}>واتساب - احصل على عرض سعر فوري</a>
+              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">واتساب - احصل على عرض سعر فوري</a>
             </Button>
 
             <Button variant={"secondary"} dir="ltr">

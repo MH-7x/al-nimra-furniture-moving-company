@@ -1,5 +1,4 @@
 import MetadataTemplate from "@/lib/MetaDataTemplate";
-import { Metadata } from "next";
 import { dubaiSubLocations } from "@/lib/dubai-locations-data";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -17,7 +16,7 @@ export const metadata = MetadataTemplate({
     path: "/شركة-النمره-نقل-اثاث-في-دبي.jpg",
     alt: "مناطق خدمات نقل الاثاث في دبي - شركة النمرة",
   },
-});;
+});
 
 export default function LocationsPage() {
   return (
@@ -98,7 +97,7 @@ export default function LocationsPage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button asChild size="lg" className="h-12 px-8 text-base font-bold">
-              <Link href={WHATSAPP_LINK}>تواصل معنا عبر واتساب</Link>
+              <Link href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">تواصل معنا عبر واتساب</Link>
             </Button>
             <Button
               asChild

@@ -995,9 +995,7 @@ export default function SharjahMovingPage() {
               <div className="flex flex-wrap gap-3">
                 <Button asChild>
                   <a
-                    href={WHATSAPP_LINK}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer"
                   >
                     استفسر عن التخزين
                   </a>
@@ -1077,9 +1075,7 @@ export default function SharjahMovingPage() {
             <div className="flex flex-wrap justify-center gap-4 mb-6">
               <Button size="lg" className="h-13 px-8 font-bold gap-2" asChild>
                 <a
-                  href={WHATSAPP_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer"
                 >
                   <MessageCircle className="w-5 h-5" />
                   واتساب — عرض سعر فوري

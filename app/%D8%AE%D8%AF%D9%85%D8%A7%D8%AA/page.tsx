@@ -247,9 +247,7 @@ export default function ServicesHubPage() {
 
           <div className="flex flex-wrap justify-center md:justify-start gap-4">
             <a
-              href={WHATSAPP_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-white font-bold text-sm md:text-base py-4 px-8 rounded-xl shadow-lg shadow-primary/20 transition-all"
             >
               عرض سعر فوري عبر الواتساب

@@ -8,6 +8,7 @@ import { Check } from "lucide-react";
 import { ReviewsSection } from "./ReviewsSection";
 import { APP_URL, PHONE_LINK, WHATSAPP_LINK } from "@/lib/utils";
 import { BreadcrumbSchema } from "@/components/utils/BreadcrumbSchema";
+import Link from "next/link";
 
 export interface PricingRow {
   type: string;
@@ -72,8 +73,12 @@ const SubLocationLayout: React.FC<SubLocationLayoutProps> = ({ data }) => {
           </h1>
           <p className="text-base text-secondary mb-8">{data.introText[0]}</p>
           <div className="flex flex-wrap gap-4 mt-10">
-            <Button>احصل على عرض سعر واتساب</Button>
-            <Button variant={"secondary"}>اتصل بنا الآن</Button>
+            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+              <Button>احصل على عرض سعر واتساب</Button>
+            </a>
+            <Link href={PHONE_LINK}>
+              <Button variant={"secondary"}>اتصل بنا الآن</Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -193,12 +198,14 @@ const SubLocationLayout: React.FC<SubLocationLayoutProps> = ({ data }) => {
                       </div>
                     ))}
                   </div>
-                  <Button
-                    size="lg"
-                    className="w-full mt-10 h-12 text-lg font-bold bg-primary hover:bg-primary/90"
-                  >
-                    احجز موعدك الآن
-                  </Button>
+                  <Link href="/اتصل-بن">
+                    <Button
+                      size="lg"
+                      className="w-full mt-10 h-12 text-lg font-bold bg-primary hover:bg-primary/90"
+                    >
+                      احجز موعدك الآن
+                    </Button>
+                  </Link>
                 </div>
 
                 <div className="bg-white p-10 rounded-[2.5rem] border border-muted shadow-lg">

@@ -168,9 +168,7 @@ const aboutFaqs = [
       <p>
         تواصل معنا عبر واتساب على الرقم{" "}
         <a
-          href={WHATSAPP_LINK}
-          target="_blank"
-          rel="noopener noreferrer"
+          href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer"
           dir="ltr"
           className="text-primary font-bold hover:underline"
         >
@@ -671,9 +669,7 @@ export default function AboutPage() {
                 asChild
               >
                 <a
-                  href={WHATSAPP_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer"
                 >
                   <MessageCircle className="w-4 h-4" />
                   واتساب: 0541767605

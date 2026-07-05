@@ -14,7 +14,7 @@ export const metadata = MetadataTemplate({
     path: "/فريق-النمره-نقل-اثاث-دبي.jpg",
     alt: "نقل اثاث دبي | شركة النمره - بدون دفعة مقدمة وتأمين شامل",
   },
-});;
+});
 
 export default function Home() {
   return (
@@ -72,7 +72,7 @@ export default function Home() {
               size="lg"
               className="h-12 px-8 text-base font-bold shadow-xl shadow-primary/20 w-full sm:w-auto rounded-full hover:scale-105 transition-transform"
             >
-              <a href={WHATSAPP_LINK}>احصل على عرض سعر عبر واتساب</a>
+              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">احصل على عرض سعر عبر واتساب</a>
             </Button>
             <Button
               size="lg"
@@ -476,17 +476,22 @@ export default function Home() {
 
               {/* سحابة بطاقات التغطية المنسقة */}
               <div className="flex flex-wrap gap-2 md:gap-2.5">
-                {areas.map((area, idx) => (
+                {dubaiSubLocationsItems.map((area, idx) => (
                   <Link
-                    href={"#"}
+                    href={area.href}
                     title={`نقل اثاث في ${area}`}
                     key={idx}
                     className="bg-muted/30 text-foreground/85 text-xs font-semibold py-2 px-4 rounded-full inline-block transition-colors duration-200 hover:bg-primary/10 hover:text-primary"
                   >
-                    {area}
+                    {area.name}
                   </Link>
                 ))}
               </div>
+              <Button className="mt-3 max-w-72" variant={"secondary"}>
+                <Link href="/مناطق-دبي" title="مناطق دبي التي نخدمها">
+                  اطلع على جميع مناطق دبي التي نخدمها
+                </Link>
+              </Button>
             </div>
 
             {/* العمود الثاني: عنصر حجز الصورة التخطيطي بنسبة 4:3 */}
@@ -566,7 +571,7 @@ export default function Home() {
                   <a href={PHONE_LINK}>تواصل معنا الآن</a>
                 </Button>
                 <Button variant={"secondary"} asChild>
-                  <a href={WHATSAPP_LINK}>تواصل معنا على الواتساب</a>
+                  <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">تواصل معنا على الواتساب</a>
                 </Button>
               </div>
             </div>
@@ -648,7 +653,11 @@ import { FAQSection } from "@/components/utils/FaqsSection";
 import { HomeFaqs } from "@/lib/FaqsData";
 import QuoteSection from "@/components/utils/QuoteSection";
 import CTASection from "@/components/utils/CTASection";
-import { servicesImages, servicesItems } from "@/lib/data";
+import {
+  dubaiSubLocationsItems,
+  servicesImages,
+  servicesItems,
+} from "@/lib/data";
 import { ReviewsSection } from "@/components/utils/ReviewsSection";
 import { APP_URL, PHONE_LINK, WHATSAPP_LINK } from "@/lib/utils";
 import Link from "next/link";
@@ -850,40 +859,4 @@ const inclusions = [
     title: "سياسة بدون دفعة مقدمة",
     desc: "الضمان الأكبر لجودة العمل هو أنك لن تدفع درهماً واحداً إلا بعد اكتمال النقل والتركيب وتأكدك التام من سلامة الأثاث.",
   },
-];
-
-const areas = [
-  "دبي مارينا",
-  "جميرا",
-  "البرشاء",
-  "ديرة",
-  "بر دبي",
-  "وسط مدينة دبي",
-  "الخليج التجاري",
-  "أبراج بحيرات جميرا (JLT)",
-  "قرية جميرا الدائرية (JVC)",
-  "قرية جميرا الثلاثية (JVT)",
-  "مردف",
-  "القصيص",
-  "القرهود",
-  "الراشدية",
-  "الجداف",
-  "الفرجان",
-  "موتور سيتي",
-  "واحة دبي للسيليكون",
-  "دبي هيلز",
-  "دبي الجنوب",
-  "مدينة دبي للانتاج",
-  "مركز دبي المالي العالمي (DIFC)",
-  "القوز",
-  "عود ميثاء",
-  "منخول",
-  "الكرامة",
-  "النهضة",
-  "الممزر",
-  "نخلة جميرا",
-  "جميرا غولف إستيتس",
-  "ريمرام",
-  "ليوان",
-  "دبي لاند",
 ];
