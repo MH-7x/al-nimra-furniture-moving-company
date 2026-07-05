@@ -4,6 +4,7 @@ import Footer from "@/components/utils/Footer";
 import localFont from "next/font/local";
 import { Metadata } from "next";
 import { Toaster } from "sonner";
+import { MainSchema } from "@/lib/data";
 
 const tajLoc = localFont({
   src: [
@@ -54,7 +55,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ar" dir="rtl" className={`${tajLoc.className} antialiased`}>
+    <html lang="ar-AE" dir="rtl" className={`${tajLoc.className} antialiased`}>
+      <head>
+        <script
+          id="company-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(MainSchema),
+          }}
+        />
+      </head>
       <body
         className="relative"
         style={{ fontFamily: "var(--font-tajawal), Tahoma, Arial, sans-serif" }}

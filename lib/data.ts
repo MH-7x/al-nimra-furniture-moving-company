@@ -1,3 +1,403 @@
+export const MainSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MovingCompany",
+      "@id": "https://alnimramovers.com/#business",
+      name: "شركة النمره نقل اثاث في دبي",
+      alternateName: [
+        "Al Nimra Movers",
+        "Al Nimra Furniture Moving Company",
+        "شركة النمرة لنقل الأثاث",
+      ],
+      description:
+        "شركة النمره نقل اثاث هي شركة نقل محترفة و افضل شركة نقل الاثاث في دبي ، ولديها خبرة تزيد عن 10 سنوات في خدمات نقل. نقوم بأعمال النقل السكني والتجاري في دبي وباقي إمارات الدولة، ونتعامل مع سكان الشقق وأصحاب الفلل والشركات على حد سواء",
+      url: "https://alnimramovers.com/",
+      logo: {
+        "@id": "https://alnimramovers.com/#logo",
+      },
+      image: [
+        "https://alnimramovers.com/فريق-النمره-نقل-اثاث-دبي.jpg",
+        "https://alnimramovers.com/النمره-نقل-اثاث-خدمة-شاملة-دبي.jpg",
+        "https://alnimramovers.com/شركة-النمره-نقل-اثاث-في-دبي.jpg",
+      ],
+      telephone: "+971541767605",
+      email: "nimramovers@gmail.com",
+      priceRange: "AED 700 – AED 5000+",
+      currenciesAccepted: "AED",
+      paymentAccepted: "Cash, Bank Transfer, Credit Card",
+      foundingDate: "2015",
+      slogan: "نقل آمن · تسليم مضمون · أسعار تنافسية",
+      knowsLanguage: ["ar", "en"],
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "46JP+GHP, Al Qouz Industrial Second",
+        addressLocality: "Al Quoz",
+        addressRegion: "Dubai",
+        addressCountry: "AE",
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: 25.1313125,
+        longitude: 55.2364375,
+      },
+      hasMap:
+        "https://www.google.com/maps/place/?q=place_id:ChIJjeNo41ppXz4R34OmlNqaUBU",
+      openingHoursSpecification: [
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday",
+          ],
+          opens: "00:00",
+          closes: "23:59",
+        },
+      ],
+      areaServed: [
+        {
+          "@type": "City",
+          name: "Dubai",
+          sameAs: "https://en.wikipedia.org/wiki/Dubai",
+        },
+        {
+          "@type": "City",
+          name: "Abu Dhabi",
+          sameAs: "https://en.wikipedia.org/wiki/Abu_Dhabi",
+        },
+        {
+          "@type": "City",
+          name: "Sharjah",
+          sameAs: "https://en.wikipedia.org/wiki/Sharjah",
+        },
+        {
+          "@type": "City",
+          name: "Ajman",
+          sameAs: "https://en.wikipedia.org/wiki/Ajman",
+        },
+        {
+          "@type": "City",
+          name: "Al Ain",
+          sameAs: "https://en.wikipedia.org/wiki/Al_Ain",
+        },
+        {
+          "@type": "City",
+          name: "Ras Al Khaimah",
+          sameAs: "https://en.wikipedia.org/wiki/Ras_Al_Khaimah",
+        },
+        {
+          "@type": "City",
+          name: "Umm Al Quwain",
+          sameAs: "https://en.wikipedia.org/wiki/Umm_Al_Quwain",
+        },
+        {
+          "@type": "City",
+          name: "Fujairah",
+          sameAs: "https://en.wikipedia.org/wiki/Fujairah",
+        },
+      ],
+      serviceArea: {
+        "@type": "GeoCircle",
+        geoMidpoint: {
+          "@type": "GeoCoordinates",
+          latitude: 25.1313125,
+          longitude: 55.2364375,
+        },
+        geoRadius: "150000",
+      },
+      contactPoint: [
+        {
+          "@type": "ContactPoint",
+          telephone: "+971541767605",
+          contactType: "customer service",
+          availableLanguage: ["Arabic", "English"],
+          areaServed: "AE",
+          hoursAvailable: {
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+              "Sunday",
+            ],
+            opens: "00:00",
+            closes: "23:59",
+          },
+        },
+        {
+          "@type": "ContactPoint",
+          telephone: "+971541767605",
+          contactType: "sales",
+          contactOption: "TollFree",
+          availableLanguage: ["Arabic", "English"],
+        },
+      ],
+      sameAs: [
+        "https://www.google.com/maps/place/?q=place_id:ChIJjeNo41ppXz4R34OmlNqaUBU",
+        "https://www.facebook.com/alnimramovers",
+        "https://www.instagram.com/alnimramovers",
+        "https://www.linkedin.com/company/al-nimra-movers",
+        "https://www.pinterest.com/alnimramovers",
+        "https://twitter.com/alnimramovers",
+      ],
+      hasOfferCatalog: {
+        "@id": "https://alnimramovers.com/#offercatalog",
+      },
+      makesOffer: [
+        {
+          "@type": "Offer",
+          name: "نقل اثاث بدون دفعة مقدمة",
+          description:
+            "ادفع فقط بعد تسليم أثاثك سالماً في المنزل الجديد والتأكد من تركيب كل شيء.",
+        },
+        {
+          "@type": "Offer",
+          name: "تأمين شامل على جميع القطع",
+          description:
+            "تأمين كامل من لحظة فك أول برغي حتى تركيب آخر قطعة في الموقع الجديد.",
+        },
+      ],
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "5.0",
+        reviewCount: "1",
+        bestRating: "5",
+        worstRating: "1",
+      },
+    },
+
+    {
+      "@type": "Organization",
+      "@id": "https://alnimramovers.com/#organization",
+      name: "شركة النمره نقل اثاث في دبي",
+      alternateName: "Al Nimra Movers",
+      url: "https://alnimramovers.com/",
+      logo: {
+        "@id": "https://alnimramovers.com/#logo",
+      },
+      image: [
+        "https://alnimramovers.com/فريق-النمره-نقل-اثاث-دبي.jpg",
+        "https://alnimramovers.com/النمره-نقل-اثاث-خدمة-شاملة-دبي.jpg",
+        "https://alnimramovers.com/شركة-النمره-نقل-اثاث-في-دبي.jpg",
+      ],
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "46JP+GHP, Al Qouz Industrial Second",
+        addressLocality: "Al Quoz",
+        addressRegion: "Dubai",
+        addressCountry: "AE",
+      },
+      email: "nimramovers@gmail.com",
+      telephone: "+971541767605",
+      contactPoint: {
+        "@type": "ContactPoint",
+        telephone: "+971541767605",
+        contactType: "customer service",
+        availableLanguage: ["Arabic", "English"],
+        areaServed: "AE",
+      },
+      foundingDate: "2015",
+      areaServed: "AE",
+      sameAs: [
+        "https://www.google.com/maps/place/?q=place_id:ChIJjeNo41ppXz4R34OmlNqaUBU",
+        "https://www.facebook.com/alnimramovers",
+        "https://www.instagram.com/alnimramovers",
+        "https://www.linkedin.com/company/al-nimra-movers",
+        "https://www.pinterest.com/alnimramovers",
+        "https://twitter.com/alnimramovers",
+      ],
+    },
+
+    {
+      "@type": "ImageObject",
+      "@id": "https://alnimramovers.com/#logo",
+      url: "https://alnimramovers.com/logo-1.svg",
+      contentUrl: "https://alnimramovers.com/logo-1.svg",
+      caption: "شركة النمره نقل اثاث في دبي - الشعار الرسمي",
+      width: 512,
+      height: 512,
+    },
+
+    {
+      "@type": "WebSite",
+      "@id": "https://alnimramovers.com/#website",
+      url: "https://alnimramovers.com",
+      name: "شركة النمره نقل اثاث في دبي",
+      description:
+        "أفضل شركة نقل اثاث في دبي - خدمة 24/7 بتأمين شامل وبدون دفعة مقدمة",
+      publisher: {
+        "@id": "https://alnimramovers.com/#organization",
+      },
+      inLanguage: "ar-AE",
+    },
+
+    {
+      "@type": "WebPage",
+      "@id": "https://alnimramovers.com/#webpage",
+      url: "https://alnimramovers.com",
+      name: "نقل اثاث دبي | شركة النمره - بدون دفعة مقدمة وتأمين شامل",
+      description:
+        "شركة النمره نقل اثاث هي شركة نقل محترفة و افضل شركة نقل الاثاث في دبي ، ولديها خبرة تزيد عن 10 سنوات في خدمات نقل. نقوم بأعمال النقل السكني والتجاري في دبي وباقي إمارات الدولة، ونتعامل مع سكان الشقق وأصحاب الفلل والشركات على حد سواء",
+      isPartOf: {
+        "@id": "https://alnimramovers.com/#website",
+      },
+      about: {
+        "@id": "https://alnimramovers.com/#business",
+      },
+      primaryImageOfPage: {
+        "@type": "ImageObject",
+        url: "https://alnimramovers.com/شركة-النمره-نقل-اثاث-في-دبي.jpg",
+      },
+      inLanguage: "ar-AE",
+    },
+
+    {
+      "@type": "OfferCatalog",
+      "@id": "https://alnimramovers.com/#offercatalog",
+      name: "خدمات نقل الاثاث في دبي",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          name: "نقل اثاث المنزل في دبي",
+          url: "https://alnimramovers.com/خدمات/نقل-اثاث-المنزل-في-دبي",
+          priceCurrency: "AED",
+          price: "700",
+          priceSpecification: {
+            "@type": "PriceSpecification",
+            priceCurrency: "AED",
+            minPrice: "700",
+            maxPrice: "5000",
+            valueAddedTaxIncluded: true,
+          },
+          itemOffered: {
+            "@type": "Service",
+            "@id":
+              "https://alnimramovers.com/خدمات/نقل-اثاث-المنزل-في-دبي#service",
+            name: "نقل اثاث المنزل في دبي",
+            serviceType: "Home Furniture Moving",
+            description:
+              "خدمة نقل شاملة للمنازل تشمل التغليف والفك والنقل وإعادة التركيب في الموقع الجديد بدبي.",
+            areaServed: { "@type": "City", name: "Dubai" },
+            provider: { "@id": "https://alnimramovers.com/#business" },
+          },
+        },
+        {
+          "@type": "Offer",
+          name: "نقل اثاث الشقق في دبي",
+          url: "https://alnimramovers.com/خدمات/نقل-اثاث-الشقق-في-دبي",
+          priceCurrency: "AED",
+          price: "900",
+          priceSpecification: {
+            "@type": "PriceSpecification",
+            priceCurrency: "AED",
+            minPrice: "900",
+            maxPrice: "1800",
+          },
+          itemOffered: {
+            "@type": "Service",
+            name: "نقل اثاث الشقق في دبي",
+            serviceType: "Apartment Moving",
+            description:
+              "نقل اثاث الشقق في الأبراج السكنية بدبي مع الخبرة في التعامل مع قوانين المباني وحجز المصاعد.",
+            areaServed: { "@type": "City", name: "Dubai" },
+            provider: { "@id": "https://alnimramovers.com/#business" },
+          },
+        },
+        {
+          "@type": "Offer",
+          name: "نقل اثاث الفلل في دبي",
+          url: "https://alnimramovers.com/خدمات/نقل-اثاث-الفلل-في-دبي",
+          priceCurrency: "AED",
+          price: "2500",
+          priceSpecification: {
+            "@type": "PriceSpecification",
+            priceCurrency: "AED",
+            minPrice: "2500",
+            maxPrice: "5000",
+          },
+          itemOffered: {
+            "@type": "Service",
+            name: "نقل اثاث الفلل في دبي",
+            serviceType: "Villa Moving",
+            description:
+              "نقل فلل كاملة في دبي بفرق عمل كبيرة وأسطول شاحنات لإنجاز النقل في يوم واحد.",
+            areaServed: { "@type": "City", name: "Dubai" },
+            provider: { "@id": "https://alnimramovers.com/#business" },
+          },
+        },
+        {
+          "@type": "Offer",
+          name: "نقل اثاث المكاتب في دبي",
+          url: "https://alnimramovers.com/خدمات/نقل-اثاث-المكاتب-في-دبي",
+          priceCurrency: "AED",
+          price: "1500",
+          itemOffered: {
+            "@type": "Service",
+            name: "نقل اثاث المكاتب في دبي",
+            serviceType: "Office Moving",
+            description:
+              "نقل مكاتب الشركات في دبي بدقة عسكرية وحماية أجهزة الكمبيوتر والملفات، مع العمل في العطلات لتقليل توقف الأعمال.",
+            areaServed: { "@type": "City", name: "Dubai" },
+            provider: { "@id": "https://alnimramovers.com/#business" },
+          },
+        },
+        {
+          "@type": "Offer",
+          name: "تغليف اثاث في دبي",
+          url: "https://alnimramovers.com/خدمات/تغليف-اثاث-في-دبي",
+          priceCurrency: "AED",
+          itemOffered: {
+            "@type": "Service",
+            name: "تغليف اثاث في دبي",
+            serviceType: "Furniture Packing",
+            description:
+              "خدمة تغليف احترافية بخمس طبقات حماية تشمل البلاستيك الفقاعي والورق المقوى والفلين للقطع الثمينة.",
+            areaServed: { "@type": "City", name: "Dubai" },
+            provider: { "@id": "https://alnimramovers.com/#business" },
+          },
+        },
+        {
+          "@type": "Offer",
+          name: "فك وتركيب اثاث في دبي",
+          url: "https://alnimramovers.com/خدمات/فك-وتركيب-اثاث-في-دبي",
+          priceCurrency: "AED",
+          itemOffered: {
+            "@type": "Service",
+            name: "فك وتركيب اثاث في دبي",
+            serviceType: "Furniture Assembly and Disassembly",
+            description:
+              "نجارون محترفون لفك وتركيب جميع أنواع الأثاث بما في ذلك ايكيا وهوم سنتر والقطع المصنعة خصيصاً.",
+            areaServed: { "@type": "City", name: "Dubai" },
+            provider: { "@id": "https://alnimramovers.com/#business" },
+          },
+        },
+        {
+          "@type": "Offer",
+          name: "تخزين اثاث في دبي",
+          url: "https://alnimramovers.com/خدمات/تخزين-اثاث-في-دبي",
+          priceCurrency: "AED",
+          itemOffered: {
+            "@type": "Service",
+            name: "تخزين اثاث في دبي",
+            serviceType: "Furniture Storage",
+            description:
+              "مستودعات تخزين نظيفة ومكيفة ومؤمنة في دبي مع إمكانية استرجاع الأثاث في أي وقت.",
+            areaServed: { "@type": "City", name: "Dubai" },
+            provider: { "@id": "https://alnimramovers.com/#business" },
+          },
+        },
+      ],
+    },
+  ],
+};
 export const servicesItems = [
   {
     name: "نقل اثاث المنزل في دبي",

@@ -2,7 +2,6 @@ import MetadataTemplate from "@/lib/MetaDataTemplate";
 import { Button } from "@/components/ui/button";
 import imgsrc from "@/public/شركة-النمره-نقل-اثاث-في-دبي.jpg";
 import Image from "next/image";
-import { Metadata } from "next";
 
 export const metadata = MetadataTemplate({
   meta: {
@@ -11,7 +10,7 @@ export const metadata = MetadataTemplate({
   },
   canonical: "/",
   image: {
-    path: "/فريق-النمره-نقل-اثاث-دبي.jpg",
+    path: "/شركة-النمره-نقل-اثاث-في-دبي.jpg",
     alt: "نقل اثاث دبي | شركة النمره - بدون دفعة مقدمة وتأمين شامل",
   },
 });
@@ -72,7 +71,9 @@ export default function Home() {
               size="lg"
               className="h-12 px-8 text-base font-bold shadow-xl shadow-primary/20 w-full sm:w-auto rounded-full hover:scale-105 transition-transform"
             >
-              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">احصل على عرض سعر عبر واتساب</a>
+              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+                احصل على عرض سعر عبر واتساب
+              </a>
             </Button>
             <Button
               size="lg"
@@ -498,7 +499,7 @@ export default function Home() {
             <div className="lg:col-span-5 w-full">
               <div className="aspect-square w-full bg-muted/40 rounded-2xl relative overflow-hidden">
                 <Image
-                  src={"/فريق-النمره-نقل-اثاث-دبي.jpg"}
+                  src={"/شركة-النمره-نقل-اثاث-في-دبي.jpg"}
                   alt="فريق عمل شركة النمره نقل اثاث بالزي الرسمي أمام شاحنة الشركة في دبي - شركة نقل اثاث احترافية وموثوقة في دبي"
                   fill
                   className="object-cover"
@@ -571,7 +572,13 @@ export default function Home() {
                   <a href={PHONE_LINK}>تواصل معنا الآن</a>
                 </Button>
                 <Button variant={"secondary"} asChild>
-                  <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">تواصل معنا على الواتساب</a>
+                  <a
+                    href={WHATSAPP_LINK}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    تواصل معنا على الواتساب
+                  </a>
                 </Button>
               </div>
             </div>

@@ -9,7 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${APP_URL}`,
       lastModified: "2026-07-05",
       changeFrequency: "weekly",
-      images: [`${APP_URL}/فريق-النمره-نقل-اثاث-دبي.jpg`],
+      images: [`${APP_URL}/شركة-النمره-نقل-اثاث-في-دبي.jpg`],
     },
     {
       url: `${APP_URL}/مناطق-دبي`,
