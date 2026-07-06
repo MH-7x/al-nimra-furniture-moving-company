@@ -59,7 +59,9 @@ export default function Header() {
           {/* Social Icons */}
           <div className="flex items-center gap-4">
             <a
-              href="/"
+              href="https://www.facebook.com/alnimramovers"
+              target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-primary transition-colors"
               aria-label="Facebook"
             >
@@ -68,7 +70,9 @@ export default function Header() {
               </svg>
             </a>
             <a
-              href="/"
+              href="https://twitter.com/alnimramovers"
+              target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-primary transition-colors"
               aria-label="Twitter"
             >
@@ -77,7 +81,9 @@ export default function Header() {
               </svg>
             </a>
             <a
-              href="/"
+              href="https://www.pinterest.com/alnimramovers"
+              target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-primary transition-colors"
               aria-label="Pinterest"
             >
@@ -86,7 +92,9 @@ export default function Header() {
               </svg>
             </a>
             <a
-              href="/"
+              href="https://www.instagram.com/alnimramovers"
+              target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-primary transition-colors"
               aria-label="Instagram"
             >
@@ -189,6 +197,7 @@ export default function Header() {
                 src={logo}
                 alt="شركة النمره نقل اثاث شعار"
                 fill
+                id="logo"
                 loading="eager"
                 className="object-contain"
               />

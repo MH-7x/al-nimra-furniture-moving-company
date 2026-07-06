@@ -54,7 +54,7 @@ export default function Footer() {
           {/* أيقونات التواصل الاجتماعي */}
           <div className="flex items-center gap-4 mt-2">
             <a
-              href="/"
+              href="https://www.facebook.com/alnimramovers"
               className="w-8 h-8 rounded-full bg-background/10 hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-colors duration-300"
               aria-label="Facebook"
             >
@@ -63,7 +63,9 @@ export default function Footer() {
               </svg>
             </a>
             <a
-              href="/"
+              href="https://twitter.com/alnimramovers"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-8 h-8 rounded-full bg-background/10 hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-colors duration-300"
               aria-label="Twitter"
             >
@@ -72,7 +74,9 @@ export default function Footer() {
               </svg>
             </a>
             <a
-              href="/"
+              href="https://www.pinterest.com/alnimramovers"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-8 h-8 rounded-full bg-background/10 hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-colors duration-300"
               aria-label="Pinterest"
             >
@@ -81,7 +85,9 @@ export default function Footer() {
               </svg>
             </a>
             <a
-              href="/"
+              href="https://www.instagram.com/alnimramovers"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-8 h-8 rounded-full bg-background/10 hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-colors duration-300"
               aria-label="Instagram"
             >
@@ -233,7 +239,14 @@ export default function Footer() {
         </div>
       </div>
       <p className="text-background/80 text-sm text-center w-full">
-        Development & Maintenance by <a href="">Mashal Huraira</a>
+        Development & Maintenance by{" "}
+        <a
+          href="https://mashalhuraira.vercel.app"
+          target="_blank"
+          rel="noreferrer noopenner"
+        >
+          Mashal Huraira
+        </a>
       </p>
     </footer>
   );
