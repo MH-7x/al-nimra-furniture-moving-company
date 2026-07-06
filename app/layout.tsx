@@ -5,6 +5,7 @@ import localFont from "next/font/local";
 import { Metadata } from "next";
 import { Toaster } from "sonner";
 import { MainSchema } from "@/lib/data";
+import GTM from "@/components/GTM";
 
 const tajLoc = localFont({
   src: [
@@ -65,6 +66,7 @@ export default function RootLayout({
           }}
         />
       </head>
+      <GTM />
       <body
         className="relative"
         style={{ fontFamily: "var(--font-tajawal), Tahoma, Arial, sans-serif" }}
