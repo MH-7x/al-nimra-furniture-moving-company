@@ -388,7 +388,7 @@ export default function AbuDhabiMovingPage() {
                   <p className="text-muted-foreground text-sm leading-relaxed mb-5">
                     خدمة{" "}
                     <Link
-                      href="/فك-وتركيب-اثاث-في-دبي"
+                      href="/خدمات/فك-وتركيب-اثاث-في-دبي"
                       className="text-primary hover:underline"
                     >
                       فك وتركيب اثاث

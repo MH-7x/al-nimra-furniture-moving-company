@@ -293,7 +293,7 @@ export default function Home() {
                 المتاعب:
               </p>
               <Button className="mt-5" asChild>
-                <Link href="/اتصل-بن">احصل على عرض سعر لنقل الأثاث</Link>
+                <Link href="/اتصل-بنا">احصل على عرض سعر لنقل الأثاث</Link>
               </Button>
             </div>
 
@@ -412,7 +412,7 @@ export default function Home() {
                 البدء.
               </p>
               <Button variant={"secondary"} className="mt-5" asChild>
-                <Link href="/اتصل-بن">الاتصال بنا للحصول على التسعير</Link>
+                <Link href="/اتصل-بنا">الاتصال بنا للحصول على التسعير</Link>
               </Button>
             </div>
           </div>
@@ -500,7 +500,7 @@ export default function Home() {
               <div className="aspect-square w-full bg-muted/40 rounded-2xl relative overflow-hidden">
                 <Image
                   src={"/شركة-النمره-نقل-اثاث-في-دبي.jpg"}
-                  alt="فريق عمل شركة النمره نقل اثاث بالزي الرسمي أمام شاحنة الشركة في دبي - شركة نقل اثاث احترافية وموثوقة في دبي"
+                  alt="فريق عمل شركة النمره نقل اثاث أمام شاحنتهم"
                   fill
                   className="object-cover"
                 />
@@ -589,7 +589,7 @@ export default function Home() {
           <div className="relative w-full aspect-4/3 overflow-hidden bg-gray-100 order-1 lg:order-2 rounded-2xl">
             <Image
               src="/النمره-نقل-اثاث-خدمة-شاملة-دبي.jpg"
-              alt="عملية نقل اثاث متكاملة بواسطة فريق وشاحنة شركة النمره في حي سكني بدبي مع أفق المدينة - أفضل شركة نقل اثاث في دبي"
+              alt="شاحنة وفريق عمل شركة النمره في دبي"
               fill
               className="object-cover"
             />

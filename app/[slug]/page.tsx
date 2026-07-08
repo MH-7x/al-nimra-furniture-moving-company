@@ -38,8 +38,6 @@ export default async function SubLocationPage({ params }: PageProps) {
   const { slug } = await params;
   const decodedSlug = decodeURIComponent(slug);
 
-  console.log("slug : ", decodedSlug);
-
   const location = dubaiSubLocations.find((l) => l.slug === decodedSlug);
 
   if (!location) {

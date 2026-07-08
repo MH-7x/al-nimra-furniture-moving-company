@@ -608,7 +608,7 @@ export default function AboutPage() {
           <div className="relative aspect-[21/9] w-full rounded-3xl overflow-hidden shadow-xl ring-1 ring-black/5">
             <Image
               src="/نقل-اثاث-جميع-الامارات-النمره.jpg"
-              alt="نقل أثاث في جميع الإمارات - خدمات النمره تغطي أبوظبي والشارقة وعجمان والعين ورأس الخيمة والفجيرة وأم القيوين"
+              alt="خدمات النمره لنقل الأثاث في جميع الإمارات"
               fill
               className="object-cover"
             />

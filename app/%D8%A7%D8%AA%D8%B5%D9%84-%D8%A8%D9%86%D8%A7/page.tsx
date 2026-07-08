@@ -2,7 +2,6 @@ import MetadataTemplate from "@/lib/MetaDataTemplate";
 import Link from "next/link";
 import QuoteSection from "@/components/utils/QuoteSection";
 import CTASection from "@/components/utils/CTASection";
-import type { Metadata } from "next";
 import { BreadcrumbSchema } from "@/components/utils/BreadcrumbSchema";
 import { APP_URL } from "@/lib/utils";
 
@@ -16,7 +15,7 @@ export const metadata = MetadataTemplate({
     path: "/شركة-النمره-نقل-اثاث-في-دبي.jpg",
     alt: "اتصل بنا | شركة النمره لنقل الأثاث",
   },
-});;
+});
 
 export default function ContactPage() {
   return (

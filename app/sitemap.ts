@@ -7,7 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
     {
       url: `${APP_URL}`,
-      lastModified: "2026-07-05",
+      lastModified: "2026-07-08",
       changeFrequency: "weekly",
       images: [`${APP_URL}/شركة-النمره-نقل-اثاث-في-دبي.jpg`],
     },

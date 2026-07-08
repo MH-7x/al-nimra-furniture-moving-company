@@ -242,7 +242,7 @@ export default function Header() {
 
             {/* Mobile Get Free Quote Indicator */}
             <a
-              href="/اتصل-بن"
+              href="/اتصل-بنا"
               className="md:hidden bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-xs uppercase tracking-wider py-2 px-4 rounded transition-colors"
             >
               احصل على عرض أسعار
@@ -373,10 +373,10 @@ export default function Header() {
                 {/* Regular Link: Contact Us */}
                 <li>
                   <a
-                    href="/اتصل-بن"
+                    href="/اتصل-بنا"
                     className="block py-4 px-4 hover:bg-background/10 md:hover:bg-transparent md:hover:text-primary transition-colors border-b border-background/5 md:border-none"
                   >
-                    اتصل بن
+                    اتصل بنا
                   </a>
                 </li>
               </ul>
@@ -385,7 +385,7 @@ export default function Header() {
             {/* Desktop-only Right Side Quote Button */}
             <div className="hidden md:block">
               <a
-                href="/اتصل-بن"
+                href="/اتصل-بنا"
                 className="inline-block bg-primary hover:bg-primary/95 text-primary-foreground font-bold text-sm uppercase tracking-wider py-5 px-8 transition-colors"
               >
                 الحصول على الاقتباس
@@ -521,10 +521,10 @@ export default function Header() {
               {/* Regular Link: Contact Us */}
               <li>
                 <a
-                  href="/اتصل-بن"
+                  href="/اتصل-بنا"
                   className="block py-4 px-4 hover:bg-background/10 transition-colors border-b border-background/5"
                 >
-                  اتصل بن
+                  اتصل بنا
                 </a>
               </li>
             </ul>

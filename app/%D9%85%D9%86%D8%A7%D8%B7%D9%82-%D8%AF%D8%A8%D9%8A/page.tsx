@@ -105,7 +105,7 @@ export default function LocationsPage() {
               variant="secondary"
               className="h-12 px-8 text-base font-bold"
             >
-              <Link href="/اتصل-بن">اتصل بنا هاتفياً</Link>
+              <Link href="/اتصل-بنا">اتصل بنا هاتفياً</Link>
             </Button>
           </div>
         </div>

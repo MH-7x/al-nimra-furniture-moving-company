@@ -367,7 +367,7 @@ Meta Description: شركة نقل اثاث راس الخيمة مع النمرة
 <!--
 Internal Linking Recommendations:
 1. [INTERNAL LINK: /نقل-اثاث-دبي/ "نقل اثاث دبي"] — link from inter-emirate section (RAK to Dubai paragraph)
-2. [INTERNAL LINK: /نقل-اثاث-الشارقة/ "نقل اثاث الشارقة"] — link from inter-emirate section (RAK to Sharjah paragraph)
+2. [INTERNAL LINK: /نقل-أثاث-الشارقة/ "نقل اثاث الشارقة"] — link from inter-emirate section (RAK to Sharjah paragraph)
 3. [INTERNAL LINK: /نقل-اثاث-ابوظبي/ "نقل اثاث أبوظبي"] — link from inter-emirate section (Abu Dhabi paragraph)
 4. [INTERNAL LINK: /نقل-اثاث-عجمان/ "نقل اثاث عجمان"] — link from inter-emirate section (Ajman paragraph)
 5. [INTERNAL LINK: /نقل-اثاث-العين/ "نقل اثاث العين"] — link from inter-emirate section (Al Ain paragraph)

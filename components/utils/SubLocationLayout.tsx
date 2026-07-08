@@ -198,7 +198,7 @@ const SubLocationLayout: React.FC<SubLocationLayoutProps> = ({ data }) => {
                       </div>
                     ))}
                   </div>
-                  <Link href="/اتصل-بن">
+                  <Link href="/اتصل-بنا">
                     <Button
                       size="lg"
                       className="w-full mt-10 h-12 text-lg font-bold bg-primary hover:bg-primary/90"

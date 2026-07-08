@@ -9,9 +9,9 @@ import { PHONE_LINK } from "@/lib/utils";
 export default function Footer() {
   const quickLinks = [
     { name: "من نحن", href: "/من-نحن" },
-    { name: "مناطق دبي", href: "/dubai-areas" },
+    { name: "مناطق دبي", href: "/مناطق-دبي" },
     { name: "مدونات", href: "/" },
-    { name: "اتصل بنا", href: "/اتصل-بن" },
+    { name: "اتصل بنا", href: "/اتصل-بنا" },
   ];
 
   return (
