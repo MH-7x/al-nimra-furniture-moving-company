@@ -96,16 +96,20 @@ export default function LocationsPage() {
             الأسبوع.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button asChild size="lg" className="h-12 px-8 text-base font-bold">
-              <Link href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">تواصل معنا عبر واتساب</Link>
+            <Button
+              whatsappBtn
+              size="lg"
+              className="h-12 px-8 text-base font-bold"
+            >
+              تواصل معنا عبر واتساب
             </Button>
             <Button
-              asChild
+              callBtn
               size="lg"
               variant="secondary"
               className="h-12 px-8 text-base font-bold"
             >
-              <Link href="/اتصل-بنا">اتصل بنا هاتفياً</Link>
+              اتصل بنا هاتفياً
             </Button>
           </div>
         </div>

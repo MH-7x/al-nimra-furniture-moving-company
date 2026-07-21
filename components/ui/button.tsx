@@ -1,11 +1,15 @@
+"use client";
+
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { Slot } from "radix-ui";
 
-import { cn } from "@/lib/utils";
+import { cn, PHONE_LINK, WHATSAPP_LINK } from "@/lib/utils";
+import Link from "next/link";
+import { track } from "@/lib/tracker";
 
 const buttonVariants = cva(
-  "group/button inline-flex shrink-0 items-center justify-center rounded-xl border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+  "group/button inline-flex shrink-0 items-center justify-center rounded-xl border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 cursor-pointer",
   {
     variants: {
       variant: {
@@ -44,27 +48,93 @@ const buttonVariants = cva(
   },
 );
 
+function resolveLabel(
+  ariaLabel: string | undefined,
+  children: React.ReactNode,
+): string {
+  if (ariaLabel) return ariaLabel;
+  if (typeof children === "string") return children;
+
+  if (React.isValidElement(children)) {
+    const child = children as React.ReactElement<{
+      children?: React.ReactNode;
+    }>;
+    if (typeof child.props?.children === "string") return child.props.children;
+  }
+  return "unknown";
+}
+
 function Button({
   className,
   variant = "default",
   size = "lg",
   asChild = false,
+  callBtn = false,
+  whatsappBtn = false,
+  children,
+  "aria-label": ariaLabel,
+  onClick,
   ...props
 }: React.ComponentProps<"button"> &
   VariantProps<typeof buttonVariants> & {
     asChild?: boolean;
+    callBtn?: boolean;
+    whatsappBtn?: boolean;
   }) {
   const Comp = asChild ? Slot.Root : "button";
 
-  return (
+  const inner = (
     <Comp
       data-slot="button"
       data-variant={variant}
       data-size={size}
       className={cn(buttonVariants({ variant, size, className }))}
+      aria-label={ariaLabel}
+      onClick={onClick}
       {...props}
-    />
+    >
+      {children}
+    </Comp>
   );
+
+  const label = resolveLabel(ariaLabel, children);
+
+  if (whatsappBtn) {
+    return (
+      <Link
+        href={WHATSAPP_LINK}
+        aria-label="Contact On WhatsApp "
+        rel="noopener noreferrer"
+        dir="ltr"
+        onClick={() =>
+          track({ type: "whatsapp_click", label, destination: WHATSAPP_LINK })
+        }
+      >
+        {inner}
+      </Link>
+    );
+  }
+
+  if (callBtn) {
+    return (
+      <Link
+        href={PHONE_LINK}
+        aria-label="Call To Movers"
+        dir="ltr"
+        onClick={() =>
+          track({
+            type: "call_click",
+            label,
+            destination: PHONE_LINK,
+          })
+        }
+      >
+        {inner}
+      </Link>
+    );
+  }
+
+  return inner;
 }
 
 export { Button, buttonVariants };

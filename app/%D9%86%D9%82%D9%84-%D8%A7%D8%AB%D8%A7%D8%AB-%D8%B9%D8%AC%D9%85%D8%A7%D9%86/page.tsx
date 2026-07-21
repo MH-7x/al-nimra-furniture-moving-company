@@ -107,25 +107,20 @@ export default function AjmanMovingPage() {
 
           {/* CTA row */}
           <div className="flex flex-wrap gap-3 mb-10">
-            <Button size="lg" className="h-12 px-7 font-bold gap-2" asChild>
-              <a
-                href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer"
-                id="cta-whatsapp-hero"
-              >
-                <MessageCircle className="w-4 h-4" />
-                عرض سعر فوري واتساب
-              </a>
+            <Button whatsappBtn size="lg" className="h-12 px-7 font-bold gap-2" id="cta-whatsapp-hero">
+              <MessageCircle className="w-4 h-4" />
+              عرض سعر فوري واتساب
             </Button>
             <Button
+              callBtn
               size="lg"
               variant="outline"
               className="h-12 px-7 font-bold gap-2 border-2"
-              asChild
+              dir="ltr"
+              id="cta-phone-hero"
             >
-              <a href={PHONE_LINK} dir="ltr" id="cta-phone-hero">
-                <Phone className="w-4 h-4" />
-                0541767605
-              </a>
+              <Phone className="w-4 h-4" />
+              0541767605
             </Button>
           </div>
 
@@ -204,10 +199,8 @@ export default function AjmanMovingPage() {
               تبا تعرف سعر نقلتك؟ تواصل معنا وراح يوصلك عرض سعر واضح خلال
               الساعة.
             </span>
-            <Button size="sm" asChild>
-              <a href={PHONE_LINK} dir="ltr">
-                0541767605
-              </a>
+            <Button callBtn size="sm" dir="ltr">
+              0541767605
             </Button>
           </div>
         </div>
@@ -676,23 +669,18 @@ export default function AjmanMovingPage() {
                 </div>
               </div>
               <div className="space-y-2">
-                <Button className="w-full font-bold gap-2" asChild>
-                  <a
-                    href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer"
-                  >
-                    <MessageCircle className="w-4 h-4" />
-                    واتساب — سعر سريع
-                  </a>
+                <Button whatsappBtn className="w-full font-bold gap-2">
+                  <MessageCircle className="w-4 h-4" />
+                  واتساب — سعر سريع
                 </Button>
                 <Button
+                  callBtn
                   variant="outline"
                   className="w-full font-bold gap-2 border-2"
-                  asChild
+                  dir="ltr"
                 >
-                  <a href={PHONE_LINK} dir="ltr">
-                    <Phone className="w-4 h-4" />
-                    0541767605
-                  </a>
+                  <Phone className="w-4 h-4" />
+                  0541767605
                 </Button>
               </div>
             </div>
@@ -1367,25 +1355,20 @@ export default function AjmanMovingPage() {
               </p>
             </div>
             <div className="flex flex-wrap justify-center gap-4 mb-6">
-              <Button size="lg" className="h-13 px-8 font-bold gap-2" asChild>
-                <a
-                  href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer"
-                  id="cta-whatsapp-bottom"
-                >
-                  <MessageCircle className="w-5 h-5" />
-                  واتساب — أرسل رسالة الآن
-                </a>
+              <Button whatsappBtn size="lg" className="h-13 px-8 font-bold gap-2" id="cta-whatsapp-bottom">
+                <MessageCircle className="w-5 h-5" />
+                واتساب — أرسل رسالة الآن
               </Button>
               <Button
+                callBtn
                 size="lg"
                 variant="outline"
                 className="h-13 px-8 font-bold border-2 gap-2"
-                asChild
+                dir="ltr"
+                id="cta-phone-bottom"
               >
-                <a href={PHONE_LINK} dir="ltr" id="cta-phone-bottom">
-                  <Phone className="w-5 h-5" />
-                  0541767605
-                </a>
+                <Phone className="w-5 h-5" />
+                0541767605
               </Button>
             </div>
             <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-xs text-muted-foreground">

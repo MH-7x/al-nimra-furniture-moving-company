@@ -109,22 +109,19 @@ export default function SharjahMovingPage() {
 
           {/* CTA row */}
           <div className="flex flex-wrap gap-3 mb-10">
-            <Button size="lg" className="h-12 px-7 font-bold gap-2" asChild>
-              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-                <MessageCircle className="w-4 h-4" />
-                عرض سعر فوري واتساب
-              </a>
+            <Button whatsappBtn size="lg" className="h-12 px-7 font-bold gap-2">
+              <MessageCircle className="w-4 h-4" />
+              عرض سعر فوري واتساب
             </Button>
             <Button
+              callBtn
               size="lg"
               variant="outline"
               className="h-12 px-7 font-bold gap-2 border-2"
-              asChild
+              dir="ltr"
             >
-              <a href={PHONE_LINK} dir="ltr">
-                <Phone className="w-4 h-4" />
-                0541767605
-              </a>
+              <Phone className="w-4 h-4" />
+              0541767605
             </Button>
           </div>
 
@@ -993,12 +990,8 @@ export default function SharjahMovingPage() {
                 أو وقت تجديد البيت.
               </p>
               <div className="flex flex-wrap gap-3">
-                <Button asChild>
-                  <a
-                    href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer"
-                  >
-                    استفسر عن التخزين
-                  </a>
+                <Button whatsappBtn>
+                  استفسر عن التخزين
                 </Button>
                 <Button variant="outline" asChild>
                   <Link href="/خدمات/تخزين-اثاث-في-دبي">خدمة تخزين الاثاث</Link>
@@ -1073,24 +1066,19 @@ export default function SharjahMovingPage() {
               والعناية نفسها.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-6">
-              <Button size="lg" className="h-13 px-8 font-bold gap-2" asChild>
-                <a
-                  href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer"
-                >
-                  <MessageCircle className="w-5 h-5" />
-                  واتساب — عرض سعر فوري
-                </a>
+              <Button whatsappBtn size="lg" className="h-13 px-8 font-bold gap-2">
+                <MessageCircle className="w-5 h-5" />
+                واتساب — عرض سعر فوري
               </Button>
               <Button
+                callBtn
                 size="lg"
                 variant="outline"
                 className="h-13 px-8 font-bold border-2 gap-2"
-                asChild
+                dir="ltr"
               >
-                <a href={PHONE_LINK} dir="ltr">
-                  <Phone className="w-5 h-5" />
-                  0541767605
-                </a>
+                <Phone className="w-5 h-5" />
+                0541767605
               </Button>
             </div>
             <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-xs text-muted-foreground">

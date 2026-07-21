@@ -73,12 +73,8 @@ const SubLocationLayout: React.FC<SubLocationLayoutProps> = ({ data }) => {
           </h1>
           <p className="text-base text-secondary mb-8">{data.introText[0]}</p>
           <div className="flex flex-wrap gap-4 mt-10">
-            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-              <Button>احصل على عرض سعر واتساب</Button>
-            </a>
-            <Link href={PHONE_LINK}>
-              <Button variant={"secondary"}>اتصل بنا الآن</Button>
-            </Link>
+            <Button whatsappBtn>احصل على عرض سعر واتساب</Button>
+            <Button variant={"secondary"} callBtn>اتصل بنا الآن</Button>
           </div>
         </div>
       </section>

@@ -270,25 +270,20 @@ export default function RasAlKhaimahMovingPage() {
 
           {/* CTA row */}
           <div className="flex flex-wrap gap-3 mb-10">
-            <Button size="lg" className="h-12 px-7 font-bold gap-2" asChild>
-              <a
-                href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer"
-                id="cta-whatsapp-hero"
-              >
-                <MessageCircle className="w-4 h-4" />
-                عرض سعر فوري واتساب
-              </a>
+            <Button whatsappBtn size="lg" className="h-12 px-7 font-bold gap-2" id="cta-whatsapp-hero">
+              <MessageCircle className="w-4 h-4" />
+              عرض سعر فوري واتساب
             </Button>
             <Button
+              callBtn
               size="lg"
               variant="outline"
               className="h-12 px-7 font-bold gap-2 border-2"
-              asChild
+              dir="ltr"
+              id="cta-phone-hero"
             >
-              <a href={PHONE_LINK} dir="ltr" id="cta-phone-hero">
-                <Phone className="w-4 h-4" />
-                0541767605
-              </a>
+              <Phone className="w-4 h-4" />
+              0541767605
             </Button>
           </div>
 
@@ -368,10 +363,8 @@ export default function RasAlKhaimahMovingPage() {
               تبا تعرف سعر نقلتك؟ تواصل معنا وراح يوصلك عرض سعر واضح خلال
               الساعة.
             </span>
-            <Button size="sm" asChild>
-              <a href={PHONE_LINK} dir="ltr">
-                0541767605
-              </a>
+            <Button callBtn size="sm" dir="ltr">
+              0541767605
             </Button>
           </div>
         </div>
@@ -813,15 +806,11 @@ export default function RasAlKhaimahMovingPage() {
                   </li>
                 </ul>
                 <Button
+                  whatsappBtn
                   variant="secondary"
                   className="w-full font-bold h-11"
-                  asChild
                 >
-                  <a
-                    href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer"
-                  >
-                    أرسل تفاصيل بيتك للتسعير
-                  </a>
+                  أرسل تفاصيل بيتك للتسعير
                 </Button>
                 <p className="text-white/70 text-xs mt-4">
                   البيانو، طاولات البلياردو، والقطع الخاصة ما تدخل في السعر

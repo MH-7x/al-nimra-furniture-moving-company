@@ -68,19 +68,19 @@ export default function Home() {
 
           <div className="flex flex-col sm:flex-row gap-4 mt-8 w-full sm:w-auto">
             <Button
+              whatsappBtn
               size="lg"
               className="h-12 px-8 text-base font-bold shadow-xl shadow-primary/20 w-full sm:w-auto rounded-full hover:scale-105 transition-transform"
             >
-              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-                احصل على عرض سعر عبر واتساب
-              </a>
+              احصل على عرض سعر عبر واتساب
             </Button>
             <Button
+              callBtn
               size="lg"
               variant="outline"
               className="h-12 px-8 text-base font-bold border-2 w-full sm:w-auto rounded-full hover:bg-secondary/5 hover:scale-105 transition-transform"
             >
-              <a href={PHONE_LINK}>اتصل بنا الآن</a>
+              اتصل بنا الآن
             </Button>
           </div>
         </div>
@@ -568,17 +568,11 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex gap-3 mt-5">
-                <Button asChild>
-                  <a href={PHONE_LINK}>تواصل معنا الآن</a>
+                <Button callBtn>
+                  تواصل معنا الآن
                 </Button>
-                <Button variant={"secondary"} asChild>
-                  <a
-                    href={WHATSAPP_LINK}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    تواصل معنا على الواتساب
-                  </a>
+                <Button variant={"secondary"} whatsappBtn>
+                  تواصل معنا على الواتساب
                 </Button>
               </div>
             </div>

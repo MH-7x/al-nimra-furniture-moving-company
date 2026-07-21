@@ -6,7 +6,7 @@ import { FAQSection } from "@/components/utils/FaqsSection";
 import CTASection from "@/components/utils/CTASection";
 import QuoteSection from "@/components/utils/QuoteSection";
 import { ReviewsSection } from "@/components/utils/ReviewsSection";
-import { APP_URL, PHONE_LINK, WHATSAPP_LINK } from "@/lib/utils";
+import { APP_URL, cn, PHONE_LINK, WHATSAPP_LINK } from "@/lib/utils";
 import { BreadcrumbSchema } from "@/components/utils/BreadcrumbSchema";
 import {
   Home,
@@ -28,6 +28,7 @@ import {
   MapPin,
 } from "lucide-react";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
 
 export const metadata = MetadataTemplate({
   meta: {
@@ -246,18 +247,24 @@ export default function ServicesHubPage() {
           </p>
 
           <div className="flex flex-wrap justify-center md:justify-start gap-4">
-            <a
-              href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-white font-bold text-sm md:text-base py-4 px-8 rounded-xl shadow-lg shadow-primary/20 transition-all"
+            <Button
+              whatsappBtn
+              className={cn(
+                "inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-white font-bold text-sm md:text-base py-6 px-8 rounded-xl shadow-lg shadow-primary/20 transition-all",
+              )}
             >
               عرض سعر فوري عبر الواتساب
-            </a>
-            <a
-              href={PHONE_LINK}
-              className="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 text-white font-bold text-sm md:text-base py-4 px-8 rounded-xl border border-white/20 transition-all"
+            </Button>
+
+            <Button
+              callBtn
+              variant={"secondary"}
+              className={cn(
+                "inline-flex items-center justify-center bg-white/10 hover:bg-white/20 text-white font-bold text-sm md:text-base py-6 px-8 rounded-xl border border-white/20 transition-all",
+              )}
             >
               اتصل بنا: 0541767605
-            </a>
+            </Button>
           </div>
         </div>
       </section>

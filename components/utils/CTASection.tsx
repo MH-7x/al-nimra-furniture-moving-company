@@ -30,13 +30,12 @@ export default function CTASection() {
 
           {/* أزرار الاتصال التفاعلية المنسقة (5 أعمدة - محاذية لليسار) */}
           <div className="lg:col-span-5 w-full flex flex-col gap-4 relative z-10 lg:ms-auto lg:max-w-xs">
-            <Button asChild>
-              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">واتساب - احصل على عرض سعر فوري</a>
+            <Button className="w-full" whatsappBtn>
+              واتساب - احصل على عرض سعر فوري
             </Button>
 
-            <Button variant={"secondary"} dir="ltr">
-              {" "}
-              <a href={PHONE_LINK}> 0541767605 اتصل الآن</a>
+            <Button className="w-full" variant={"secondary"} dir="ltr" callBtn>
+              0541767605 اتصل الآن
             </Button>
           </div>
         </div>

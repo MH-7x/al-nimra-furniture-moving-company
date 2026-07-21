@@ -663,28 +663,22 @@ export default function AboutPage() {
             </div>
             <div className="flex flex-col gap-3 w-full md:w-auto">
               <Button
+                whatsappBtn
                 size="lg"
                 variant="secondary"
                 className="h-12 px-7 font-bold gap-2"
-                asChild
               >
-                <a
-                  href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer"
-                >
-                  <MessageCircle className="w-4 h-4" />
-                  واتساب: 0541767605
-                </a>
+                <MessageCircle className="w-4 h-4" />
+                واتساب: 0541767605
               </Button>
               <Button
+                callBtn
                 size="lg"
                 variant="outline"
                 className="h-12 px-7 font-bold gap-2 border-2 bg-transparent border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground/10"
-                asChild
               >
-                <a href={PHONE_LINK} dir="ltr">
-                  <Phone className="w-4 h-4" />
-                  اتصل بنا الآن
-                </a>
+                <Phone className="w-4 h-4" />
+                اتصل بنا الآن
               </Button>
             </div>
           </div>

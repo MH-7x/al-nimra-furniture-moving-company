@@ -126,25 +126,20 @@ export default function UmmAlQuwainMovingPage() {
 
           {/* CTA row */}
           <div className="flex flex-wrap gap-3 mb-10">
-            <Button size="lg" className="h-12 px-7 font-bold gap-2" asChild>
-              <a
-                href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer"
-                id="cta-whatsapp-hero"
-              >
-                <MessageCircle className="w-4 h-4" />
-                عرض سعر فوري واتساب
-              </a>
+            <Button whatsappBtn size="lg" className="h-12 px-7 font-bold gap-2" id="cta-whatsapp-hero">
+              <MessageCircle className="w-4 h-4" />
+              عرض سعر فوري واتساب
             </Button>
             <Button
+              callBtn
               size="lg"
               variant="outline"
               className="h-12 px-7 font-bold gap-2 border-2"
-              asChild
+              dir="ltr"
+              id="cta-phone-hero"
             >
-              <a href={PHONE_LINK} dir="ltr" id="cta-phone-hero">
-                <Phone className="w-4 h-4" />
-                0541767605
-              </a>
+              <Phone className="w-4 h-4" />
+              0541767605
             </Button>
           </div>
 
@@ -1148,25 +1143,22 @@ export default function UmmAlQuwainMovingPage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <Button
+              whatsappBtn
               size="lg"
               className="h-14 px-8 font-bold gap-2 text-base"
-              asChild
             >
-              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-                <MessageCircle className="w-5 h-5" />
-                راسلنا على واتساب
-              </a>
+              <MessageCircle className="w-5 h-5" />
+              راسلنا على واتساب
             </Button>
             <Button
+              callBtn
               size="lg"
               variant="outline"
               className="h-14 px-8 font-bold gap-2 text-base bg-white"
-              asChild
+              dir="ltr"
             >
-              <a href={PHONE_LINK} dir="ltr">
-                <Phone className="w-5 h-5" />
-                0541767605
-              </a>
+              <Phone className="w-5 h-5" />
+              0541767605
             </Button>
           </div>
           <p className="text-secondary-foreground font-bold text-lg mb-2">

@@ -129,11 +129,9 @@ const ServicePageLayout: React.FC<ServicePageLayoutProps> = ({ data }) => {
               <p className="text-white/80 mt-5">{data.introParagraphs[0]}</p>
 
               <div className="flex flex-wrap gap-4 pt-4">
-                <Button asChild>
-                  <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">احصل على عرض سعر واتساب</a>
-                </Button>
-                <Button variant={"secondary"} asChild>
-                  <a href={PHONE_LINK}>اتصل الآن</a>
+                <Button whatsappBtn>احصل على عرض سعر واتساب</Button>
+                <Button variant={"secondary"} callBtn>
+                  اتصل الآن
                 </Button>
               </div>
             </div>
@@ -415,18 +413,16 @@ const ServicePageLayout: React.FC<ServicePageLayoutProps> = ({ data }) => {
                   </p>
 
                   <div className="space-y-4">
-                    <a
-                      href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-2 bg-primary hover:bg-primary/95 text-white font-bold h-13 rounded-xl transition-all shadow-lg shadow-primary/25 w-full hover:-translate-y-0.5"
+                    <Button whatsappBtn className="w-full">
+                      تواصل واتساب فوري
+                    </Button>
+                    <Button
+                      callBtn
+                      variant={"secondary"}
+                      className="w-full mt-3"
                     >
-                      <span>تواصل واتساب فوري</span>
-                    </a>
-                    <a
-                      href={PHONE_LINK}
-                      className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/15 text-white border border-white/15 font-bold h-13 rounded-xl transition-all w-full"
-                    >
-                      <span>اتصال هاتفي مباشر</span>
-                    </a>
+                      اتصال هاتفي مباشر
+                    </Button>
                   </div>
 
                   <div className="mt-6 pt-5 border-t border-white/10 flex items-center justify-between text-[11px] text-white/60">
