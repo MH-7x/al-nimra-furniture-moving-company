@@ -168,7 +168,7 @@ export const MainSchema = {
       aggregateRating: {
         "@type": "AggregateRating",
         ratingValue: "5.0",
-        reviewCount: "1",
+        reviewCount: "5",
         bestRating: "5",
         worstRating: "1",
       },
