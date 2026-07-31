@@ -5,13 +5,13 @@ import Image from "next/image";
 
 export const metadata = MetadataTemplate({
   meta: {
-    title: "نقل اثاث دبي | شركة النمره - بدون دفعة مقدمة وتأمين شامل",
+    title: "شركة النمره نقل اثاث دبي - بدون دفعة مقدمة وتأمين شامل",
     desc: "أفضل شركة نقل اثاث في دبي بخبرة +10 سنوات. شاحنات مغلقة ومكيفة، تأمين شامل، أسعار شفافة بدون دفعة مقدمة. احصل على عرض سعر مجاني عبر واتساب الآن!",
   },
   canonical: "",
   image: {
     path: "/شركة-النمره-نقل-اثاث-في-دبي.jpg",
-    alt: "نقل اثاث دبي | شركة النمره - بدون دفعة مقدمة وتأمين شامل",
+    alt: "شركة النمره نقل اثاث دبي - بدون دفعة مقدمة وتأمين شامل",
   },
 });
 
@@ -30,29 +30,19 @@ export default function Home() {
             نقل آمن · تسليم مضمون · أسعار تنافسية
           </span>
 
-          <h1 className="text-4xl md:text-6xl font-bold text-secondary-foreground leading-tight tracking-tight mb-8">
-            شركة النمره <br className="block md:hidden" /> نقل اثاث في{" "}
-            <span className="text-primary relative inline-block">
-              دبي
-              <div className="absolute -bottom-2 end-0 w-full h-2 bg-primary/20 -z-10 rounded-full" />
-            </span>
-          </h1>
+          <h1 className="main-h1"> شركة النمره نقل اثاث في دبي</h1>
 
           <div className="text-muted-foreground md:text-lg  leading-relaxed space-y-4 max-w-4xl mx-auto text-center">
             <p>
-              <span className="text-foreground font-medium">
-                نقل اثاث دبي يبدأ بقرار واحد صح.
-              </span>{" "}
-              في شركة النمره، نحمل أثاثك كما نحمل أثاث بيتنا - بعناية، بأمان،
-              وبدون أي ضغوط. منذ أكثر من ١٠ سنوات وفريقنا ينقل شقق وفلل ومكاتب
-              دبي من أول صندوق لآخر قطعة.
+              نقل اثاث دبي يبدأ بقرار واحد صح. في شركة النمره نقل اثاث، نحمل
+              أثاثك كما نحمل أثاث بيتنا - بعناية، بأمان، وبدون أي ضغوط. منذ أكثر
+              من ١٠ سنوات وفريقنا ينقل شقق وفلل ومكاتب دبي من أول صندوق لآخر
+              قطعة.
             </p>
             <p>
               نحن ندرك تماماً أن الانتقال لمكان جديد قد يكون مرهقاً، ولهذا جعلنا
-              مهمتنا هي تبسيط هذه العملية بالكامل. نحن لسنا مجرد شركة نقل؛{" "}
-              <span className="text-foreground font-medium">
-                نحن شركاؤك في هذه الرحلة الجديدة.
-              </span>
+              مهمتنا هي تبسيط هذه العملية بالكامل. نحن لسنا مجرد شركة نقل؛ نحن
+              شركاؤك في هذه الرحلة الجديدة.
             </p>
           </div>
 
@@ -140,11 +130,11 @@ export default function Home() {
             </span>
             <h2 className="text-secondary-foreground  font-bold mb-6 leading-tight">
               لماذا يختار سكان دبي
-              <br /> شركة النمره لنقل أثاثهم؟
+              <br /> شركة النمره لنقل أثاث هم؟
             </h2>
             <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
               عندما تبحث عن شركة نقل اثاث دبي، فمن الطبيعي أن تبحث عن الأمان
-              والاحترافية. دبي مدينة سريعة الإيقاع، والانتقال فيها يتطلب معرفة
+              والاحترافية. تعد دبي وجميع مدن الإمارات العربية المتحدة بيئة سريعة الإيقاع، والانتقال فيها يتطلب معرفة
               دقيقة بالشوارع والمباني والقوانين المحلية. إليك ما يميزنا عن غيرنا
               من شركات نقل الاثاث في دبي ويجعلنا الخيار الأول لآلاف العائلات:
             </p>
@@ -293,7 +283,7 @@ export default function Home() {
                 المتاعب:
               </p>
               <Button className="mt-5" asChild>
-                <Link href="/اتصل-بنا">احصل على عرض سعر لنقل الأثاث</Link>
+                <Link href="/اتصل-بنا">احصل على عرض سعر لنقل اثاثك</Link>
               </Button>
             </div>
 
@@ -544,15 +534,14 @@ export default function Home() {
             {/* Text Content */}
             <div className="space-y-6 leading-relaxed text-muted-foreground">
               <p className="font-medium text-secondary-foreground mb-2 md:text-base text-sm">
-                تأسست شركة النمره في قلب دبي، وتحديداً في منطقة القوز. نحن نؤمن
+                تأسست شركة النمره في قلب دبي بدولة الإمارات العربية المتحدة، وتحديداً في منطقة القوز. نحن نؤمن
                 أن &quot;نقل اثاث دبي&quot; ليس مجرد تحميل صناديق، بل هو فن
                 يتطلب الدقة والأمانة.
               </p>
 
               <p className="md:text-base text-sm">
-                نحن فخورون بأننا ساعدنا آلاف العائلات في بدء حياة جديدة بكل
-                سعادة وراحة بال. فريقنا المدرب يضمن سلامة ممتلكاتكم في كل خطوة
-                من خطوات النقل.
+                نحن فخورون بأننا ساعدنا آلاف العائلات والأفراد في مختلف أنحاء الإمارات العربية المتحدة في بدء حياة جديدة بكل
+                سعادة وراحة بال، مع خدمات نقل الأثاث المتكاملة التي تغطي كافة مدن الدولة.
               </p>
 
               {}
@@ -568,9 +557,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex gap-3 mt-5">
-                <Button callBtn>
-                  تواصل معنا الآن
-                </Button>
+                <Button callBtn>تواصل معنا الآن</Button>
                 <Button variant={"secondary"} whatsappBtn>
                   تواصل معنا على الواتساب
                 </Button>

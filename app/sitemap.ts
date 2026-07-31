@@ -7,7 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
     {
       url: `${APP_URL}`,
-      lastModified: "2026-07-21",
+      lastModified: "2026-07-31",
       changeFrequency: "weekly",
       images: [`${APP_URL}/شركة-النمره-نقل-اثاث-في-دبي.jpg`],
     },
@@ -92,37 +92,37 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     {
       url: `${APP_URL}/نقل-أثاث-الشارقة`,
-      lastModified: "2026-07-21",
+      lastModified: "2026-07-31",
       changeFrequency: "weekly",
       images: [`${APP_URL}/shj/نقل-اثاث-الشارقة-النمره-شركة-نقل.jpg`],
     },
     {
       url: `${APP_URL}/نقل-اثاث-ابوظبي`,
-      lastModified: "2026-07-21",
+      lastModified: "2026-07-31",
       changeFrequency: "weekly",
       images: [`${APP_URL}/auh/نقل-اثاث-ابوظبي-النمره-شركة-نقل.jpg`],
     },
     {
       url: `${APP_URL}/نقل-اثاث-العين`,
-      lastModified: "2026-07-21",
+      lastModified: "2026-07-31",
       changeFrequency: "weekly",
       images: [`${APP_URL}/aln/نقل-اثاث-العين-النمره-جبل-حفيت.jpg`],
     },
     {
       url: `${APP_URL}/نقل-اثاث-راس-الخيمة`,
-      lastModified: "2026-07-21",
+      lastModified: "2026-07-31",
       changeFrequency: "weekly",
       images: [`${APP_URL}/rak/نقل-اثاث-راس-الخيمة-النمره-فك-تغليف-نقل.jpg`],
     },
     {
       url: `${APP_URL}/نقل-اثاث-عجمان`,
-      lastModified: "2026-07-21",
+      lastModified: "2026-07-31",
       changeFrequency: "weekly",
       images: [`${APP_URL}/ajm/نقل-اثاث-عجمان-النمره-شركة-نقل.jpg`],
     },
     {
       url: `${APP_URL}/نقل-الاثاث-ام-القيوين`,
-      lastModified: "2026-07-21",
+      lastModified: "2026-07-31",
       changeFrequency: "weekly",
       images: [`${APP_URL}/uaq/نقل-اثاث-ام-القيوين-النمرة-شركة-نقل.jpg`],
     },

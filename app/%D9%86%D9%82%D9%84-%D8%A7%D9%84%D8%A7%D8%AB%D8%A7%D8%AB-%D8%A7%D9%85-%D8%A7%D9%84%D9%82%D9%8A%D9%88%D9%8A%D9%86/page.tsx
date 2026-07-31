@@ -45,7 +45,7 @@ export const metadata = MetadataTemplate({
     path: "/uaq/نقل-اثاث-ام-القيوين-النمرة-شركة-نقل.jpg",
     alt: "نقل الاثاث ام القيوين | النمره - أسعار تبدأ من 400 درهم",
   },
-});;
+});
 
 export default function UmmAlQuwainMovingPage() {
   return (
@@ -101,32 +101,28 @@ export default function UmmAlQuwainMovingPage() {
           </div>
 
           {/* H1 */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-[1.1] tracking-tight mb-6 max-w-3xl">
-            نقل الاثاث{" "}
-            <span className="relative inline-block">
-              <span className="relative z-10 text-primary">ام القيوين</span>
-              <span
-                aria-hidden
-                className="absolute bottom-1 start-0 end-0 h-3 bg-primary/10 -skew-x-3 rounded-sm z-0"
-              />
-            </span>{" "}
-            <span className="text-2xl block mt-5">
-              – شركة النمره لنقل الأثاث
-            </span>
+          <h1 className="loc-heading">
+            نقل الاثاث ام القيوين{" "}
+            <span className="loc-sub-leading">– شركة النمره لنقل الأثاث</span>
           </h1>
 
           <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-2xl mb-8">
-            تبحث عن خدمة <strong>نقل الاثاث ام القيوين</strong> تقدر تعتمد
-            عليها؟ شركة النمره لنقل الأثاث تخدم سكان ام القيوين بخبرة تزيد عن 10
+            تبحث عن خدمات النقل و <strong>نقل الاثاث ام القيوين</strong> التي تقدر تعتمد
+            عليها؟ شركة النمره تقدم خدمات عالية الجودة تخدم سكان ام القيوين بخبرة تزيد عن 10
             سنوات في نقل اثاث الشقق والفلل والمكاتب. فريقنا يتعامل مع كل قطعة
             أثاث وكأنها ملكه، ويستخدم شاحنات مغلقة ومكيّفة ومواد تغليف تحمي
-            أغراضك فعلاً مش بس على الكلام. كل شحنة عندنا مغطاة بتأمين شامل،
+            أغراضك فعلاً. كل شحنة عندنا مغطاة بتأمين شامل،
             والدفع ما يكون إلا بعد ما تستلم أثاثك سليم في مكانه الجديد.
           </p>
 
           {/* CTA row */}
           <div className="flex flex-wrap gap-3 mb-10">
-            <Button whatsappBtn size="lg" className="h-12 px-7 font-bold gap-2" id="cta-whatsapp-hero">
+            <Button
+              whatsappBtn
+              size="lg"
+              className="h-12 px-7 font-bold gap-2"
+              id="cta-whatsapp-hero"
+            >
               <MessageCircle className="w-4 h-4" />
               عرض سعر فوري واتساب
             </Button>
@@ -207,7 +203,7 @@ export default function UmmAlQuwainMovingPage() {
       <section className="py-14 px-4">
         <div className="max-w-3xl mx-auto space-y-6">
           <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-            نقل اثاث ام القيوين مع النمره يعني إنك ما تشيل هم أي شي. من أول
+            تتميز النمرة بتقديم أفضل عمليات نقل اثاث في ام القيوين لتكون تجربتك معنا سلسة ومريحة بدون ما تشيل هم أي شي. من أول
             صندوق لآخر قطعة، نتكفل بكل التفاصيل. سواء كنت تنقل داخل الإمارة أو
             تنتقل من ام القيوين لإمارة ثانية، نوصلك ونركب لك كل شي في مكانه. لو
             تبي عرض سعر، أرسل لنا رسالة واتساب على الرقم{" "}
@@ -486,7 +482,7 @@ export default function UmmAlQuwainMovingPage() {
                   تغليف وتعبئة الأثاث في ام القيوين
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                  التغليف هو الخطوة اللي تحمي أثاثك فعلياً أثناء النقل. نستخدم
+                  تعد مرحلة نقل وتغليف الأثاث الخطوة الأساسية التي تحمي منقولاتك فعلياً أثناء الانتقال. نستخدم
                   مواد تغليف اثاث احترافية تشمل:
                 </p>
                 <ul className="space-y-2 text-sm text-muted-foreground list-disc list-inside mb-4">

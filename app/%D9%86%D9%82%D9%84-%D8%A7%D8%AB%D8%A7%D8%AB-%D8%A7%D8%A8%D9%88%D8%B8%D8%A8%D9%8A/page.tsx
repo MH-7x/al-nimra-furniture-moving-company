@@ -22,7 +22,7 @@ import CTASection from "@/components/utils/CTASection";
 import QuoteSection from "@/components/utils/QuoteSection";
 import { ReviewsSection } from "@/components/utils/ReviewsSection";
 import { auhFaqs } from "@/lib/FaqsData";
-import { APP_URL, PHONE_LINK, WHATSAPP_LINK } from "@/lib/utils";
+import { APP_URL, PHONE_LINK } from "@/lib/utils";
 import { BreadcrumbSchema } from "@/components/utils/BreadcrumbSchema";
 
 export const metadata = MetadataTemplate({
@@ -35,7 +35,7 @@ export const metadata = MetadataTemplate({
     path: "/auh/نقل-اثاث-ابوظبي-النمره-شركة-نقل.jpg",
     alt: "نقل اثاث ابوظبي | شركة النمرة نقل اثاث  - 0541767605",
   },
-});;
+});
 
 export default function AbuDhabiMovingPage() {
   return (
@@ -84,16 +84,9 @@ export default function AbuDhabiMovingPage() {
           </div>
 
           {/* H1 */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-[1.1] tracking-tight mb-6 max-w-3xl">
-            نقل اثاث{" "}
-            <span className="relative inline-block">
-              <span className="relative z-10 text-primary">ابوظبي</span>
-              <span
-                aria-hidden
-                className="absolute bottom-1 start-0 end-0 h-3 bg-primary/10 -skew-x-3 rounded-sm z-0"
-              />
-            </span>
-            <span className="text-2xl block mt-5">
+          <h1 className="loc-heading">
+            نقل اثاث ابوظبي
+            <span className="loc-sub-leading">
               شركة النمره للنقل الآمن والمضمون
             </span>
           </h1>
@@ -109,7 +102,12 @@ export default function AbuDhabiMovingPage() {
 
           {/* CTA row */}
           <div className="flex flex-wrap gap-3 mb-10">
-            <Button whatsappBtn size="lg" className="h-12 px-7 font-bold gap-2" id="cta-whatsapp-hero">
+            <Button
+              whatsappBtn
+              size="lg"
+              className="h-12 px-7 font-bold gap-2"
+              id="cta-whatsapp-hero"
+            >
               <MessageCircle className="w-4 h-4" />
               عرض سعر فوري واتساب
             </Button>
@@ -210,7 +208,7 @@ export default function AbuDhabiMovingPage() {
           </p>
           <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
             سوق نقل الاثاث في أبوظبي فيه شركات كثيرة، بعضها مرخص ومحترف وبعضها
-            عبارة عن بيك اب وعمال يومية بدون تأمين ولا ضمانات. الفرق بين النوعين
+            عبارة عن بيك اب وعمال يومية بدون تأمين ولا ضمانات. والبحث عن أفضل شركات نقل اثاث في ابوظبي يتطلب التأكد من التغطية التأمينية والخبرة الفعلية. الفرق بين النوعين
             يظهر لما تنكسر قطعة أثاث غالية أو يتأخر النقل نص يوم. من البداية،
             قررنا إن كل عملية نقل اثاث نقوم بها في ابوظبي تكون بنفس المعايير
             اللي نطبقها في دبي: تأمين كامل، مواد تغليف عالية الجودة، شاحنات
@@ -235,7 +233,7 @@ export default function AbuDhabiMovingPage() {
               خدمات نقل اثاث ابوظبي التي نقدمها
             </h2>
             <p className="text-muted-foreground max-w-4xl text-sm md:text-base leading-relaxed">
-              نقدم في ابوظبي نفس الخدمات اللي بنينا عليها سمعتنا في دبي على مدار
+              تلتزم شركة النمرة بتقديم خدماتها الاحترافية في ابوظبي بنفس المعايير العالية التي بنينا عليها سمعتنا في دبي على مدار
               أكثر من عشر سنوات. كل خدمة من هذي الخدمات متاحة بشكل مستقل أو كجزء
               من عملية نقل كاملة، حسب احتياجك. يعني لو تحتاج فقط تغليف بدون نقل،
               أو فك وتركيب بدون شاحنة، نقدر نرتبها لك.{" "}
@@ -434,13 +432,13 @@ export default function AbuDhabiMovingPage() {
               لماذا تختار شركة النمره لنقل اثاث في ابوظبي؟
             </h2>
             <p className="text-white/70 max-w-4xl text-sm md:text-base leading-relaxed">
-              السؤال الأول عند أي عملية نقل: مين أضمن شركة؟ في سوق ابوظبي
+              السؤال الأول عند أي عملية نقل: مين أضمن شركة لتقديم أفضل خدمات نقل؟ في سوق ابوظبي
               تحديداً، كثير من شركات النقل تقدم وعود كبيرة وتنفيذ ضعيف. عندنا
               عملاء جاؤنا بعد تجارب سيئة مع شركات ثانية: أثاث مكسور، تأخير ساعات
               عن الموعد، رسوم إضافية ما كانت في الاتفاق. واحد من عملائنا نقل
               فيلا في مدينة خليفة مع شركة رخيصة قبل ما يعرفنا، وانتهى بطاولة
               سفرة مكسورة الأرجل وكنب مخدوش والشركة رفضت تعوّضه لأن ما عندها
-              تأمين أصلاً. الفرق مع النمره يظهر في التفاصيل.
+              تأمين أصلاً. نحن نضمن لك الحصول على أفضل خدمات نقل أثاث بسلامة وأمان، فالفرق مع النمره يظهر في التفاصيل.
             </p>
           </div>
 
@@ -1184,9 +1182,7 @@ export default function AbuDhabiMovingPage() {
                 وقت بتنسيق مسبق معنا وننقله لعنوانك الجديد.
               </p>
               <div className="flex flex-wrap gap-3">
-                <Button whatsappBtn>
-                  استفسر عن التخزين
-                </Button>
+                <Button whatsappBtn>استفسر عن التخزين</Button>
                 <Button variant="outline" asChild>
                   <Link href="/خدمات/تخزين-اثاث-في-دبي">خدمة تخزين الاثاث</Link>
                 </Button>
@@ -1353,7 +1349,12 @@ export default function AbuDhabiMovingPage() {
               بكل شيء. نقل آمن · تسليم مضمون · أسعار تنافسية.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-6">
-              <Button whatsappBtn size="lg" className="h-13 px-8 font-bold gap-2" id="cta-whatsapp-bottom">
+              <Button
+                whatsappBtn
+                size="lg"
+                className="h-13 px-8 font-bold gap-2"
+                id="cta-whatsapp-bottom"
+              >
                 <MessageCircle className="w-5 h-5" />
                 واتساب — عرض سعر فوري
               </Button>

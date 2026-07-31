@@ -36,7 +36,7 @@ export const metadata = MetadataTemplate({
     path: "/aln/نقل-اثاث-العين-النمره-جبل-حفيت.jpg",
     alt: "نقل اثاث العين | النمرة نقل اثاث - أسعار تبدأ من 600 درهم",
   },
-});;
+});
 
 export default function AlAinMovingPage() {
   return (
@@ -85,16 +85,9 @@ export default function AlAinMovingPage() {
           </div>
 
           {/* H1 */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-[1.1] tracking-tight mb-6 max-w-3xl">
-            نقل اثاث{" "}
-            <span className="relative inline-block">
-              <span className="relative z-10 text-primary">العين</span>
-              <span
-                aria-hidden
-                className="absolute bottom-1 start-0 end-0 h-3 bg-primary/10 -skew-x-3 rounded-sm z-0"
-              />
-            </span>
-            <span className="text-2xl block mt-5">
+          <h1 className="loc-heading">
+            نقل اثاث العين
+            <span className="loc-sub-leading">
               فك وتغليف وتركيب مع ضمان كامل
             </span>
           </h1>
@@ -110,7 +103,12 @@ export default function AlAinMovingPage() {
 
           {/* CTA row */}
           <div className="flex flex-wrap gap-3 mb-10">
-            <Button whatsappBtn size="lg" className="h-12 px-7 font-bold gap-2" id="cta-whatsapp-hero">
+            <Button
+              whatsappBtn
+              size="lg"
+              className="h-12 px-7 font-bold gap-2"
+              id="cta-whatsapp-hero"
+            >
               <MessageCircle className="w-4 h-4" />
               عرض سعر فوري واتساب
             </Button>
@@ -193,7 +191,7 @@ export default function AlAinMovingPage() {
           <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
             نقل اثاث العين له تحدياته الخاصة. المدينة حارة معظم أشهر السنة،
             والمسافات بين الأحياء طويلة، وبعض المناطق السكنية فيها فلل كبيرة
-            تحتاج تجهيزات مختلفة عن الشقق. عشان كذا، اللي يدور على شركة نقل اثاث
+            تحتاج تجهيزات مختلفة عن الشقق. عشان كذا، اللي يدور على أفضل شركة نقل
             في العين يحتاج شركة تعرف المدينة وتفهم طبيعة الاثاث والمباني فيها.
           </p>
         </div>
@@ -212,7 +210,7 @@ export default function AlAinMovingPage() {
               لماذا تختار شركة النمره لنقل اثاث العين؟
             </h2>
             <p className="text-white/70 max-w-4xl text-sm md:text-base leading-relaxed">
-              إذا سألت أي شخص جرب نقل اثاث العين عن أكبر مشكلة واجهها، غالبا
+              إذا سألت أي شخص جرب نقل أثاث في العين عن أكبر مشكلة واجهها، غالبا
               الجواب يكون واحد من ثلاث: أسعار تتغير يوم النقل، أثاث يوصل مخدوش
               أو مكسور، أو شركة ما تجي في الموعد. عندنا الموضوع مختلف لأنك ما
               تدفع إلا بعد ما نخلص الشغل وتكون راضي.
@@ -1104,7 +1102,12 @@ export default function AlAinMovingPage() {
               </p>
             </div>
             <div className="flex flex-wrap justify-center gap-4 mb-6">
-              <Button whatsappBtn size="lg" className="h-13 px-8 font-bold gap-2" id="cta-whatsapp-bottom">
+              <Button
+                whatsappBtn
+                size="lg"
+                className="h-13 px-8 font-bold gap-2"
+                id="cta-whatsapp-bottom"
+              >
                 <MessageCircle className="w-5 h-5" />
                 واتساب — أرسل رسالة الآن
               </Button>

@@ -185,6 +185,17 @@ html {
   background: inherit;
 }
 
+.loc-heading {
+  @apply text-4xl sm:text-5xl md:text-6xl font-bold leading-[1.1] tracking-tight mb-6 max-w-3xl;
+}
+.loc-sub-leading {
+  @apply text-2xl block mt-5;
+}
+
+.main-h1 {
+  @apply text-4xl md:text-6xl font-bold text-secondary-foreground leading-tight tracking-tight mb-8;
+}
+
 .scroll-header[data-scroll-state="scrolled"] .scroll-header-top,
 .scroll-header[data-scroll-state="scrolled"] .scroll-header-middle {
   max-height: 0;

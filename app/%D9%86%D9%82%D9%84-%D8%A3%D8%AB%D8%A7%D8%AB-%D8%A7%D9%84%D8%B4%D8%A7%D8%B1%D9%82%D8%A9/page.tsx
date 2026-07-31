@@ -36,7 +36,7 @@ export const metadata = MetadataTemplate({
     path: "/shj/نقل-اثاث-الشارقة-النمره-شركة-نقل.jpg",
     alt: "نقل أثاث الشارقة | شركة النمرة نقل اثاث - 0541767605",
   },
-});;
+});
 
 export default function SharjahMovingPage() {
   return (
@@ -85,22 +85,15 @@ export default function SharjahMovingPage() {
           </div>
 
           {/* H1 */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-[1.1] tracking-tight mb-6 max-w-3xl">
-            نقل أثاث{" "}
-            <span className="relative inline-block">
-              <span className="relative z-10 text-primary">الشارقة</span>
-              <span
-                aria-hidden
-                className="absolute bottom-1 start-0 end-0 h-3 bg-primary/10 -skew-x-3 rounded-sm z-0"
-              />
-            </span>
-            <span className="text-2xl block mt-5">
+          <h1 className="loc-heading">
+            نقل أثاث الشارقة
+            <span className="loc-sub-leading">
               فك وتغليف ونقل وتركيب مع تأمين شامل
             </span>
           </h1>
 
           <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-2xl mb-8">
-            تبحث عن شركة نقل أثاث الشارقة تقدر تعتمد عليها؟ شركة النمرة نقل اثاث
+            تبحث عن شركة نقل أثاث الشارقة تقدر تعتمد عليها لضمان تجربة نقل آمنة وسلسة؟ شركة النمرة نقل اثاث
             تخدم سكان الشارقة من أكثر من
             <strong className="text-foreground">10 سنوات</strong> في نقل الاثاث
             السكني والتجاري. فك، تغليف احترافي بمواد عالية الجودة، نقل بشاحنات
@@ -189,7 +182,7 @@ export default function SharjahMovingPage() {
       <section className="py-14 px-4">
         <div className="max-w-3xl mx-auto">
           <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-4">
-            كل عملية نقل اثاث في الشارقة معنا تشمل{" "}
+            تُعتبر شركة النمرة الخيار الموثوق لنقل الاثاث في الشارقة حيث تشمل كل عملية{" "}
             <strong className="text-foreground">تأمين شامل على كل القطع</strong>{" "}
             بدون أي تكلفة إضافية. ومعاينة مجانية قبل النقل لتحديد السعر بدقة. ما
             نطلب أي دفعة مقدمة، وما في رسوم خفية. تبي عرض سعر فوري؟ أرسل تفاصيل
@@ -220,7 +213,7 @@ export default function SharjahMovingPage() {
               خدمات نقل اثاث في الشارقة لكل نوع نقلة
             </h2>
             <p className="text-muted-foreground max-w-4xl text-sm md:text-base leading-relaxed">
-              ما في نقلة تشبه الثانية. شقة في النهدة غير فيلا في مويلح غير مكتب
+              نحن نقدم خدمات نقل متكاملة ومخصصة لأن ما في نقلة تشبه الثانية. شقة في النهدة غير فيلا في مويلح غير مكتب
               في المنطقة الصناعية. كل موقع له تحدياته، وكل عميل له احتياجات
               مختلفة. ولهذا السبب ما نقدم خدمة واحدة ثابتة لكل الناس.
             </p>
@@ -255,7 +248,7 @@ export default function SharjahMovingPage() {
                 </div>
                 <p className="text-muted-foreground text-sm leading-relaxed mb-3">
                   نقل اثاث الشقق في الشارقة له تحدياته. كثير من الأبراج السكنية
-                  فيها مصاعد صغيرة ما تتسع للقطع الكبيرة مثل الكنب والخزائن.
+                  فيها مصاعد صغيرة ما تتسع للقطع الكبيرة من الأثاث الخاص بك مثل الكنب والخزائن.
                   الممرات ضيقة وتحتاج مناورة دقيقة لتمرير الأثاث بدون خدوش على
                   الجدران. ومواقف السيارات أمام المباني محدودة ولازم تنسّق مع
                   الإدارة. فريقنا يتعامل مع هالمواقف بشكل يومي ويعرف كيف يتصرف
@@ -514,7 +507,7 @@ export default function SharjahMovingPage() {
           </div>
 
           <p className="text-white/50 text-sm mt-8 border-t border-white/10 pt-6 leading-relaxed max-w-2xl">
-            لو تسأل &quot;ما هي أفضل شركة نقل اثاث الشارقة؟&quot; الجواب ما يكون
+            لو تسأل ما هي أفضل شركة نقل أثاث في الشارقة؟ الجواب ما يكون
             بالكلام بل بالتجربة. تقدر تشوف تقييمات عملائنا على خرائط قوقل وتحكم
             بنفسك. أو اتصل وجرّب بنفسك:{" "}
             <a
@@ -683,7 +676,7 @@ export default function SharjahMovingPage() {
                 </p>
               </div>
               <p className="text-muted-foreground text-sm leading-relaxed mt-4">
-                ما نبي تفاجأ بتكاليف إضافية. لهذا نفضّل نعاين أو نشوف صور قبل ما
+                ما نبي تفاجأ بتكاليف إضافية. لهذا يمكنك الاتصال بنا مباشرة أو مراسلتنا ونفضّل نعاين أو نشوف صور قبل ما
                 نعطي سعر نهائي. أرسل لنا صور أثاثك على الواتساب وبنرد عليك بعرض
                 سعر خلال دقائق. أو اتصل على 0541767605 ونحسبها معك مباشرة. عشان
                 تحصل على أرخص سعر نقل اثاث في الشارقة، انقل في منتصف الشهر وتجنب
@@ -773,7 +766,7 @@ export default function SharjahMovingPage() {
               نقل اثاث من الشارقة إلى الإمارات الأخرى
             </h2>
             <p className="text-muted-foreground text-sm md:text-base leading-relaxed max-w-2xl">
-              خدمة نقل أثاث الشارقة عندنا ما تقتصر على النقل داخل الإمارة. كثير
+              خدمة نقل أثاث الشارقة عندنا ما تقتصر على النقل داخل الإمارة بل تغطي كافة أرجاء الإمارات العربية المتحدة. كثير
               من عملائنا ينتقلون من الشارقة لإمارة ثانية أو العكس. نغطي
               هالمسارات بشكل يومي بنفس مستوى الخدمة والتأمين والأسعار. فك وتركيب
               كامل في الموقعين.
@@ -975,7 +968,7 @@ export default function SharjahMovingPage() {
               </h2>
               <p className="text-muted-foreground text-sm leading-relaxed mb-4">
                 أحياناً ما يكون البيت الجديد جاهز بعد، أو تبي تسافر فترة وتحتاج
-                مكان آمن لأثاثك. أو ممكن تكون تجدد شقتك وتحتاج تخزّن الأثاث
+                مكان آمن لأثاثك. هنا تأتي أهمية خدمات التخزين الآمنة لدينا، سواء كنت تجدد شقتك وتحتاج تخزّن الأثاث
                 مؤقتاً لحين انتهاء أعمال الصيانة أو التجديد.
               </p>
               <p className="text-muted-foreground text-sm leading-relaxed mb-4">
@@ -990,9 +983,7 @@ export default function SharjahMovingPage() {
                 أو وقت تجديد البيت.
               </p>
               <div className="flex flex-wrap gap-3">
-                <Button whatsappBtn>
-                  استفسر عن التخزين
-                </Button>
+                <Button whatsappBtn>استفسر عن التخزين</Button>
                 <Button variant="outline" asChild>
                   <Link href="/خدمات/تخزين-اثاث-في-دبي">خدمة تخزين الاثاث</Link>
                 </Button>
@@ -1066,7 +1057,11 @@ export default function SharjahMovingPage() {
               والعناية نفسها.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-6">
-              <Button whatsappBtn size="lg" className="h-13 px-8 font-bold gap-2">
+              <Button
+                whatsappBtn
+                size="lg"
+                className="h-13 px-8 font-bold gap-2"
+              >
                 <MessageCircle className="w-5 h-5" />
                 واتساب — عرض سعر فوري
               </Button>
